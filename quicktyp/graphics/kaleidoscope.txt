@@ -1,0 +1,36 @@
+new
+10 rem Kaleidoscope (manual page P1)
+20 print chr$(11)
+25 poke12328+41,32
+30 m=40:n=24
+40 goto160
+60 rem CA= color address
+70 rem color plot subroutine
+75 rem
+80 if x>m-1 then x=m-1
+90 if y<0 then y=0
+100 if y>n-1 then y=n-1
+110 if x<0 then x=0
+115 rem calculate address
+120 pa=12328+x+y*40
+130ca=pa+1024
+140poke ca,c
+150 return
+160 rem start loops
+180 for i=0to m/2-1
+190 for j=0to m/2-1
+200 k=i+j
+205 rem c=color 1-14
+210 c=int(14*rnd(1)+1)
+250 rem 8 plot points
+260 x=y:y=k:gosub75
+270 x=k:y=i:gosub75
+280 x=m-i:y=n-k:gosub75
+290 x=m-k:y=n-i:gosub75
+300 x=k:y=n-i:gosub75
+310 x=m-i:y=k:gosub75
+320 x=i:y=n-k:gosub75
+330 x=m-k:y=i:gosub75
+335 z=fre(x)
+340 next j,i
+350 goto 160

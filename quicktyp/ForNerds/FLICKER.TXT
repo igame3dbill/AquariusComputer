@@ -1,0 +1,24 @@
+
+new
+
+rem - program prints a ratio of time spent 
+rem - at video blanking (smaller number)
+rem - vs normal screen scan (bigger number)
+rem - run it on real aquarius and send
+rem - results to emucompboy@yahoo.com
+
+10 j=13313
+20 READA:if a=-1 then 40
+30 POKEJ,A:j=j+1:goto 20
+40 POKE14340,1:POKE14341,52
+50 J=USR(0)
+60 print peek(13500)+256*peek(13501)+65536*peek(13502)
+70 print peek(13520)+256*peek(13521)+65536*peek(13522)
+80 data	175,253,33,208,52,253,119,0,253,119,1,253,119,2,253,33
+90 data	188,52,253,119,0,253,119,1,253,119,2,14,253,22,10,237
+100 data 120,203,71,40,2,32,248,237,120,203,71,40,250,253,33,188
+110 data 52,237,120,221,35,253,52,0,32,8,253,52,1,32,3,253
+120 data 52,2,203,71,32,235,253,33,208,52,237,120,221,35,253,52
+130 data 0,32,8,253,52,1,32,3,253,52,2,203,71,40,235,21
+140 data 32,203,201,-1
+

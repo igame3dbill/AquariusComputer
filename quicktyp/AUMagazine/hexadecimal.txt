@@ -1,0 +1,72 @@
+
+
+NEW
+
+5 REM By Welmoed Jonker
+10 Z1$=" dec.":Z2$=" hex."
+20 ? CHR$(11)
+30 ?"Make your selection :":?
+40 ?:?"Decimal to hexadecimal..1"
+50 ?:?"Hexadecimal to decimal..2"
+60 ?:?:INPUT"Your selection .... ";Z$
+70 IF VAL(Z$)=0 THEN 20
+80 IF VAL(Z$)<1 OR VAL(Z$)>2 THEN 20
+90 IF Z$="2" THEN Z=1:GOSUB 1000: GOTO 20
+100 ? CHR$(11):INPUT"Decimal number (max. 65535) : ";N$
+110 IF VAL(N$)=0 THEN ?"Incorrect number!":GOTO 100
+120 N=VAL(N$):NA=N
+130 FOR X=3 TO 0 STEP -1
+140 N(X)=INT(NA/16^X):NA=NA-N(X)*16^X
+150 N$(X)=CHR$(N(X)+48-7*(N(X)>9)):A$=A$+N$(X)
+160 NEXT X
+170 IF VAL(N$)>32767 THEN N1$=STR$(VAL(N$)-65536)
+180 ?:?:? N$;Z1$;" is ";A$;Z2$
+190 IF VAL(N$)<32768 THEN 220
+200 ?:?"Addresses over 32767,"
+210 ? TAB(21);"---> poke : ";N1$
+220 GOSUB 1230
+230 N$="":N1$="":A$="":N=0:NA=0
+240 GOTO 20
+1000 ? CHR$(11):INPUT "Hexadecimal number (2 or 4 characters) : ";N$
+1010 IF LEN(N$)>4 THEN ?"Not more then 4 characters!":GOTO 1000
+1020 IF LEN(N$)<2 THEN ?"2 characters minimum!":GOTO 1000
+1030 IF LEN(N$)=4 THEN AZ=4
+1040 IF LEN(N$)=2 THEN AZ=2
+1050 N=0:N1=0
+1060 FOR X=1 TO AZ
+1070 N1=ASC(MID$(N$,X))
+1080 N=N*16+((N1AND15)-9*(N1>64))
+1090 NEXT X
+1100 ?:?:? N$;Z2$;" is ";N;Z1$
+1110 IF N<32768 THEN A=N:GOTO1160
+1120 ?:?"Addresses over 32767,"
+1130 ? TAB(21);"---> poke : ";
+1140 A=N-65535
+1150 ? A
+1160 IF AZ=2 THEN 1200
+1170 ?:?"To add in data-list :"
+1180 ?:?"Low byte : ";AAND255
+1190 ?:?"High byte: ";INT(N/256)
+1200 GOSUB 1230
+1210 N=0:N1=0:N$="":A=0
+1220 GOTO 20
+1230 ?:?:INPUT"Continue (y/n) ";V$
+1240 IF V$="N" OR V$="n" THEN END
+1250 RETURN
+
+
+
+REM
+REM Programmed by Welmoed Jonker
+REM
+REM Appeared in Aquarius User Magazine
+REM nr. 2 / 1986
+REM published by van Balen uitgeverij
+REM
+REM
+REM
+REM all credits to the programmer
+REM
+REM
+
+

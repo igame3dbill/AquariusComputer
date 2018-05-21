@@ -1,0 +1,38 @@
+
+new
+rem joystick peeker - peek joysticks
+
+
+
+100 h$="0123456789ABCDEF":print chr$(11)
+150 gosub 6000
+
+160 a$=inkey$:if a$<>"" then 160
+170 print"joystick peeker - move joystick"
+180 print"and watch numbers change"
+190 print"(hit space to end)":print
+200 a=usr(0):l=peek(13342):r=peek(13343)
+210 print l,r;chr$(13);
+220 a$=inkey$:if a$<>" " then 200
+230 print:print
+240 end
+
+
+
+
+rem subroutine for poking the ml and set USR
+6000 poke14340,1:poke14341,52:gosub6100
+6010 return
+rem poke one ml subroutine
+6100 j=13313
+6110 read a$:if a$="z"then return
+6120 c=asc(mid$(a$,1,1)):d=c and15:if c>64then d=9+(c and15)
+6130 c=asc(mid$(a$,2,1)):e=c and15:if c>64then e=9+(c and15)
+6140 c=d*16+e:poke j,c:j=j+1:goto6110
+rem joystick peeker routine for AY
+6200 data 3e,0e,cd,12,34,32,1e,34
+6210 data 3e,0f,cd,12,34,32,1f,34
+6220 data c9,d3,f7,db,f6,00,4f,db
+6230 data f6,b9,20,f9,c9,00,00
+6240 data z
+

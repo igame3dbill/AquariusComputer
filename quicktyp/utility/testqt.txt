@@ -1,0 +1,18 @@
+new
+5 rem This is a program to test Quicktype
+6 rem on the emulator running BASIC
+10 print "1234567890-="
+20 print "!#$%&'()?_+"
+30 print "abcdefghijklmnopqrstuvwxyz"
+40 print "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+50 print "/ ^ \ ; @ : * , < . > "
+60 print "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ"
+70 print "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+80 print "1!2"
+90 print "3#4$5%6&7'8(9)-_=+/^;@:*,<.>"
+100 print "!1"2"#3$4%5&6'7(8)9?0_-+=^/@;*:<,>."
+110 print "aaabbbcccdddeeefffggghhhiiijjjkkklllmmm"
+120 print "nnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzz"
+130 print "AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMM"
+140 print "NNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZZ"
+

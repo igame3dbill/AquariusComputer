@@ -1,0 +1,34 @@
+
+new
+rem test an Ay-3-8910 tone
+
+100 h$="0123456789ABCDEF":print chr$(11)
+150 gosub 6000
+
+160 a$=inkey$:if a$<>"" then 160
+165 print"Test AY frequencies":print"Enter a 0 to quit."
+170 print"input number 0-8191";
+180 input a
+190 poke 13348,(a and 255):poke 13349,int(a/256)
+200 x=usr(0)
+210 if a=0 then print: end
+220 goto 170
+
+
+rem subroutine for poking the ml and set USR
+6000 poke14340,1:poke14341,52:gosub6100
+6010 return
+rem poke one ml subroutine
+6100 j=13313
+6110 read a$:if a$="z"then return
+6120 c=asc(mid$(a$,1,1)):d=c and15:if c>64then d=9+(c and15)
+6130 c=asc(mid$(a$,2,1)):e=c and15:if c>64then e=9+(c and15)
+6140 c=d*16+e:poke j,c:j=j+1:goto6110
+rem test ay tone
+6200 data 3e,07,d3,f7,3e,3e,d3,f6
+6210 data 3e,08,d3,f7,3e,0f,d3,f6
+6220 data 3e,00,d3,f7,3a,24,34,d3
+6230 data f6,3e,01,d3,f7,3a,25,34
+6240 data d3,f6,c9,00,00
+6250 data z
+

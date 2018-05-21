@@ -1,0 +1,12 @@
+
+new
+5 print chr$(11):print:print
+10 s=12288+40
+20 forx=0 to 15
+30 for y=0 to 15
+40 poke s+x+40*y,y*16+x
+50 next
+60 next
+70 b$=inkey$:ifb$=""then70
+80 print chr$(11)
+run

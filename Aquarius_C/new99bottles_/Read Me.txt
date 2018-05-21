@@ -1,0 +1,25 @@
+Load Virtual Aquarius and Press Enter to begin BASIC
+type CLOAD and press return twice
+Choose File Menu > Play Casette File and choose "_new99bottles.caq"
+BASIC should tell you it found: LOADR
+
+Type RUN and press turn twice
+
+ Choose File Menu > Play Casette File and choose "new99bottles.caq"
+ Enjoy the show.
+ 
+ To use the .bat file to zombie the z88dk c file
+ CD to the path of the C file
+ 
+ Then drag the .bat to the console window
+ If z88dk is installed and everything is in place
+ you should get updated .CAQ files.
+ 
+ Find out more here:
+ http://atariage.com/forums/topic/220410-aquarius-z88dk-aquarius-development/
+ 
+and here
+http://www.z88dk.org/forum/viewtopic.php?id=348
+
+and here
+http://www.z88dk.org/wiki/doku.php?id=platform:aquarius&s[]=aquarius

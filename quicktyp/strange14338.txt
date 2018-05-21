@@ -1,0 +1,26 @@
+
+
+new
+5 PRINT CHR$(11)
+
+20 REM 14338 & 14337 Address of the cursor within the cursor matrix
+
+100 Rem reset cursor to 0,0
+110 poke 14337,1 : poke 14338,48
+105 poke 14338,48
+110 gosub 2000
+695 poke 14336,1 : Rem move print column back
+700 goto 100
+ 
+2000 REm Print here
+2025 print " "
+2022 print " "
+2023 print " " 
+2024 print "#"
+2100 return
+
+run 
+
+
+
+630 PE = PEEK(14337)

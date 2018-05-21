@@ -1,0 +1,53 @@
+new
+
+10 gosub 900
+20 for j=0 to39:poke c+j,0:next
+25 for j=0 to39:poke c+40+j,9*16+0:next
+30 for y=0to15:p=c+80+y*40
+40 for x=0to39
+50 poke p+x,a(y)
+60 next:next
+70 for y=16to22:p=c+80+y*40
+80 for x=0to39
+90 poke p+x,a(x and15)
+100 next:next
+101 gosub 1110
+105 print"any key to end";
+110 b$=inkey$:if b$=""then110
+120 print chr$(11)
+130 end
+
+900 print chr$(11);
+
+910 dim a(16):forj=0 to15:a(j)=j*15+1:next
+920 print"Display Color Bars"
+930 print"Any key to begin"
+940 print"Any key to end."
+950 print:print"Press a key to begin"
+960 b$=inkey$:if b$=""then960
+970 s=3*4096:c=s+1024
+980 print chr$(11);
+990 return
+
+1110 REM ASCII CHARACTERS
+1510  poke 12288, 255 :rem create solid border
+1520 d=12327: mod=1024: B=12288+mod: cd=6
+1530 rows =160 : rem start drawing at line 2
+1540 poke b,7 : rem a white border
+1550 columns = cd
+1560 for a=0 to 255
+1570 n=a
+2230 columns=columns+1
+2285 FG=cd + d + columns + rows
+2290 BG=cd + b + columns + rows+39
+2300 poke (FG),a
+2310 poke (BG),7
+2350 if columns > 21 then gosub 5000
+2600 next a
+4000 if inkey$<>" " then goto 4000
+4800 return
+5000 columns = cd: rows = rows + 40 
+5010 return
+6000 end
+
+run

@@ -1,0 +1,20 @@
+
+REM poke near -16491 to -16300
+REM BASIC near 17568 to 18800
+5 s = -32767
+6 print chr$(11)
+10 FOR X =  s TO -1  
+20 C=C+1
+30 IF C=800 THEN 500
+40 POKE 12288+40+C,PEEK(X)
+50 NEXT X
+60 END
+
+500  print x
+510 A$=INKEY$
+501 if A$="p" then lprint
+505 IF A$<>" " THEN GOTO 510
+520 c=0
+550 GOTO 50
+
+run

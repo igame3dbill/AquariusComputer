@@ -1,0 +1,80 @@
+NEW
+10 GOSUB 4000
+20 gosub 4300
+30 gosub 3200
+40 gosub 3000
+50 gosub 3100
+60 gosub 4300
+70 gosub 3400
+
+890 goto 20
+900 a$=inkey$:if a$=""then900
+1000 gosub4400:end
+
+rem stripes
+3000  FOR J=0 TO 959:POKE S+J,C( J AND 15 ):next:rem stripes
+3010 for x=0to39:fory=0to23:pokes+40*y+x,c(x and15):next:next
+3020 return
+
+rem diagonal
+3100 for y=0to39+24
+3110 for x=0to y:h=y-x
+3120 if h<24 and x<40 then poke s+h*40+x,c(y and15 )
+3140 next:next
+3150 return
+
+rem random fill of screen
+
+3200 for j=0 to 199
+3210 r=int(rnd(1)*16)
+3220 rx=int(rnd(1)*40):ry=int(rnd(1)*24)
+3230 poke s+ry*40+rx,c(r)
+3240 next
+3250 return
+
+
+rem four part kaleidoscope, three wide and high
+3400 for j=0to199
+3410 r=int(rnd(1)*16)
+3415 rem for k=0to3
+3420 rx=int(rnd(1)*18):ry=int(rnd(1)*12)
+3430 ox=37-rx:oy=22-ry:gosub 3300
+3440 ox=rx:oy=ry:gosub 3300
+3450 ox=rx:oy=22-ry:gosub 3300
+3460 ox=37-rx:oy=ry:gosub 3300
+3470 rem next
+3475 next
+3480 return
+
+rem 2x3 rectangle
+3300 poke s+oy*40+ox,c(r)
+3310 poke s+(oy+1)*40+ox,c(r)
+
+3330 poke s+oy*40+1+ox,c(r)
+3340 poke s+(oy+1)*40+1+ox,c(r)
+
+3360 poke s+oy*40+2+ox,c(r)
+3370 poke s+(oy+1)*40+2+ox,c(r)
+
+3390 return
+
+
+
+rem init
+4000 S=12288+1024+40:rem init
+4010 DIM C(16)
+4020 for j=0to15:c(j)=16*j+j:next
+4050 print chr$(11);:print"Screen fun, by James"
+4060 print"**Press a key to begin**"
+4070 a$=inkey$:j=rnd(1)
+4080 if a$=""then4070
+4100 x=0:y=0:w=0:h=0:n=0
+4110 RETURN
+
+rem black stripes
+4300 for j=0to999:pokes-40+j,c(0):next:return
+
+rem cls
+4400 print chr$(11):return
+
+run

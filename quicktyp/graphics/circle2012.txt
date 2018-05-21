@@ -1,0 +1,22 @@
+NEW
+5 PRINT CHR$(11)
+10 center = 40 : rem or half resolution width
+15 radius = 30 : rem half the circle height
+20 pop = 0.03 : rem  pieces of pi 
+30 FOR x = 0 TO 7 STEP pop
+40 column=center+radius*SIN(x)
+55 row =center+radius*COS(x) 
+60 PSET(column,row)
+80 NEXT
+RUN
+
+
+5 PRINT CHR$(11)
+
+20 pop = 0.03 : rem  pieces of pi 
+30 FOR x = 0 TO 7 STEP pop
+40 i=i+1:print i
+50 c=c+1:if c>24 then gosub 500
+500 print chr$(11):c=0:return
+80 NEXT
+RUN

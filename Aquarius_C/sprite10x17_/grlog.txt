@@ -1,0 +1,49 @@
+Calling QueryAdapterInfo...
+Adding resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+Adding resolution 30005 for drivernr 11 (639x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30001 for drivernr 12 (319x199)
+replacing resolution 30005 for drivernr 11 (639x199)
+Adding resolution 30009 for drivernr 11 (639x479)
+Adding resolution 32767 for drivernr 11 (719x347)
+Adding resolution 30005 for drivernr 13 (639x199)
+Adding resolution 30007 for drivernr 13 (639x349)
+replacing resolution 30005 for drivernr 13 (639x199)
+replacing resolution 30007 for drivernr 13 (639x349)
+Adding resolution 30009 for drivernr 13 (639x479)
+Adding resolution 30001 for drivernr 15 (319x199)
+replacing resolution 30001 for drivernr 15 (319x199)
+Adding resolution 30008 for drivernr 15 (639x399)
+Adding resolution 30009 for drivernr 15 (639x479)
+Adding resolution 30001 for drivernr 17 (319x199)
+Adding resolution 30009 for drivernr 17 (639x479)
+Adding resolution 30001 for drivernr 18 (319x199)
+Adding resolution 30009 for drivernr 18 (639x479)
+Adding resolution 30010 for drivernr 13 (799x599)
+Adding resolution 30010 for drivernr 15 (799x599)
+Adding resolution 30010 for drivernr 17 (799x599)
+Adding resolution 30010 for drivernr 18 (799x599)
+Adding resolution 30012 for drivernr 13 (1023x767)
+Adding resolution 30012 for drivernr 15 (1023x767)
+Adding resolution 30012 for drivernr 17 (1023x767)
+Adding resolution 30012 for drivernr 18 (1023x767)
+Adding resolution 30013 for drivernr 13 (1279x1023)
+Adding resolution 30013 for drivernr 15 (1279x1023)
+Adding resolution 30013 for drivernr 17 (1279x1023)
+Adding resolution 30013 for drivernr 18 (1279x1023)
+Searching for driver 18 and mode 30012
+Searching for driver 18 and mode 30012
+Entering mode 279 of driver 10
+maxx = 1023, maxy = 767
+Initializing mode 1024, 768 65536 colours
+calling setviewport from setbkcolor
+calling setviewport from setbkcolor done
+(org_to_cap - org_to_dec): 0
+calling setviewport from setbkcolor
+calling setviewport from setbkcolor done
+(org_to_cap - org_to_dec): 0

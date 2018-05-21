@@ -1,0 +1,9 @@
+
+10 PRINT CHR$(7): PRINT CHR$(11) :
+20 FOR C=0 TO 255
+30 POKE 12288,C
+40 REM POKE  13312+1024,C  modifies the cursor position
+50 FOR T=1 TO 30:NEXT T: REM delay
+60 NEXT C
+
+RUN

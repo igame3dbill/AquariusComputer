@@ -1,0 +1,11 @@
+new
+5 PRINT CHR$(11)
+10 for x = 0 to 7 step 0.03
+20 pset (40+20*sin(x),40+20*cos(x))
+
+30 pset (40+10*sin(x),40+10*cos(x))
+
+40 pset (40+30*sin(x),40+30*cos(x))
+
+60 next
+run

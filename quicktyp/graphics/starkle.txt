@@ -1,0 +1,44 @@
+new
+10 gosub 900
+20 for j=0 to999:poke c+j,0:next
+25 k=29
+30 b$=inkey$:if len(b$)>0 then print chr$(11):end
+35 k=k+1:if k>29 then k=0
+40 n=a(int(14*rnd(1)+1))
+50 x=int(38 * rnd(1) + 1)
+60 y=int(23*rnd(1) +1)
+
+62 if peek(c+y*40+x) > 0 then 50
+63 if peek(c+(y-1)*40+x) > 0 then 50
+64 if peek(c+(y+1)*40+x) > 0 then 50
+65 if peek(c+y*40+x-1) > 0 then 50
+66 if peek(c+y*40+x+1) > 0 then 50
+
+
+70 poke c+y*40+x,n
+80 poke c+(y-1)*40+x,n
+90 poke c+(y+1)*40+x,n
+100 poke c+y*40+x-1,n
+110 poke c+y*40+x+1,n
+120 m=u(k):n=v(k)
+170 poke c+n*40+m,0
+180 poke c+(n-1)*40+m,0
+190 poke c+(n+1)*40+m,0
+200 poke c+n*40+m-1,0
+210 poke c+n*40+m+1,0
+220 u(k)=x:v(k)=y
+250 goto 30
+
+900 print chr$(11);
+910 dim a(16):forj=0 to15:a(j)=j*16+j:next
+920 print"Stars"
+930 print"Any key to begin"
+940 print"Any key to end."
+950 print:print"Press a key to begin"
+960 b$=inkey$:if b$=""then960
+970 s=3*4096:c=s+1024
+980 print chr$(11);
+
+1000 dim u(30):dim v(30):for j=0 to29:u(j)=1:v(j)=1:next
+2000 return
+

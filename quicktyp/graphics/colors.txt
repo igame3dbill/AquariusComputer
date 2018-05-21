@@ -1,0 +1,28 @@
+new
+10 gosub 900
+20 for j=0 to39:poke c+j,0:next
+25 for j=0 to39:poke c+40+j,9*16+0:next
+30 for y=0to15:p=c+80+y*40
+40 for x=0to39
+50 poke p+x,a(y)
+60 next:next
+70 for y=16to22:p=c+80+y*40
+80 for x=0to39
+90 poke p+x,a(x and15)
+100 next:next
+105 print"any key to end";
+110 b$=inkey$:if b$=""then110
+120 print chr$(11)
+130 end
+
+900 print chr$(11);
+910 dim a(16):forj=0 to15:a(j)=j*16+j:next
+920 print"Display Color Bars"
+930 print"Any key to begin"
+940 print"Any key to end."
+950 print:print"Press a key to begin"
+960 b$=inkey$:if b$=""then960
+970 s=3*4096:c=s+1024
+980 print chr$(11);
+990 return
+

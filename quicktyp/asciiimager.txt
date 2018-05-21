@@ -1,0 +1,26 @@
+REM AQUARIUS ASCII Imager
+new
+1110 print chr$(11)
+1510  poke 12288, 255 :rem create solid border
+1520 d=12327: mod=1024: B=12288+mod: cd=6
+1530 rows =160 : rem start drawing at line 2
+1540 poke b,7 : rem a white border
+1550 columns = cd
+1560 for a=0 to 255
+1570 n=a
+2230 columns=columns+1
+2285 FG=cd + d + columns + rows
+2290 BG=cd + b + columns + rows+39
+2300 poke (FG),a
+2310 poke (BG),7
+2350 if columns > 21 then gosub 5000
+2600 next a
+4000 if inkey$<>" " then goto 4000
+5000 columns = cd: rows = rows + 40 
+5010 return
+6000 end
+run
+
+
+
+

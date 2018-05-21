@@ -1,0 +1,32 @@
+new
+10 print chr$(11)
+20 for x = 0 to 1024
+30 poke 12288+1024+x,119
+40 next x
+50 for i=1 to 24: print: next i
+
+1110 REM ASCII CHARACTERS
+1510  poke 12288, 255 :rem create solid border
+1520 d=12327-40: mod=1024: B=12288+mod-40: cd=0
+1530 rows =0 : rem start drawing at 40*row
+1540 poke b,7 : rem a white border
+1550 columns = cd
+1560 for a=0 to 255
+1570 n=a
+2230 columns=columns+2
+2285 FG=cd + d + columns + rows
+2290 BG=cd + b + columns + rows+39
+2300 poke (FG),a
+2310 poke (BG),a
+2350 if columns > 38 then gosub 5000
+2600 next a
+4000 if inkey$<>" " then goto 4000a
+4800 return
+5000 columns = cd: rows = rows + 80 
+5010 return
+
+6000 poke b,7 : rem a white border
+6100 a$=inkey$: if a$="" then 6100
+6200 end
+
+run

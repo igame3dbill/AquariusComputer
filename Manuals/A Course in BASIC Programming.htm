@@ -1,0 +1,3804 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>A Course in BASIC Programming</title>
+<meta name="subject" content="ZX80">
+<meta name="doccomm" content="OCRed with CuneiForm 99 by F.J. Kraan 
+                              from the second edition 1980. Edited and
+			      maintained with vi and/or Kate.
+			      Proofreading and corrections by Lex Landa.">
+<style type="text/css">
+H1    { font-size: 24pt; font-family: sans-serif; }
+H2    { font-size: 18pt; font-family: sans-serif; }
+H3    { font-size: 14pt; font-family: sans-serif; }
+P     { font-size: 10pt; font-family: sans-serif; font-weight: normal; }
+P.pno { font-size: 9pt; font-style: italic; text-align: right; 
+        page-break-after: always; }
+P.pne { font-size: 9pt; font-style: italic; text-align: left; 
+        page-break-after: always; }
+BODY  { font-size: 10pt; font-family: sans-serif; }
+PRE   { font-size: 10pt; font-family: sans-serif; }
+TABLE { font-size: 10pt; font-family: sans-serif; 
+        text-align: justify; vertical-align: top;
+        padding: 0em; background-color: white; color: black;
+	border-collapse: collapse; border-width: 0px; 
+	width: 100%; }
+TD    { font-size: 10pt; font-family: sans-serif; 
+        text-align: justify; vertical-align: top;
+        padding: 1em; background-color: white; color: black;
+	width: 50%; border-color: black; 
+	border-style: none none none solid ; border-width: 1px; }
+Table.nb TD { font-size: 10pt; font-family: sans-serif; 
+	      text-align: justify; vertical-align: top;
+	      padding: 0em; background-color: white; color: black;
+	      width: 20%; border-color: black; 
+	      border-style: none ; border-width: 0px; }
+HR    { height: 1px; background-color: white; color: black; }
+</style>
+<!-- <link rel="STYLESHEET" type="text/css" href="zx80om.css"> -->
+</head>
+<body>
+
+<hr>
+<a name="i"></a>
+<h1>A COURSE IN<br>
+BASIC PROGRAMMING</h1>
+<p>by</p>
+<p>Hugo Davenport</p>
+
+<table>
+<tbody><tr><td>&nbsp;</td><td>
+
+<h3>CONTENTS</h3>
+
+<p>
+<a href="#INTRO">Chapter 1 INTRODUCTION</a><br>
+<a href="#GETTING">Chapter 2 GETTING STARTED</a><br>
+<a href="#NOTSO">Chapter 3 NOT SO BASIC</a><br>
+<a href="#TALK">Chapter 4 TALKING TO THE ZX-80</a><br>
+<a href="#PROBLEMS">Chapter 5 SO YOU'VE GOT PROBLEMS</a><br>
+<a href="#ANSWERS">Chapter 6 FINDING THE ANSWERS</a><br>
+<a href="#DECISION">Chapter 7 DECISIONS, DECISIONS</a><br>
+<a href="#BRANCH">Chapter 8 BRANCHING OUT</a><br>
+<a href="#ITER">Chapter 9 ITER-WHAT?</a><br>
+<a href="#LOOP">Chapter 10 LOOPING THE LOOP</a><br>
+<a href="#HOWTO">Chapter 11 HOW TO PRINT</a><br>
+<a href="#COPING">Chapter 12 COPING WITH CHARACTERS</a><br>
+<a href="#HELP">Chapter 13 HELP! OR WHAT TO DO WHEN DESPERATE</a><br>
+<a href="#RAGBAG">Chapter 14 A RAGBAG OF FUNCTIONS</a><br>
+<a href="#OVER">Chapter 15 OVER TO YOU</a><br>
+<a href="#APP1">Appendix I ERROR CODES</a><br>
+<a href="#APP2">Appendix II 4K BASIC FOR ZX-80</a><br>
+<a href="#APP3">Appendix III SYSTEM VARIABLES</a><br>
+<a href="#INDEX">Index</a></p>
+
+
+
+<p>© 1980 by Science of Cambridge Ltd.</p>
+<p>Second edition.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 1</p>
+<hr>
+<a name="5"></a>
+
+<h2>CHAPTER <font size="+5">1</font></h2>
+
+<a name="INTRO"></a><p>INTRODUCTION</p>
+
+<p class="CENTER">page 3</p>
+<hr>
+<a name="3"></a>
+
+<h3>INTRODUCTION - READ CHAPTER TWO FIRST!</h3>
+
+<table><tbody><tr><td>
+
+<p>This book is the user's manual for the ZX-80 personal computer. In it
+ is everything you need to know in order to set up the ZX-80 hardware 
+and to use the ZX-80 BASIC language for writing your own programs.</p>
+
+<p>For most of the book the chapters are grouped in pairs. The first 
+(odd-numbered) chapter of a pair is purely descriptive and prepares the 
+reader for what is covered in the second (even-numbered) chapter of the 
+pair. The second chapter of a pair is intended to take you through the 
+use of ZX-80 BASIC as painlessly as possible while you're actually 
+sitting at the keyboard.</p>
+
+<p>If you are an experienced BASIC user, you won't need to read very 
+much - probably only chapter 2, the ZX-80 BASIC language summary, and 
+the Index.</p>
+
+<p>If you're less experienced and patient, it's probably best to read 
+through the whole book, chapter by chapter. If you're less experienced 
+but impatient you can skip the odd numbered chapters 3, 5, 7, and 9 (and
+ probably will!).</p>
+<p>OK. NOW READ CHAPTER TWO - AGAIN!</p>
+
+</td><td>
+</td></tr></tbody></table>
+
+<p class="pno">page 5</p>
+<hr>
+<a name="1"></a>
+
+<h2>CHAPTER <font size="+5">2</font></h2>
+
+<a name="GETTING"></a><h3>GETTING STARTED</h3>
+
+<p class="pno">page 7</p>
+<hr>
+<a name="1"></a>
+
+<h3>GETTING STARTED</h3>
+
+<table><tbody><tr><td>
+
+<p>This is the most important chapter in the book. It tells you how to connect up and switch on your ZX-80.</p>
+
+<p>The ZX-80 consists of two units:</p>
+<p>(1) The computer</p>
+<p>(2) The power supply</p>
+
+<p>The power supply used should be 9 volts DC @ 600 mA unregulated, 
+terminated with a 3.5 mm jack plug. The tip of the jack plug must be 
+positive.</p>
+
+<p>DON'T PLUG IN THE MAINS SUPPLY YET</p>
+
+<p>Look at the back of the ZX-80 computer. You will see four sockets. 
+Three of these are 3.5 mm jack sockets marked MIC, EAR and POWER. The 
+fourth is a phono socket for the video cable.</p>
+
+<p>The connection diagram shows how to connect up the ZX-80 to the power
+ supply and to a domestic television which will be used to display the 
+output for the ZX-80.</p>
+
+</td><td>
+
+<p>A video cable with a coaxial plug at each end is provided to connect the TV to the computer.</p>
+
+<p>A twin cable with 3.5 mm jack plugs at both ends is provided to 
+connect the ZX-80 to a cassette recorder. Don't worry about this for the
+ moment.</p>
+
+<p>Connect the power supply to the ZX-80 by plugging the 3.5 mm jack plug into the socket marked 9V DC IN (if you <u>do</u>
+ get it in the wrong jack socket you won't damage your ZX-80 even if you
+ switch on the power. It won't work until you get the plug in the right 
+socket, though!)</p>
+
+<p>SEE DIAGRAM</p>
+
+<p>Connect the TV using the coax lead provided. You will have to tune 
+the TV to the ZX-80 frequency, approximately channel 36 on UHF, so check
+ that you can do this - most TV sets either have a continuously variable
+ tuning control or, if they select channels with push-buttons, have 
+separate tuning controls for each channel. If your set is a push-button 
+set select an unused channel (ITV 2, perhaps). Turn down the volume 
+control.</p>
+
+<p>OK - we can't put off the moment of truth any longer!</p>
+
+<p>Switch on the TV.</p>
+<p>When it has warmed up...</p>
+<p>SWITCH ON THE ZX-80.</p>
+</td></tr></tbody></table>
+
+<p class="pno">page 9</p>
+<hr>
+<a name="10"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om010_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om010_1.gif" alt="Connecting the ZX80" width="577" height="399"></a></p>
+<p class="pne">page 10</p>
+<hr>
+<a name="11"></a>
+
+<table><tbody><tr><td>
+
+<p>You will be disappointed to see a horrible grey mess on the screen!!</p>
+
+<p>Try tuning in the TV set. At some position of the tuning control the 
+screen will suddenly clear. At the bottom left hand corner of the screen
+ you will see a curious symbol - a black square with a white letter K in
+ it.</p>
+
+<p>If you can't see the K, turn the brightness control up until you can 
+see it; you may find that adjusting the contrast control improves 
+legibility. You may be planning to use your ZX-80 a lot. If so it may be
+ worth considering buying a second-hand black-and-white TV to use with 
+the ZX-80, They can be bought cheaply - in the UK, at least.</p>
+
+<p>STORING PROGRAMS ON TAPE</p>
+
+<p>Before you can store programs on tape you'll have to write a program,
+ The rest of this book is all about writing programs, so the first thing
+ to do is to read on until you've got a program to store...</p>
+<p>...and now that you have we can start.</p>
+
+<p>The twin coax cable with 3.5 mm jack plugs is used to connect the 
+tape recorder to the ZX-80. Most cassette recorders have 3.5 mm jack 
+sockets</p>
+
+</td><td>
+
+<p>for MICROPHONE and EARPIECE. If you have one of those, just connect 
+the 3.5 mm jack plugs as shown in the diagram. On other recorders DIN 
+sockets are used. DIN plug to 3.5 mm jack plug connecting leads are 
+available from most Hi-Fi shops. Consult the handbook to find out how to
+ connect up the plug or plugs.</p>
+<p>Once you have done this, connect up the cassette recorder to the 
+ZX-80. Set the tone control (if any) to MAXIMUM. Some recorders have 
+separate TREBLE and BASS control. In this case set TREBLE to MAXIMUM, 
+BASS to MINIMUM. Set the volume control to MAXIMUM.</p>
+<p>Have you got that program?</p>
+<p>Unplug the MIC plug or DIN plug from the recorder and use the 
+recorder's microphone to record the program's title; if you haven't 
+recorded your voice saying the program's title, you will have trouble in
+ finding programs when you've got a lot of them on tape. Stop the 
+recorder. Reconnect the plug to the recorder. Get into command mode. 
+Start recording and <u>then</u> type SAVE (E key) and NEWLINE.</p>
+
+<p>The screen will go grey for about 5 seconds, then you'll see a series of horizontal streaks</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 11</p>
+<hr>
+<a name="12"></a>
+
+<table><tbody><tr><td>
+
+<p>across the screen. After a few seconds the screen will clear and will show the program listing.</p>
+<p>You will want to check that the program has been SAVED. Unplug the 
+EAR plug. Rewind the tape until you get back to your voice. Now play 
+back. You will hear your title, then you may (or may not) hear a short 
+buzz followed by about 5 seconds of silence. You will then hear a 
+peculiar sound, rather like a supercharged bumble bee. This is the 
+program being played back via the loudspeaker. After a while the sound 
+will change to a loud buzz. Rewind until you are at the beginning of the
+ 5 second silence. Reconnect the EAR plug. Start playing back and then 
+type LOAD (W key) NEWLINE. The screen will go grey or black and after a 
+few seconds it may start looking grey but agitated. After a few more 
+seconds the screen should clear to show a listing of the program.</p>
+
+<p>Note: when you SAVE a program you also SAVE all the data and 
+variables. You can avoid deleting these (RUN clears them) by using the 
+command GO TO 1.</p>
+
+<p>If it doesn't, use BREAK (SHIFT SPACE) to stop LOADING. If this 
+doesn't work, unplug the power from the ZX-80 for a few seconds. Try 
+repeating the procedure using different</p>
+
+</td><td>
+
+<p>volume control settings. If this doesn't work, are you using the 
+cassette recorder on mains power? Try again using battery power. If this
+ fails, check the wiring to MIC and EAR.</p>
+
+<p>On the ZX-80 some cassette recorders will not work properly with both
+ jacks plugged in at the same time. You can usually tell if yours is one
+ of these by observing that there is a signal (self oscillation) during 
+the 5 second "silence". To SAVE on these recorders you should connect 
+only from the computer to the cassette recorder external MIC socket. To 
+LOAD connect only from the computer to the cassette recorder EAR socket.</p>
+
+<p>Good luck!</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 12</p>
+<hr>
+<a name="13"></a>
+
+<h2>CHAPTER <font size="+5">3</font></h2>
+
+<h3><a name="NOTSO">NOT SO BASIC</a></h3>
+
+<p class="pno">page 13</p>
+<hr>
+<a name="15"></a>
+
+<h3>NOT SO BASIC</h3>
+
+<table><tbody><tr><td>
+
+<p>Nearly all digital computers (such as the ZX-80) talk to themselves 
+in binary codes. We talk to each other in English. This means that 
+either we have to learn binary codes, or we have to teach the computer 
+English. Binary codes are about as difficult to learn as Chinese, but it
+ can be done. Forty years ago you <u>had</u> to learn them if you wanted
+ to use a digital computer at all. But why should we do the work when 
+we've got a computer to do it for us?</p>
+
+<p>So we teach the computer English. There is a snag, though. Computers,
+ so far, aren't bright enough to learn English, something which a child 
+of two does relatively easily. This is mainly because we have so many 
+words and ways of saying things in English. A computer would have to 
+learn every single one. We have to compromise half-way between binary 
+and English. Sometimes we compromise at a <u>low level</u> by using assembly <u>codes</u> which are more like binary than English. Sometimes we compromise at a <u>high level</u>
+ by using languages such as ALGOL, PL/1, PASCAL, FORTRAN, and BASIC. 
+These languages are much closer to English than binary. The ZX-80 uses 
+BASIC because it is easy to learn and more than adequate for most 
+purposes. BASIC stands</p>
+
+</td><td>
+
+<p>for Beginner's All-purpose Symbolic Instruction Code and was devised 
+at Dartmouth College, New Hampshire in 1964 as a simple beginners' 
+programming language. Although it was intended just for beginners, it 
+has since become one of the most widespread and popular high level 
+languages. This isn't very surprising when you think about it, because 
+even scientists and engineers prefer to concentrate on science and 
+engineering instead of trying to talk to computers in complex and 
+difficult languages.</p>
+
+<p>Like English, BASIC has a variety of dialects, depending on which 
+computer is being used. The ZX-80 BASIC differs from other BASIC's in 
+some respects. These differences are listed in the appendix "Summary of 
+ZX-80 BASIC" at the end of this book.</p>
+
+<p>As we said before, computers aren't that bright. We have to tell them
+ exactly what to do by giving them a step-by-step list of instructions. 
+This is called a program. Each instruction must be given in a clear and 
+un-ambiguous way - the syntax must be right (in ZX-80 BASIC the computer
+ will tell you if it thinks that the syntax is wrong <u>before</u> you can run the program. Some BASICs wait until you've tried to run the program before they say "nuts!"), Even if the</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 15</p>
+<hr>
+<a name="16"></a>
+
+<table><tbody><tr><td>
+
+<p>syntax is right, the computer will be confused if you give it a badly
+ thought out list of instructions. Chapters 5 and 7 give some ideas for 
+making sure that you're telling the computer to do the right things in 
+the right order.</p>
+
+<p>STATEMENTS AND COMMANDS</p>
+
+<p>ZX-80 BASIC allows you to use 22 instructions or statements.</p>
+
+<p>These are divided into several categories.</p>
+<p>1. System commands:</p>
+<ul>
+<li>NEW - Clears ZX-80 ready for a new program</li>
+<br><li>RUN - Runs the current program</li>
+<br><li>LIST - Lists the current program</li>
+<br><li>LOAD - Loads a program from tape</li>
+<br><li>SAVE - Saves a program on tape</li>
+</ul>
+
+<p>2. Control statements:</p>
+<ul>
+<li>GOTO</li>
+<br><li>IF... THEN...</li>
+<br><li>GOSUB</li>
+<br><li>STOP</li>
+<br><li>RETURN</li>
+</ul>
+</td><td>
+<!-- (Lex) Start of next table definition resets the ordered list - need to find a way around this. -->
+<!-- (Lex)  Currently, I am not using ordered lists here, because of that. -->
+<ul>
+<br><li>FOR ... TO</li>
+<br><li>NEXT</li>
+<br><li>CONTINUE</li>
+</ul>
+<p>These statements allow the programmer to control the order in which 
+instructions are carried out. They are described in detail in chapters 7
+ - 10.</p>
+
+<p>3. Input/Output statements:</p>
+<ul>
+<li>PRINT - allows computer to output data</li>
+<br><li>INPUT - allows user to enter data</li>
+</ul>
+<p>I/O statements provide a means for getting data into and out from BASIC programs.</p>
+<p>4. Assignment statement:</p>
+<ul>
+<li>LET...=...</li>
+</ul>
+<p>This versatile statement is used whenever an arithmetic operation is to be performed.</p>
+
+<p>5. Other statements:</p>
+<ul>
+<li>CLEAR - clears the stored values of variables</li>
+<br><li>CLS - clears the screen</li>
+<br><li>DIM - sets the size of an array</li>
+<br><li>REM - indicates that what follows is a remark</li>
+
+</ul></td></tr></tbody></table>
+
+<p class="pne">page 16</p>
+<hr>
+<a name="17"></a>
+
+<table><tbody><tr><td>
+
+<p>RANDOMISE - sets up random number</p>
+<dir><p>generator</p></dir>
+
+<p>POKE - allows user to talk to the com-</p>
+<dir><p>puter in binary code</p></dir>
+
+<p>There are some normal BASIC statements which are not included in ZX-80 BASIC. These are:</p>
+<p>READ </p>
+<p>DATA </p>
+<p>RESTORE </p>
+<p>END</p>
+<p>ON</p>
+
+<p>Nearly everything that can be done by using these statements can be 
+done in ZX-80 BASIC by using other statements. (The END statement is not
+ needed at all in ZX-80 BASIC).</p>
+
+<p>In a BASIC program all statements or lines are preceded by a <u>statement</u> <u>number</u> <u>or</u> <u>line</u> <u>number</u> which labels that particular line. Line numbers can vary between 1 and 9999. The computer carries out, or <u>executes</u>,
+ statements in the order in which they are numbered. It makes life 
+easier by always displaying programs in order of increasing statement 
+numbers, so that the order in which the program is listed is also the 
+order in which it would be executed.</p>
+
+</td><td>
+
+<h3>VARIABLES</h3>
+
+<p>All the pieces of information stored in the computer for use in a 
+program are labelled so that the computer can keep track of them, Each 
+piece of information, or <u>variable</u>, has a name.</p>
+
+<p>There are two sorts of variable:</p>
+
+<ol>
+<li>Numbers <u>(integer</u> <u>variables)</u> which can take<dir>
+any whole number value from - 32768 to</dir><dir>32767 inclusive.</dir><dir><p>Example: <u>142</u></p></dir></li>
+
+<li>Strings which can be any sequence of any
+characters (except " ) of any length.</li>
+</ol>
+<p>Example: <u>"AROUND</u> <u>THE</u> <u>WORLD</u> <u>IN</u> <u>80</u> <u>DAYS"</u></p>
+
+<p>Integer variables have names which must always start with a letter and only contain letters and digits.</p>
+
+<p>Integer variable names can be any length, so if you wish the name could be a mnemonic for the variable.</p>
+
+<p>Some allowable variable names for integer variables are:</p>
+
+<p>A A2 AB AB3 ANSWER A4X</p>
+
+<p>Y Y8 YZ YZ9 FREDBLOGGS (N.B. no</p>
+<dir><p>space).</p></dir>
+
+<p>AAAA Z123ABC QTOTAL</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 17</p>
+
+<hr>
+<a name="18"></a>
+
+<table><tbody><tr><td>
+
+<p>Some illegal names are:</p>
+
+<p>4 4 4AD            (name <u>must</u> start with a</p>
+<dir><dir><p>letter)</p></dir></dir>
+<p>FRED BLOGGS (space not allowed)</p>
+<p>A.B (other characters not</p>
+<dir><dir><p>allowed)</p></dir></dir>
+<p>FRED-BLOGGS (not a variable, but two</p>
+<dir><dir><p>variables, one subtracted from the other)</p></dir></dir>
+
+<p>String variables have names of the form: letter $</p>
+
+<p>The dollar sign tells you (and the computer) that the variable is a 
+string variable. Because only one letter is allowed, this means that you
+ can only have up to 26 string variables in a program.</p>
+
+<p>Some allowable names for string variables:</p>
+
+<p>A$ P$ X$</p>
+
+<p>Some illegal names:</p>
+<p>2$ (name must start with letter)</p>
+<p>A2$ (too many characters)</p>
+<p>AC$ (too many characters)</p>
+
+<p>All this may seem a little daunting at first. The good news is that, like so many things, it's easier than it sounds. </p>
+
+</td><td>
+
+<p>Notes:
+</p><ol>
+<li>Arrays must have a name consisting of a single letter.</li>
+<li>Control variables (see Chapter 10) must have a name consisting of a single letter.</li>
+</ol>
+</td></tr></tbody></table>
+
+<p class="pne">page 18</p>
+<hr>
+<a name="19"></a>
+
+<h2>CHAPTER <font size="+5">4</font></h2>
+
+<a name="TALK"><h3>TALKING TO THE ZX-80</h3></a>
+<p class="pno">page 19</p>
+
+<hr>
+<a name="21"></a>
+
+<p align="CENTER"><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om021_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om021_1.gif" alt="ZX80 keyboard layout" width="50%"></a></p>
+
+<p align="CENTER">The Keyboard</p>
+<p class="pno">page 21</p>
+<hr>
+<a name="22"></a>
+
+
+<h3>LET'S TALK</h3>
+
+<table><tbody><tr><td>
+
+<p>Set up the computer as described in chapter 2 and switch on. You will see a <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif"> sign appear at the bottom left hand corner of the screen. This is the <u>cursor</u> and shows you where you are on the screen.</p>
+
+<h3>THE KEYBOARD</h3>
+
+<p>If you look at the keyboard you will see that it looks quite like a 
+typewriter keyboard but there are some differences. There is no carriage
+ return key (instead there's a key called NEW LINE) and the space bar is
+ replaced by a key labelled SPACE. All the letters are upper case 
+(capitals) so that if you use the SHIFT key you get the symbol printed 
+on the top right hand corner of the key. You'll also notice that quite a
+ lot of keys have labels above them - such as NEW above the Q key. These
+ will save you a lot of time from now on.</p>
+
+<p>One vital point: it is very important to distinguish between the 
+letter 0 and figure 0 or Zero. In the book we will use 0 to mean letter 0
+ and Ø to mean zero. On the screen the com-puter uses a square O [<img src="A%20Course%20in%20BASIC%20Programming_files/o.gif">] for letter O and a</p>
+
+</td><td>
+
+<p>hexagonal 0 [<img src="A%20Course%20in%20BASIC%20Programming_files/0.gif">]
+ for zero. (The reason that we've used Ø in the book is because it is 
+easier for printing and because all other books on programming use it).</p>
+
+<p>SINGLE-KEY KEYWORD SYSTEM</p>
+
+<p>Hit the Q key. Amazing! The computer writes NEW on the screen. Now 
+hit NEWLINE. You have cleared the computer ready to accept a new 
+program. This illustrates the single-key keyword system. Most of the 
+words you'll have to use with ZX-80 BASIC can be typed with only one 
+keystroke in this way. In all this may save you up to 40% of the typing 
+you'd otherwise have to do. Some BASICs allow you to use single 
+key-strokes to input words like NEW, PRINT, RUN etc. but only the ZX-80 
+prints out the word in full. This makes it much easier to keep track of 
+what's going on in programs. You'll see how it works as you go along.</p>
+
+<p>The labels above the numeral keys - NOT, AND etc. - are not keywords. They are called <u>tokens</u> and, when needed, are obtained by using the SHIFT key. This also applies to EDIT on the NEWLINE key.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 22</p>
+
+<hr>
+<a name="23"></a>
+
+<table><tbody><tr><td>
+
+<u><p>Getting data in and out of the ZX-80 computer</p>
+</u>
+<p>The PRINT statement allows you to get data out of the computer. This can be done while a program is running - or afterwards.</p>
+
+<p>Type exactly: 100 "THIS IS A STRING"</p>
+
+<p>using SHIFT Y for "</p>
+
+<p>That should have come out as</p>
+
+<p>10 PRINT "THIS IS A STRING"</p>
+
+<p>The computer provided the word PRINT, as well as the space between 10 and PRINT. Did you notice what happened to the <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif">
+ cursor? First of all, it followed what you were typing in, appearing 
+just after the last character typed. After PRINT it changed to a <img src="A%20Course%20in%20BASIC%20Programming_files/l.gif">
+ sign - this showed that the computer was not expecting any more 
+single-key keywords just then. After you typed " you may have noticed 
+that another character appeared as well - a <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> sign. What was actually on the screen was</p>
+
+<p>10 PRINT "<img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"></p>
+
+<p>This <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> is the <u>syntax error marker</u>
+ and occurs if there is a syntax error in the line being typed in. In 
+this case it came up because the line needs the closing quotation marks 
+if it is to be</p>
+
+</td><td>
+
+<p>correct. The <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif">
+ followed the cursor as you typed in THIS IS A STRING and vanished when 
+you typed the second ". Now erase the " by using the RUBOUT key. The <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> reappears. Try hitting the NEWLINE key - nothing happens because the computer won't accept a line containing a syntax error.</p>
+
+<p>Type " and hit the NEWLINE key.</p>
+
+<p>The computer accepts the line and displays it at the top of the screen together with a <img src="A%20Course%20in%20BASIC%20Programming_files/gt.gif"> cursor which shows that it is the last (and in this case the first) line entered. The <img src="A%20Course%20in%20BASIC%20Programming_files/gt.gif"> points to the <u>current</u> <u>line.</u></p><u>
+</u>
+<p>Although there is only one line entered it is a program consisting of
+ only one instruction. Type R (RUN) and NEWLINE and the program will run
+ - after a brief flicker on the screen the words</p>
+
+<p>THIS IS A STRING</p>
+
+<p>appear at the top of the screen. At the bottom you'll see 0/10 which tells you that the program ran successfully with no errors.</p>
+
+<p>Type any key to get back into <u>command mode.</u></p>
+
+<p>What the computer did was to print all the characters between the quotation marks. Any</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 23</p>
+<hr>
+<a name="24"></a>
+
+<table><tbody><tr><td>
+
+<p>character (except for quotation marks) is legal when PRINT is used in this way.</p>
+<p>In general this form of the PRINT statement is useful for things like
+ titles which only have to be printed once in a program. There are other
+ forms which allow more complicated things to be done; you'll come 
+across these the whole way through this book.</p>
+<p>Now let's try getting some data into the computer. This is done by using the INPUT statement, which is basically of the form:</p>
+<p>INPUT variable name.</p>
+
+<p>Hit NEW (key Q) and NEWLINE. This tells the computer that a new program is being entered.</p>
+<p>Type in the following program, using NEWLINE at the end of each line.
+ (If you make a mistake, use SHIFT 0 (RUBOUT) to delete the mistake; 
+every time you hit RUBOUT the character, keyword, or token to the left 
+of the cursor is deleted).</p>
+
+<pre>10 PRINT "ENTER YOUR STRING"
+20 INPUT A$            (A$ is the name of a
+                              string variable)
+30 PRINT A$           (You can use PRINT to
+                              print out a variable)</pre>
+
+<p>Now run the program by typing RUN (key R) and NEWLINE.</p>
+
+</td><td>
+
+<p>The computer responds with</p>
+<dir><p>ENTER YOUR STRING</p>
+<p>"<img src="A%20Course%20in%20BASIC%20Programming_files/l.gif">"</p></dir>
+
+<p>and waits. The "L" means that it is waiting for you to do something; 
+in this case the quotation marks show that is is expecting you to enter a
+ string variable.</p>
+
+<p>Type in a short message or random string of letters (don't use quote 
+marks) and press NEWLINE, The computer prints out what you have just put
+ in, which was a string variable called A$.</p>
+
+<p>Get back into command mode by pressing any key. Try running the 
+program several times using more and more characters in your string. 
+Keep an eye on the cursor. On the 15th line it will vanish. RUBOUT 
+(shift 0) - the cursor will reappear. Now carry on adding characters - 
+the display will gradually get SMALLER as you use up the storage 
+capacity of the processor. Now hit NEWLINE - a 4/20 error message 
+appears. The 4 tells you that the ZX-80 ran out of space to put the 
+string variable into, and the 20 tells you that this happened at line 20
+ of the program.</p>
+
+<p>Get back into command mode.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 24</p>
+<hr>
+<a name="25"></a>
+
+<table><tbody><tr><td>
+
+<p>You may have wondered why the line numbers have been 10, 20, 30 instead of (say) 1, 2, 3.</p>
+
+<p>This is because you may want to add bits to the middle of your program.</p>
+
+<p>For instance, enter</p>
+<pre>22 PRINT "ENTER A NUMBER"
+24 INPUT A
+40 PRINT A</pre>
+
+<p>The program displayed at the top of the screen now reads</p>
+<pre>10 PRINT "ENTER YOUR STRING"
+20 INPUT A$
+22 PRINT "ENTER A NUMBER"
+24 INPUT A
+30 PRINT A$
+40 PRINT A</pre>
+
+<p>because the computer always sorts out the lines in numerical order. 
+By leaving gaps between line numbers you can always do this. It also 
+makes it easy to see how you've altered the program since the original 
+lines will have line numbers in multiples of 10 (unless the lines were 
+added at the end of the program, like statement 40). Now try running the
+ program again.</p>
+
+</td><td>
+
+<p>FIRST it asks you for a string. Enter a string.</p>
+
+<p>THEN it asks you for a number. Notice that when the ZX-80 is waiting for you to enter a number it displays <img src="A%20Course%20in%20BASIC%20Programming_files/l.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> and not "<img src="A%20Course%20in%20BASIC%20Programming_files/l.gif">". Enter a number.</p>
+
+<p>FINALLY it prints out what you put in.</p>
+
+<p>In chapter 3 the difference between string variables and integer 
+variables is mentioned. The program has two variables in it - a string 
+variable A$ and an integer variable A. How does the computer react when 
+you give it a different sort of variable to the one that it's expecting?</p>
+
+<p>Easy enough to find out - just run the program again. When the 
+computer asks you for a string, give it a number. What happened? It was 
+accepted - numbers are acceptable inside strings. Now - when it asks you
+ for a number, type in a letter. Nothing much happened except that 2/24 
+appeared at the lower left hand corner of the screen. This is another 
+error code. The 2 stands for the type of error - VARIABLE NAME NOT FOUND
+ - because the computer knew that the letter was the name of an integer 
+variable and you hadn't assigned a value to it. The 24 stands for the 
+line number at which the error was found.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 25</p>
+<hr>
+<a name="26"></a>
+
+<table><tbody><tr><td>
+
+<p>EDITING PROGRAMS</p>
+
+<p>Suppose that you want to alter something in a program that you've already entered. (This is called editing a program.)</p>
+<p>It's easy on a ZX-80.</p>
+<p>Get into command mode.</p>
+<p>Look at the listing at the top of the screen. The cursor (current 
+line pointer) is at line 40. Now see what happens when you hit SHIFT 7 (<img src="A%20Course%20in%20BASIC%20Programming_files/up.gif">) a few times - the cursor moves up line by line. SHIFT 6 (<img src="A%20Course%20in%20BASIC%20Programming_files/down.gif">) moves it down line by line.</p>
+
+<p>These keys allow you to select any line in your program to edit.</p>
+
+<p>A further key, HOME (SHIFT 9) sets the line pointer to line 0. 
+Because there isn't a line 0 the cursor will vanish if you use HOME - 
+but when you hit SHIFT 6 the cursor will jump to the next line - in this
+ case line 10 - and reappear.</p>
+
+<p>Select a line - line 22 for example.</p>
+
+<p>Now hit SHIFT NEWLINE. Line 22 (or any other one you might have selected) appears at the bottom of the screen.</p>
+
+<p>Try SHIFT 8 (<img src="A%20Course%20in%20BASIC%20Programming_files/right.gif">) - you'll see the cursor jump past PRINT. SHIFT 5 (<img src="A%20Course%20in%20BASIC%20Programming_files/left.gif">) moves the cursor left,</p>
+
+</td><td>
+
+<p>to where it was before. Try moving the cursor right a few times - say
+ to the position after ENTER. Now type a few A's - they are inserted 
+into the string to the immediate left of the cursor. A few RUBOUTS and 
+you can erase them again.</p>
+
+<p>This editing facility is very useful if you want to alter individual 
+characters within lines. However, if you want to delete a whole line it 
+would be rather tedious to go through the procedure mentioned above. 
+There is a simpler way to delete lines, though.</p>
+
+<p>Type the line number, then NEWLINE - and you'll see the line vanish 
+from the listing at the top of the screen. The cursor &gt; will also 
+vanish. It will not reappear until you type a new line, use the control 
+keys Ø and g, or use the LIST command.</p>
+
+<h3>THE LIST COMMAND</h3>
+
+<p>As you get more experienced with the ZX-80 you'll want to write 
+programs longer than the 24 lines which will fit onto the screen. This 
+could pose a problem - or could it? We can find out by writing a really 
+long program.</p>
+
+<p>Type NEW then NEWLINE.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 26</p>
+<hr>
+<a name="27"></a>
+
+<table><tbody><tr><td>
+
+<p>Enter the following program (which prints a large number of blank lines).</p>
+
+<pre>  10 PRINT
+  20 PRINT
+  30 PRINT
+  40 PRINT
+
+...and so on to...
+
+230 PRINT (keep an eye on the listing in
+              the upper part of the screen)
+240 PRINT 
+250 PRINT 
+260 PRINT</pre>
+
+<p>We seem to have lost the first few lines. Or have we?</p>
+
+<p>Hit LIST (key A) fallowed by NEWLINE - the program is now displayed from line 10 down.</p>
+
+<p>Now try LIST 200 - the program is displayed from line 200. You can 
+list the program starting from any line you want in this way. Notice 
+that the current line cursor is altered to the line you selected.</p>
+
+<p>Try using the up/down cursor control keys - go on hitting the <img src="A%20Course%20in%20BASIC%20Programming_files/up.gif"> key and see what happens.</p>
+
+</td><td>
+
+<p>In this way you can display any part of the program you want.</p>
+
+<p>By now you will have realised that the ZX-80 has some powerful (and very convenient) facilities to help you write programs.</p>
+
+<p>From now on we can concentrate on how to write programs which 
+actually do something - like solving arithmetic problems, for instance.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 27</p>
+<hr>
+<a name="29"></a>
+
+<h2>CHAPTER <font size="+5"><b>5</b></font></h2>
+
+
+<a name="PROBLEMS"><h3>SO YOU'VE GOT PROBLEMS</h3></a>
+
+<p class="pno">page 29</p>
+<hr>
+<a name="31"></a>
+
+<h3>SO YOU'VE GOT PROBLEMS</h3>
+
+<table><tbody><tr><td>
+
+<p>People are very good at disentangling confused instructions and 
+solving complex problems. A computer isn't - all it can do is to follow a
+ list of instructions and carry out the instructions as it comes to 
+them.</p>
+
+<p>As an example, take the following instructions which a mother might give to her child:</p>
+
+<p>"Could you run down to the shop and buy some bread? Take 50p which is
+ in my purse on the kitchen table. And for goodness sake get dressed!"</p>
+
+<p>It all seems quite clear; the child knows where to go, what to buy and where the money is.</p>
+
+<p>A computer-controlled robot would take the first instruction:</p>
+<p>run down the shop, and do that.</p>
+
+<p>The second instruction: buy some bread. It can't do that (no money) and at this stage would probably just stop, baffled.</p>
+
+<p>The third instruction: take 50p from the purse, it can't do that.</p>
+<p>The fourth instruction: go to the kitchen table. It returns home and goes to the kitchen table.</p>
+
+</td><td>
+
+<p>Then the fifth instruction: get dressed. It gets dressed.</p>
+
+<p>A child would instinctively carry out the instructions in the following order:
+</p><ol>
+<li>Get dressed</li>
+<li>Go to the kitchen table</li>
+<li>Take 50p from the purse</li>
+<li>Go to the shop</li>
+<li>Buy some bread</li>
+<li>He or she would come back home!</li>
+</ol>
+<p>The mother in this example missed out one vital instruction ('come 
+home') as well as putting the instructions in an illogical order. 
+Children use common-sense to interpret complex instructions, but 
+computers can't do this. You have to do all the thinking in advance when
+ you use a computer. So remember:</p>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om031_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om031_1.gif" width="123" height="27"></a></p>
+<p>One way of making sure that you are thinking straight is by drawing a
+ flow diagram before you start to do any actual programming. This helps 
+you get things in the right order to begin with.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 31</p>
+<hr>
+<a name="32"></a>
+
+<table><tbody><tr><td>
+
+<p>The flow diagram for the example above would look like this:</p>
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om032_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om032_1.gif" width="151" height="179"></a></p>
+<p>Each box contains an instruction, and the arrows show the order in 
+which the instructions are executed. Well, that looks pretty simple and 
+neat. Now that the flow diagram is drawn on paper we can check it by 
+going through the boxes one by one and asking ourselves: Can the child 
+(or the computer) do this?</p>
+
+<p>Starting with the first box (get dressed) we might think that it's 
+pretty basic. On the other hand, the child may not be able to find his 
+clothes because his naughty sister has thrown them out of the bedroom 
+window. Perhaps we should add</p>
+
+</td><td>
+
+<p>an instruction (find clothes) at the beginning of the program.</p>
+
+<p><b>Go to the kitchen table</b>: well, that looks OK.</p>
+
+<p><b>Take 50p from purse</b>: what happens if the purse is empty?</p>
+
+<p><b>Go to the shop</b>: does the child know where the shop is?</p>
+<p><b>Buy some bread</b>: what sort?</p>
+<p><b>Return home</b>: nothing much wrong with that!</p>
+
+<p>Maybe the flow diagram wasn't as good as we thought. Even simple tasks can turn out to be more complicated than we think.</p>
+
+<p>Most of the problems which we've spotted are due to a lack of 
+information and this can be coped with by adding extra instructions at 
+the beginning of the program. These could include:</p>
+<ol>
+<li>Ask where the shop is</li>
+<li>Find clothes</li>
+</ol><p></p>
+
+<p>When you are writing programs for the ZX-80 it is particularly 
+important to give the computer all the information it needs before it 
+has to carry out a task. For instance, if you ask it to <b>PRINT</b> a variable the computer must know the value of the variable.</p>
+
+<p>Now for some arithmetic.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 32</p>
+<hr>
+<a name="33"></a>
+
+<h2>CHAPTER <font size="+5">6</font></h2>
+
+<a name="ANSWERS"><h3>FINDING THE ANSWERS</h3></a>
+
+<p class="pno">page 33</p>
+<hr>
+<a name="35"></a>
+
+<h3>FINDING THE ANSWERS</h3>
+
+<table><tbody><tr><td>
+
+<p>Up to now you've just been getting used to the feel of the computer. Now we'll actually use the computer to do a few sums.</p>
+
+<p>THE LET STATEMENT</p>
+
+<p>Nearly all arithmetic operations are done by using the LET statement. It is of the form</p>
+
+<p>LET variable = expression.</p>
+
+<p>In this case the variable (which can have any name you assign to it) 
+is what you want to find out. The expression describes how you want to 
+define the variable.</p>
+
+<p>For instance</p>
+<table border="1">
+<tbody><tr><td>LET A =</td><td>2+4</td></tr>
+<tr><td>variable</td><td>expression</td></tr>
+</tbody></table>
+<p>means "add 2 to 4 and set A equal to the result (6) ".</p>
+<p>You can use other variables: LET A =2+ B</p>
+<p>Or</p>
+
+<p>LET A= B+C</p>
+
+</td><td>
+
+<p>One condition: the computer must already know what the values of B and C are before it comes to the LET statement.</p>
+
+<p>The equal sign (=) isn't used in quite the same way it is in ordinary arithmetic or algebra. For instance:</p>
+
+<p>LET J = J+1</p>
+
+<p>Obviously J isn't equal to J + 1. What the LET statement means is:</p>
+
+<p>"Take the existing value of J, add one to it and then set J to this value."</p>
+
+<p>The + sign is called an <u>operator</u> and defines the</p>
+<p>operation you wish to be performed. The other</p>
+<p>arithmetic operators are:</p>
+
+<dir>- (minus)</dir>
+<!-- (Lex)  Make this a list? -->
+<!-- (Lex)  The algebraic 'x' symbol was difficult to find -->
+<dir>* (multiply - there is no <font face="Symbol">c</font> sign to avoid confusion with letter <i>x</i>)</dir>
+<dir>/ (divide)</dir>
+<dir>** (raise to the power)</dir>
+
+<p>For the moment we'll leave / and ** out of it.</p>
+
+<p>Here is a program for multiplying two numbers together.</p>
+<pre>10 PRINT "MULTIPLICATION"
+20 PRINT "ENTER FIRST NUMBER"</pre>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 35</p>
+<hr>
+<a name="36"></a>
+
+<table><tbody><tr><td>
+
+<pre>30 INPUT A
+40 PRINT "ENTER SECOND NUMBER"
+50 INPUT B
+60 LET C=A*B
+70 PRINT "THE ANSWER IS", C</pre>
+
+<!-- Lex: US spelling of 'economise' - check validity -->
+<p>Notice line 70. It's a PRINT statement with a string between inverted
+ commas, but it's got a C added to it. This form allows you to economize
+ on PRINT statements.</p>
+
+<p>Enter the program and try running it, using two quite small numbers - such as 17 and 25.</p>
+
+<p>The computer will come up with the answer:</p>
+
+<p>THE ANSWER IS 425</p>
+
+<p>Run the program a few more times, increasing the size of the input 
+variables. At about 255 x 129 or just a bit larger you will get another 
+error message - 6/60. The 6 is the code for <u>arithmetic</u> overflow because the answer is larger than 32767, which is the largest number the computer can hold as an integer variable.</p>
+
+<p>Now try editing the program so that it does addition instead - just 
+change the * to a + in line 60. You can also try subtraction and check 
+that you get negative numbers when A is less than B.</p>
+
+</td><td>
+
+<p>All fairly straightforward so far.</p>
+<p>Now let's try division. Alter line 60 to</p>
+<p>60 LET C = A/B</p>
+
+<p>Run the program for
+
+</p><dir><p>A (first number) = 24</p></dir>
+
+<dir><p>B (second number) = 12</p></dir>
+<p>The computer will come up with:</p>
+<p>THE ANSWER IS 2</p>
+<p>Run the program again, this time for A=18 and B=12</p>
+<p>THE ANSWER IS 1</p>
+<p>??!!</p>
+
+<p>Shouldn't that be 1.5? Well, yes, but the ZX-80 uses integer 
+arithmetic - only whole numbers can be expressed. What the computer does
+ is to do a division normally and the truncate the result towards ZERO. 
+As examples:</p>
+
+<p>ANSWER</p>
+
+<!-- (Lex)  I couldn't get TD ALIGN="." to work, here. -->
+<table border="1">
+<tbody><tr><td>2.58</td><td colspan="2">would become</td><td align="RIGHT">2</td></tr>
+<tr><td>-0.01</td><td colspan="2">" "</td><td align="RIGHT">0</td></tr>
+<tr><td>212.1</td><td colspan="2">" "</td><td align="RIGHT">212</td></tr>
+<tr><td>-5941.98</td><td colspan="2">" "</td><td align="RIGHT">-5941</td></tr>
+</tbody></table>
+
+<p>This means that you may have to be careful when you use division - 
+it's always fairly accurate when you're dividing a large number by a 
+small number, but may be less accurate when the two numbers are closer 
+together in size.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 36</p>
+<hr>
+<a name="37"></a>
+
+<table><tbody><tr><td>
+
+<p>Luckily there are ways of getting round this problem. For instance, 
+here is a program which will give quotients to 3 decimal places using 
+integer arithmetic only.</p>
+
+<!-- (Lex)  This was in PRE tags before.  The page table is overriding the appearance - fix? -->
+<table border="1">
+<tbody><tr><td>10 PRINT "DIVISION PROGRAM"</td></tr>
+<tr><td>20 PRINT "DIVIDEND =?"</td></tr>
+<tr><td>30 INPUT X</td></tr>
+<tr><td>40 PRINT "DIVISOR =?"</td></tr>
+<tr><td>50 INPUT Y</td></tr>
+<tr><td>60 LET Z = X/Y</td><td>Divides X by Y</td></tr>
+<tr><td>70 LET R1 = X - Z * Y</td><td>Calculates remainder</td></tr>
+<tr><td>80 LET D1 = 10 * R1/Y</td><td>Divides 10 * remainder by Y to give 1st decimal</td></tr>
+<tr><td>90 LET R2 = 10 * R1 - D1 * Y</td><td>Calculates 2nd remainder</td></tr>
+<tr><td>100 LET D2= 10 * R2/Y</td><td>Divides to give 2nd decimal place</td></tr>
+<tr><td>110 LET R3 = 10 * R2 - D2 * Y</td><td>Calculates 3rd remainder</td></tr>
+<tr><td>120 LET D3 = 10 * R3/Y</td><td>Last decimal place</td></tr>
+<tr><td>130 PRINT "THE ANSWER IS ";Z;".";D1;D2;D3</td></tr>
+</tbody></table>
+
+</td><td>
+
+<p>This program does a long division in exactly the same way as we would do it on paper.</p>
+
+<p>Try running it!</p>
+
+<p><u>Notice the PRINT list in line 130</u> - it contains several 
+literal strings and variables separated by semicolons. The semicolons 
+tell the ZX-80 that each thing to be printed must be printed immediately
+ after the preceding item, without spaces between them.</p>
+
+<p>Also notice the LET statements from line 70 on. There's no fiddle - 
+you can use more than one operator per statement. There is a snag, 
+though.</p>
+
+<p>Operations are not necessarily carried out in order from left-to-right.</p>
+
+<p>The order in which they are carried out <u>depends on what sort of operations are present in the statement</u>.</p>
+
+<p>Here is a list of priorities for arithmetic operations:</p>
+<table>
+<tbody><tr><td>First</td><td>A**B (A to the power B)</td></tr>
+<tr><td>Second</td><td>-A</td><td>(Negation, or multiplication by -1)</td></tr>
+<tr><td>Third</td><td>A*B</td></tr>
+<tr><td>Fourth</td><td>A/B</td></tr>
+<tr><td>Fifth</td><td>A+B or A-B</td></tr>
+</tbody></table>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 37</p>
+<hr>
+<a name="38"></a>
+
+<table><tbody><tr><td>
+
+<p>Now for some experiments</p>
+<pre>10 REM TEST PROGRAM    (<b>REM</b> is a keyword - key <b>Y</b>)
+20 PRINT "ENTER A"
+30 INPUT A
+40 PRINT "ENTER B"
+50 INPUT B
+60 PRINT "ENTER C"
+70 INPUT C
+80 LET Z=A+B*C
+90 PRINT Z</pre>
+
+<p>Try running this with A = 1, B = 2, C = 3 but before you start, use 
+the priority rules to predict what answer the ZX-80 will give: 7 or 9?</p>
+
+<p>O.K. - run it now.</p>
+
+<p>The answer was 7. First the computer multiplied 2 by 3 to get 6, then it added 1 to get the final answer.</p>
+
+<p>Try a few other combinations by editing statement 80 - like</p>
+<p>A*B/C</p>
+<p>A/B*C (watch out for truncation!)</p>
+<p>A**B (A to the power B - try using small</p>
+<p>numbers with C = 0)</p>
+
+</td><td>
+
+<p>-A**B</p>
+<p>A*-B</p>
+
+<p>Here's a golden rule: when in doubt either use more than one LET statement and build up that way, or use <u>brackets.</u></p>
+<p>Brackets make life much easier when it comes to complex arithmetic operations.</p>
+
+<p>Take example Z = A/B*C</p>
+
+<p>The normal sequence would be for the computer to evaluate B times C and then divide A by the result.</p>
+
+<p>If we put brackets round A/B thus: 80 LET Z = (A/B)*C</p>
+
+<p>then the computer will carry out the operation within the brackets first, even though it has a lower priority.</p>
+
+<p>A more subtle example is:</p>
+<p>Z = A*(B/C)</p>
+<p>and</p>
+<p>Z = A*B/C</p>
+
+<p>At first sight you would think that these would give the same answer.</p>
+
+<p>Well, they do - sometimes!</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 38</p>
+<hr>
+<a name="39"></a>
+
+<table><tbody><tr><td>
+
+<p>Try them both using A = 100, B = 25, C = 5 (the answer is 500)</p>
+
+<p>Now try it both ways using A = 100, B = 3, C = 5 (the answer should be 60).</p>
+<p>What happened when you used the brackets?</p>
+<p>Think about it.</p>
+<p>The phantom truncator has struck again!</p>
+
+<p>The computer evaluated 3/5 first and truncated it to ZERO - then it multiplied 100 by ZERO and naturally got ZERO as a result.</p>
+
+<p>All this emphasizes that you have to be very much on the alert when 
+you use integer arithmetic for multiplication and division. 
+Multiplications can cause arithmetic overflow problems (which will cause
+ the program to stop), whilst small numbers used in division may give 
+rise to funny answers which <u>don't</u> give error codes.</p>
+
+<p>If you think that you're going to run into truncation then do 
+multiplications first - on the other hand it may be better to do 
+divisions first to avoid overflow.</p>
+
+<p>That's probably enough arithmetic for now. Let's move on to more interesting things.</p>
+
+</td><td>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 39</p>
+<hr>
+<a name="41"></a>
+
+<h2>CHAPTER <font size="+5">7</font></h2>
+
+<a name="DECISION"><h3>DECISIONS, DECISIONS</h3></a>
+
+<p class="pno">page 41</p>
+<hr>
+<a name="43"></a>
+
+<h3>DECISIONS, DECISIONS</h3>
+
+<table><tbody><tr><td>
+
+<p>So far we have only considered problems which can be solved by 
+carrying out a list of instructions, starting at the beginning of the 
+list and working steadily down the list until the last instruction is 
+carried out.</p>
+
+<p>The next four chapters deal with ways in which you can make the ZX-80
+ (or any computer using BASIC) carry out much more complex programs 
+which can perform many tedious tasks.</p>
+
+<p>In chapter 5 we talked briefly of the use of flowcharts for checking 
+that the program steps were in a logical sequence. This can be useful 
+even for simple programs. When it comes to complex programs flowcharts 
+are vital.</p>
+
+<p>Let's consider a problem we face every day - getting up in the morning. There is a flowchart for getting up on the next page.</p>
+
+<p>The program is said to <u>branch</u> at each decision diamond. As you
+ can see, one feature of branches is that they allow some parts of the 
+program to be skipped if they are not necessary.</p>
+
+<p>Programs can get difficult to understand if there are a lot of branches, and this is where flow diagrams help.</p>
+
+</td><td>
+
+<p>It is a good idea to keep a pad or notebook handy when you are 
+writing programs and an even better one to draw a flow diagram of your 
+program <u>before</u> you start writing it!</p>
+
+<p>Turn to the next chapter to find out how the ZX-80 can take decisions.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 43</p>
+<hr>
+<a name="44"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om044_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om044_1.gif" width="572" height="441"></a></p>
+
+<p class="pne">page 44</p>
+<hr>
+<a name="45"></a>
+
+<h2>CHAPTER <font size="+5">8</font></h2>
+
+<a name="BRANCH"><h3>BRANCHING OUT</h3></a>
+
+<p class="pno">page 45</p>
+
+<hr>
+<a name="47"></a>
+
+<h3>BRANCHING OUT</h3>
+
+<table><tbody><tr><td>
+
+<p>Before we go on to real decisions lets have a look at the GO TO statement.</p>
+
+<p>This is of the form</p>
+<p>GO TO <b>n</b> where <b>n</b> is <u>normally</u> a line number. It can be a variable, though only the ZX-80 BASIC has the power to do this.</p>
+
+<p>When the ZX-80 comes to a GO TO statement it jumps straight to statement number <b>n</b> and executes that statement. If <b>n</b> is a variable - <b>X</b>, say - the computer will look at the value of <b>X</b> and jump to the statement with that number - assuming that there is a statement with that number in your program.</p>
+
+<p>A further refinement of the GO TO statement is that <b>n</b> can be any integer expression such as <b>A/10</b>. Here again, this is possible with the ZX-80.</p>
+
+<p>Here is a program which illustrates the use of GO TO.</p>
+<pre>10 PRINT "THIS IS STATEMENT 10"
+20 GO TO 40
+30 PRINT "THIS IS STATEMENT 30"
+40 PRINT "END OF PROGRAM"</pre>
+<p>Now run the program.</p>
+
+</td><td>
+
+<p>The computer responded with</p>
+<p>THIS IS STATEMENT 10</p>
+<p>END OF PROGRAM</p>
+
+<p>It skipped statement 30. "That's not much use", you must be saying, 
+"what's the point of including a perfectly good statement which will 
+never be executed?"</p>
+
+<p>OK</p>
+<p>Get back into command mode.</p>
+<p>Now, type GO TO 30, and then NEWLINE.</p>
+<p>The ZX-80 came back with</p>
+<p>THIS IS STATEMENT 30</p>
+<p>END OF PROGRAM</p>
+
+<p>This demonstrates two uses of GO TO - first <u>to jump unconditionally</u>
+ to an arbitary statement (in this case statement 40); second as a 
+command which causes the computer to jump to the desired statement (in 
+this case 30) and start executing the program from there.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 47</p>
+
+<hr>
+<a name="48"></a>
+
+<h3>THE IF STATEMENT</h3>
+
+<table><tbody><tr><td>
+
+<p>This is the most powerful control statement in BASIC. It allows the user to incorporate decision-making into his programs.</p>
+
+<p>Here is a program for calculating square roots approximately. It does
+ this by multiplying a number by itself, starting with 0 and comparing 
+the result with the number whose square root is to be found. If the 
+product is less than the number to be rooted it increases the number by 1
+ and tries again.</p>
+
+<!-- (Lex)  Table here? -->
+<pre>10 PRINT "SQUARE ROOT ROUTINE"
+<p>20 PRINT "ENTER THE NUMBER TO BE ROOTED"
+30 INPUT X
+40 LET J=0
+50 LET K = J*J
+60 LET D = X-K
+70 IF D = 0 THEN GO TO 110</p><dir>(Use SHIFT 3 to get THEN)</dir>
+80 IF D &lt; 0 THEN GO TO 130<dir>(&lt; is SHIFT N)</dir>
+90 LET J = J+1
+100 GO TO 50</pre>
+</td><td>
+<pre>110 PRINT "THE ROOT IS";J
+120 GO TO 140
+130 PRINT " THE ROOT LIES BETWEEN ";(J - 1); " AND "; J
+140 STOP</pre>
+
+<p>See the diagram on the next page.</p>
+
+<p>The form of the IF statement is:</p>
+<pre>IF (CONDITION TO BE MET) THEN (DO THIS)
+70 IF D = 0 THEN GO TO 110</pre>
+
+<p>In line 70 the condition to be met was <u>D = 0</u> and if this is so then J is <u>exactly</u>
+ the square root of X, so we want to print THE ROOT IS J. In this case 
+(DO THIS) is GO TO 110 which is the number of the PRINT statement we 
+want.</p>
+
+<p>In most BASICs the only thing you can do in a IF statement is to GO 
+TO a line number. The ZX-80 lets you do other things as well.</p>
+<p>In fact it lets you do almost anything!</p>
+<p>Some examples:</p>
+<p>70 IF D = 0 THEN PRINT "NUTS"</p>
+<p>70 IF D = 0 THEN INPUT G</p>
+<p>70 IF D = 0 THEN LET A = 10</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 48</p>
+
+<hr>
+<a name="49"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om049_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om049_1.gif" width="326" height="338"></a></p>
+
+<p class="pno">page 49</p>
+
+<hr>
+<a name="50"></a>
+
+<table><tbody><tr><td>
+
+<p>Any keyword can follow THEN in an IF statement - even things like 
+LIST or RUN. The results can be rather peculiar if you use commands such
+ as LIST. The examples listed above can be useful, though.</p>
+
+<p>The condition to be met is (in its simplest version) of the form:</p>
+
+<!-- (Lex)  I don't have 'This sounds rather a mouthful!' in my manual.  Strange. -->
+
+<p>(Expression) (relational operator) (expression) This sounds rather a mouthful!</p>
+
+<p>A relational operator can be:</p>
+<table>
+<tbody><tr><td>=</td><td> equal to</td></tr>
+<tr><td>&lt;</td><td>less than</td></tr>
+<tr><td>&gt;</td><td>greater than</td></tr>
+</tbody></table>
+<p>Examples</p>
+
+<table>
+<tbody><tr><td>A = 2</td><td>A equal to 2</td></tr>
+<tr><td>A &lt; 10</td><td>A less than 10</td></tr>
+<tr><td>A+B &gt; C+D</td><td>A+B greater than C+D</td></tr>
+</tbody></table>
+
+<p>In these cases, A, 2, 10, A+B and C+D are the expressions.</p>
+
+<p>The expressions need not be a simple integer or integer variable.</p>
+
+<!-- (Lex)  This is horrible. -->
+<p>The statement
+</p><pre>IF A=Z - (Z/B)*B THEN GO TO 10
+          \______ expression ______/
+</pre>
+
+</td><td>
+
+<p>is quite valid, and so is IF A+B &gt; C+D THEN GO TO 20</p>
+
+<p>The condition to be met can be even more complex because <u>logical operators</u> can be used.</p>
+
+<p>For example</p>
+<pre>10 IF NOT A=2 THEN GO TO 100
+          \__/
+     logical operator
+(use SHIFT 1 for NOT)</pre>
+
+<p>This NOT operator negates the succeeding condition, so that the ZX-80 will jump to 100 if A does <u>not</u> equal 2.</p>
+
+<p>This program illustrates the use of the AND operator.</p>
+<pre>10 INPUT A 
+20 INPUT B 
+30 INPUT C
+40 IF A=1 AND B=1 AND C=1 THEN PRINT "OK"
+<dir>(<b>AND</b> is another logical operator)</dir></pre>
+<!-- (Lex)  I could not work out how to have the text point to the word 'AND'. -->
+<p>(Use SHIFT 2 for <b>AND</b>)</p>
+
+<p>The condition to be met is that ALL three variables must be 1; if this is so it will print <u>OK.</u> You can chain together as many conditions as you like in this way. Try running this program</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 50</p>
+
+<hr>
+<a name="51"></a>
+
+<table><tbody><tr><td>
+
+<p>and see if you can make it print <u>OK</u> in any way other than by entering three 1s.</p>
+
+<p>The other logical operator is the <b>OR</b> operator.</p>
+
+<p>Edit the program by changing the <b>AND</b>s to <b>OR</b>s (<b>OR</b> is SHIFT B).</p>
+
+<p>When you run the program now you will find that it prints <u>OK</u> as long as one of the numbers entered is a 1.</p>
+
+<p>You can use brackets to group things together.</p>
+<p>Consider the following statements:</p>
+<p>(a) 40 IF A=1 OR B=1 AND C=1 THEN PRINT "OK"</p>
+
+<p>(b) 40 IF (A=1 OR B=1) AND C=1 THEN PRINT "OK"</p>
+
+<p>If you remember, in chapter 6 we said that some operators had 
+priority over others - multiplications were carried out before divisions
+ or additions, for instance. The same applies to logical operators.</p>
+
+<p>Their priority (in descending order) is</p>
+<p>NOT</p>
+<p>AND</p>
+<p>OR</p>
+
+</td><td>
+
+<p>Thus, in (a) B=1 AND C=1 is taken first, so that the computer will print <u>OK</u>
+ if B AND C are 1 'but will also print OK if A=1. The brackets in (b) 
+work in the same way as they did for arithmetic operators. Thus the 
+ZX-80 will print <u>OK</u> if C=1 and <u>either</u> B=1 or A=1.</p>
+
+<p>The operators NOT, AND and OR also allow you to produce conditional expressions. For example, if you require</p>
+<p>X=3  if A&gt;B</p>
+<p>X=Q+R  if A=B</p>
+<p>X=P  if A&lt;B</p>
+
+<p>The obvious way is:</p>
+<pre>110 IF A&gt;B THEN LET X=3
+120 IF A=B THEN LET X=Q+R
+130 IF A&lt;B THEN LET X=P</pre>
+
+<p>However you could instead write:</p>
+
+<p>110 LET X=A&gt;B AND 3 OR A=B AND Q+R</p>
+<p>OR A&lt;B AND P</p>
+
+<p>To round off this chapter on branching, here is a program which throws a die. The program uses a useful facility, the function</p>
+<p>RND(X)</p>
+<p>This generates a random number in the range 1</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 51</p>
+<hr>
+<a name="52"></a>
+
+<table><tbody><tr><td>
+
+<p>to X. It occurs in line 120 of the program - in this case X = 6</p>
+
+<p></p><pre>10 PRINT "DIE THROWING"
+20 LET A$ = "<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">...<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">"    <img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif"> is SHIFT A
+30 LET B$ = "..<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">.."
+40 LET C$ = "<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">...."
+50 LET D$="....<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">"
+60 LET E$="....."
+120 LET X = RND (6)
+130 PRINT "YOU THREW..."
+140 IF X = 1 THEN GO TO 200
+150 IF X = 2 THEN GO TO 300
+160 IF X = 3 THEN GO TO 400
+170 IF X = 4 THEN GO TO 500
+180 IF X = 5 THEN GO TO 600
+190 IF X = 6 THEN GO TO 700
+195 GO TO 1000
+200 PRINT E$
+205 PRINT E$
+210 PRINT B$
+215 PRINT E$
+220 PRINT E$</pre><p></p>
+
+</td><td>
+
+<p></p><pre>230 GO TO 1000
+300 PRINT C$
+305 PRINT E$
+310 PRINT E$
+315 PRINT E$
+320 PRINT D$
+330 GO TO 1000
+400 PRINT D$
+405 PRINT E$
+410 PRINT B$
+415 PRINT E$
+420 PRINT C$
+430 GO TO 1000
+500 PRINT A$
+505 PRINT E$
+510 PRINT E$
+515 PRINT E$
+520 PRINT A$
+530 GO TO 1000
+600 PRINT A$
+605 PRINT E$</pre><p></p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 52</p>
+
+<hr>
+<a name="53"></a>
+
+<table><tbody><tr><td>
+
+<p></p><pre>610 PRINT B$
+615 PRINT E$
+620 PRINT A$
+630 GO TO 1000
+700 PRINT A$
+705 PRINT E$
+710 PRINT A$
+715 PRINT E$
+720 PRINT A$
+1000 STOP</pre><p></p>
+
+<!-- (Lex)  I don't have this text in my manual. -->
+<p>It's a bit of a strain to enter this program but it's quite fun to run.</p>
+
+<p>Note that lines 140 to 190 could have been replaced by</p>
+
+<p>140 GO TO (X+1) * 100</p>
+
+<p>If you want to make the program restart itself try editing the program:</p>
+
+<pre>1000 PRINT "HIT NEWLINE TO THROW AGAIN"
+1100 INPUT X$
+1200 CLS    (CLS is on key C)
+1300 IF X$ = "" THEN GO TO 120</pre>
+
+</td><td>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om053_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om053_1.gif" width="225" height="357"></a></p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 53</p>
+
+<hr>
+<a name="54"></a>
+
+<table><tbody><tr><td>
+
+<p>Two points: CLS clears the screen. If you didn't put this in the 
+screen would fill up after 3 goes and the program would stop, giving an 
+error message such as 5/305 (run out of screen at line 305).</p>
+<p>Secondly, the use of a INPUT statement to halt program execution is a
+ useful trick. The string variable X$ is used in statement 1300 when it 
+is tested to see that only NEWLINE has been pressed; any other entry 
+will stop the program (there is nothing between the quotation marks in 
+1300).</p>
+
+<p>The reason that there is a IF statement at 1300 rather than a GO TO 
+statement is that, while the ZX-80 is waiting for a string variable to 
+be entered, the BREAK key (SHIFT SPACE) doesn't work. As a result it is 
+difficult to get out of the program except by entering a very long 
+string variable - a variable so long, in fact, that it makes the 
+computer run out of storage space. This is very tedious, so it's better 
+to use the IF statement. Then if you enter any character the program 
+will stop.</p>
+
+<p>(If you do ever get into a situation when nothing you do seems to 
+have any useful effect on the computer, try the BREAK key first. If this
+ has no effect, give in and switch the ZX-80 off for a few seconds. You 
+lose the current program, but</p>
+
+</td><td>
+
+<p>this may be inevitable if you really have got yourself into a fix.)</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 54</p>
+
+<hr>
+<a name="55"></a>
+
+<h2>CHAPTER <font size="+5">9</font></h2>
+
+
+<a name="ITER"><h3>ITER - WHAT?</h3></a>
+
+<p class="pno">page 55</p>
+
+<hr>
+<a name="57"></a>
+
+<h3>ITER - WHAT?</h3>
+
+<table><tbody><tr><td>
+
+<p>Very often we come up against problems which involve repeated 
+operations. The square rooting program in chapter 8 was one example of 
+such a problem, and the program was written so that the computer jumped 
+back to line 50, if the test conditions in statements 70 or 80 were not 
+met, and tried again - and again - until the conditions <u>were</u> met.</p>
+
+<p>Programs of this sort are called <u>iterative.</u> By using iterative techniques it's possible to get the computer to do a lot of work with a very short program.</p>
+
+<p>It's easy to make a program iterative - all you have to do is to put a
+ GO TO statement at the end of the program to jump the computer back to 
+the first statement (or any other suitable statement). One snag is that 
+such iterative programs can get stuck in endless loops.</p>
+
+<p>One way to avoid this is to allow the computer to go round only a set
+ number of times. One way of doing this would be to use IF and GO TO 
+statements.</p>
+
+<p>Consider the following program which prints <b>$</b> 152 times.</p>
+
+</td><td>
+
+<pre>10 LET J= 1
+20 PRINT "$";
+30 IF J = 152 THEN GO TO 60
+40 LET J = J+1
+50 GO TO 20
+60 STOP</pre>
+
+<p>First the program sets J (the <u>loop</u> <u>control</u> variable) to
+ 1. Then it prints $. Then it tests to see if J = 152. It isn't and so 
+the computer goes on to line 40 which increments the value of J by 1 to 
+2. The computer passes on to 50 which tells it to jump back to 20. This 
+process goes on until J = 152 when the IF statement is satisfied and the
+ computer jumps out of the loop to line 60.</p>
+
+<p>The arrows on the program help you to see where the program is going;
+ for short programs this is quicker than drawing a flow diagram and does
+ make it easier to see what the program is doing.</p>
+
+<p>The program took 5 lines (if you don't count the STOP statement, 
+which doesn't actually do anything - it just serves as a target for the 
+GO TO in line 30.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 57</p>
+
+<hr>
+<a name="58"></a>
+
+<table><tbody><tr><td>
+
+<p>Loops are so useful that you'd have thought that there was an easier 
+way of writing programs using them. Well there is. Turn to chapter 10.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 58</p>
+
+<hr>
+<a name="59"></a>
+
+<h2>CHAPTER <font size="+5">10</font></h2>
+
+<a name="LOOP"><h3>LOOPING THE LOOP</h3></a>
+
+<p class="pno">page 59</p>
+
+<hr>
+<a name="61"></a>
+
+<h3>LOOPING THE LOOP</h3>
+
+<table><tbody><tr><td>
+
+<p>Because loops are so useful some special statements have been devised to make it easy to use them.</p>
+
+<p>Program for printing <b>$</b>:</p>
+<p>10 FOR J = 1 TO 152   (use SHIFT 4 for TO)</p>
+<p>20 PRINT "$";</p>
+<p>60 NEXT J</p>
+
+<p>In chapter 9 it took 5 lines of program to get the same result using IF and GO TO statements.</p>
+
+<p>Note the <b>;</b> after the PRINT statement. This tells the computer to print each <b>$</b> immediately after its predecessor. Try running this program. It's a pity that one can't have a dollar bill for each <b>$</b> sign printed.</p>
+
+<p>In BASIC these loops are normally called FOR loops. They are also 
+widely known as DO loops (because other languages, such as FORTRAN, use 
+DO instead of FOR).</p>
+
+<p>There is nothing to stop us from putting a loop inside another loop - or putting several loops in:</p>
+
+</td><td>
+
+<p>Add the following lines to the program:</p>
+<pre>30 FOR I = 1 TO 3
+40 PRINT "£"
+50 NEXT I</pre>
+<p>The flowchart for this program is:</p>
+
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om061_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om061_1.gif" width="210" height="287"></a></p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 61</p>
+
+<hr>
+<a name="62"></a>
+
+<table><tbody><tr><td>
+
+<p>You can jump <u>out</u> of a loop at any time. If you do this the 
+loop control variable will remain at whatever value if had got to when 
+you jumped out. In our case the loop control variables were J for the 
+major loop and I for the minor loop.</p>
+
+<p>Try jumping out of the major loop at J = 100.</p>
+<p>Add:</p>
+
+<p>15 IF J = 100 THEN GO TO 1000</p>
+<p>1000 STOP</p>
+
+<p>Run this. You'll see that you get fewer <b>$</b>'s and <b>£</b>'s. Get into command mode.</p>
+<p>Now type PRINT J NEWLINE</p>
+<p>The computer responds with <u>100</u></p>
+<p>This shows two things</p>
+
+<p>1. J was 100 when the program jumped out of the loop and stopped.</p>
+
+<p>2. You can use PRINT to find out what state the control variables (or
+ other variable) were in when the program stopped. This is especially 
+useful when you are debugging programs.</p>
+
+<p>If the loop is completed successfully for all values of J up to 152 
+(in this case) the control variable will be left at 153. This is because
+ the NEXT J statement not only tests the value of J</p>
+
+</td><td>
+
+<p>but also increments J by 1. Some BASICs allow you to increment the 
+control variable by other amounts, but this isn't possible on the ZX-80 
+(It's not a very useful feature anyway).</p>
+<!-- (Lex)  Here, I have changed the labels to italicised text, in square brackets. -->
+<p>All this is quite straightforward.</p>
+<blockquote>
+FOR J <i>[control variable]</i> = N <i>[starting value]</i> TO M <i>[finishing value]</i>
+</blockquote>
+<p>defines what variable you want to use, what value it should start at 
+and at what value of control variable you want to leave the loop.</p>
+
+<p>NEXT J reminds the computer that it is in a loop and tells it what 
+variable it should be testing and (in fact) where it should jump back to
+ if the loop isn't finished.</p>
+
+<p>You can start at any value you like - try starting at J = 100. The computer will go round the loop M - N + 1 times.</p>
+
+<p>DON'T EVER jump into a loop unless you have just jumped out of it - 
+if you do the computer will skip the FOR statement and will get very 
+confused because it won't know what the control variable is, what it 
+should start at and what it should finish at. It will do the best it can
+ but it will probably stop when it gets to the NEXT statement. The error
+ message will be of the form</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 62</p>
+<hr>
+<a name="63"></a>
+
+<table><tbody><tr><td>
+
+<p><b>1/LINE No.</b> where <b>1</b> means "no FOR statement to match this NEXT statement", or <b>2/LINE No.</b> where <b>2</b> means "variable name not found".</p>
+
+<p>You can try this by adding to the program:</p>
+<p>5 GO T0 20</p>
+<p>and running, and then adding</p>
+<p>4 LET J = 4</p>
+
+<p>and running (you must say RUN, not GO TO 4).</p>
+
+<p>This will jump the ZX-80 into the major loop and it will stop when it
+ gets to statement 60 (NEXT J) giving the error message 2/60 or 1/60.</p>
+
+<p>In chapter 6 there was a program to divide one number by another to give a quotient to 3 decimal places.</p>
+
+<p>Here is a program to give any number of decimal places. Statement 10 
+is a remark. The computer disregards REM statements when it executes 
+programs. It's often useful to put comments and remarks into programs so
+ that you can remind yourself what the program does when you look at it,
+ often months later!</p>
+<pre>10 REM HIGH PRECISION DIVISION
+20 PRINT "HOW MANY DECIMAL PLACES?"</pre>
+
+</td><td>
+
+<pre>30 INPUT D
+40 PRINT "DIVIDEND?"
+50 INPUT R
+60 PRINT "DIVISOR?"
+70 INPUT Y
+80 LET Z = R/Y
+90 LET R = R - Z*Y
+100 PRINT "QUOTIENT IS "; Z; ".";
+110 FOR J = 1 TO D
+120 LET Z = 10*R/Y
+130 LET R = 10*R-Z*Y
+140 PRINT Z;
+150 NEXT J
+(110 to 150 evalu-
+ ate successive
+ decimal places un-
+ til the program has
+ produced D decimal
+ places</pre>
+
+<p>Try running this, first of all with dividend = 1, divisor = 3, D = 100 (say).</p>
+
+<p><u>Note line 110</u></p>
+<p>110 FOR J =1 to D</p>
+<p>The starting and finishing values can be variables. This means that 
+you can control the starting value and finishing value of the loop 
+variable as you wish. The starting and finishing values can also be <u>expressions</u> of the form D/2, (D+1)*5 or indeed any other arithmetic expression.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 63</p>
+<hr>
+<a name="64"></a>
+
+<table><tbody><tr><td>
+
+<p>110 FOR J = D*10 TO D*200 would be quite legal. However, the name of the control variable must be a <u>single letter.</u></p>
+
+<p>If you do decide to use several FOR loops, one inside the other, be very careful in the way you go about it.</p>
+<dir>
+<dir>
+<dir>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om064_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om064_1.gif" width="217" height="223"></a></p></dir>
+</dir>
+</dir>
+
+<p>is definitely not all right and could cause major problems. Another good reason for using flowcharts!</p>
+
+</td><td>
+
+<p>One final point: because the control variable is effectively tested 
+and incremented by the NEXT statement, the main part of the loop will 
+always be executed at least once - regardless of the value of the 
+control variable - even if you have jumped into the loop.</p>
+
+<h3>SUBROUTINES</h3>
+
+<p>A subroutine is a sub-program which may be used once or many times by the program (or main program).</p>
+<p>Example:</p>
+<p>10 FOR J = 1 TO 10</p>
+<p>20 GO SUB 1000 (GO SUB is on key V)</p>
+<p>30 NEXT J</p>
+<p>40 PRINT "END"</p>
+<p>900 GO TO 1200</p>
+<p>1000 PRINT "SUBROUTINE EXECUTED"</p>
+<p>1100 RETURN            (RETURN is on key B)</p>
+<p>1200 STOP</p>
+
+<p>Statement 20 tells the computer to <u>GO TO the subroutine</u> at line 1000.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 64</p>
+<hr>
+<a name="65"></a>
+
+<table><tbody><tr><td>
+
+<p>This prints:</p>
+
+<p>SUBROUTINE EXECUTED</p>
+
+<p>Statement 1100 tells the computer that the subroutine is finished and
+ that it should return to the main program. The computer then jumps to 
+the line <u>immediately following</u> the GO SUB statement and executes that (in this case: NEXT J).</p>
+
+<p>An example of the use of subroutines is given below: The Chinese Ring Puzzle.</p>
+
+<p>As you will see, one subroutine can call another, or even call itself (this is called <u>recursion</u>).</p>
+
+<h3>THE CHINESE RINGS PUZZLE</h3>
+
+<p>This is a program which will say what moves are required to remove N rings from the T-shaped loop.</p>
+
+<p>The mechanics of this wire puzzle are not important - roughly 
+speaking one manipulates the rings until they all come off the loop.</p>
+
+<p>For an arbitrary number of rings the rules are as follows:</p>
+
+<p>1. Each ring can be either on the loop or off it.</p>
+
+</td><td>
+
+<p>2. Only one ring may be moved (from on to off</p>
+<p>or vice versa) at a time.</p>
+<p>3. The first ring may be moved at any time.</p>
+<p>4. The <b>i</b>th ring (<b>i</b>&gt;1) may be moved if and only if:</p>
+<p>(a) All the rings numbered <b>i-2</b> or lower are</p>
+<p>off.</p>
+<p>(b) Ring <b>i-1</b> is on.</p>
+<p>...the rings higher up the loop (number &gt;<b>i</b>) may</p>
+<p>be in any state, so:</p>
+<p>To remove the first <b>i</b> rings:</p>
+<p>1. Remove the first <b>i-2</b> rings</p>
+<p>2. Remove the <b>i</b>th ring</p>
+<p>3. Replace the first <b>i-2</b> rings</p>
+<p>4. Remove the first <b>i-1</b> rings</p>
+<p>To replace the first <b>i</b> rings:</p>
+<p>1. Replace the first <b>i-1</b> rings</p>
+<p>2. Remove the first <b>i-2</b> rings</p>
+<p>3. Replace the <b>i</b>th ring</p>
+<p>4. Replace the first <b>1-2</b> rings</p>
+<p>CHINESE RINGS (Recursive procedure)</p>
+<p>10 INPUT N</p>
+<p>20 GO SUB 100</p>
+<p>30 STOP</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 65</p>
+<hr>
+<a name="66"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om066_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om066_1.gif" width="515" height="308"></a></p>
+
+<p>            Chinese Ring Puzzle</p>
+
+<p class="pne">page 66</p>
+<hr>
+<a name="67"></a>
+
+<table><tbody><tr><td>
+
+<p>100 IF N&lt;1 THEN RETURN</p>
+<p>120 LET N = N - 2</p>
+<p>130 GO SUB 100</p>
+<p>140 PRINT N+2; "OFF",</p>
+<p>150 GO SUB 500</p>
+<p>160 LET N = N+1</p>
+<p>170 GO SUB 100</p>
+<p>180 LET N = N+1</p>
+<p>190 RETURN</p>
+
+<p>500 IF N&lt;1 THEN RETURN</p>
+<p>520 LET N = N - 1</p>
+<p>530 GO SUB 500</p>
+<p>540 LET N = N - 1</p>
+<p>550 GO SUB 100</p>
+<p>560 PRINT N + 2; " ON",</p>
+<p>570 GO SUB 500</p>
+<p>575 LET N = N+2</p>
+<p>580 RETURN</p>
+
+<p>Your output for the case N = 4 should look like:</p>
+
+<p>2 OFF 1 OFF 4 OFF 1 ON <br>
+2 ON 1 OFF 3 OFF 1 ON <br>
+2 OFF 1 OFF</p>
+
+</td><td>
+
+<p>The GO SUB statement can be used in conjunction with a variable, e.g.</p>
+
+<p>10 GO SUB G</p><dir>whereupon the computer will jump to the subroutine at line whose number is the value of G (if there is such a line).</dir><p></p>
+
+<p>As before, an expression can also be used.</p>
+
+<p>In general it is not a very good idea to use variables or expressions in this way because the program <u>may</u> alter the variable in a way you hadn't foreseen and thus cause problems.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 67</p>
+<hr>
+<a name="69"></a>
+
+<h2>CHAPTER <font size="+5">11</font></h2>
+
+<a name="HOWTO"><h3>HOW TO PRINT</h3></a>
+
+<p class="pno">page 69</p>
+
+<hr>
+<a name="71"></a>
+
+<table><tbody><tr><td>
+
+<h3>HOW TO PRINT</h3>
+
+<p>Up to now we have used the PRINT statement as and when it was needed 
+to print out headings and variables. In fact PRINT is a very versatile 
+statement indeed.</p>
+
+<p>The general form of the PRINT statement is PRINT expression ch expression ch expression ch... and so on.</p>
+
+<p>ch stands for <u>control character</u> and this can be <b>,</b> or <b>;</b> or nothing at all (at the end of the statement only).</p>
+
+<p>Expressions can be literal strings in quotes, e.g.</p>
+<p>"THIS IS A LITERAL STRING"</p>
+<p>or string variables such as <b>A$</b></p>
+
+<p>Alternatively they can be integer variables or arithmetic expressions, e.g.</p>
+
+<p>A2 or B*2/C</p>
+
+<p>The object of using control characters is to be able to control the 
+spacing of the line to be printed. We've already come across the use of <b>;</b> in PRINT statements.</p>
+
+<p>The program</p>
+<p>10 LET X=4</p>
+
+</td><td>
+<!-- (Lex)  Messy kludge to deal with drawings -->
+<p>20 PRINT <u>"THE ANSWER IS"</u> <i>[expression]</i> <u>;</u>X<u>;</u> <i>[control characters]</i> <u>"UNITS"</u> <i>[expression]</i></p>
+
+<p>Would print:</p>
+<p>THE ANSWER IS4UNITS</p>
+
+<p>The semi-colon (<b>;</b>) makes the computer print out the 
+expressions without any spaces between them. If you want spaces you have
+ to include them in the literal strings to be printed.</p>
+
+<p>The comma (<b>,</b>) is used as a tab. Each display line of 32 characters on the screen is divided into 4 <u>fields</u>,
+ each of which is 8 characters in length. Each time the computer comes 
+across a comma in a PRINT statement, it starts printing the next 
+expression at the beginning of the next available field.</p>
+
+<p>The effect of this is to provide a display on the screen in 4 
+columns. If a string variable or literal string is more than 7 
+characters long and is followed by a comma the computer uses two or more
+ fields in which to print the string and starts the next expression at 
+the beginning of the third field.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 71</p>
+<hr>
+<a name="72"></a>
+
+<table><tbody><tr><td>
+
+<p>You can add extra commas to skip fields:</p>
+<p>PRINT "FIELD 1", "FIELD 2", "FIELD 3"</p>
+
+<p>would produce the output</p>
+
+<p>FIELD 1 FIELD 2 FIELD 3</p>
+
+<p>but</p>
+
+<p>PRINT "FIELD 1",,<i>[extra comma]</i>"FIELD 2", "FIELD 3"</p>
+
+<p>would produce</p>
+<p>FIELD 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIELD 2 FIELD 3</p>
+<dir><p>this field skipped</p></dir>
+
+<p>The statement</p>
+<p>PRINT "THIS IS A FIELD",,"FIELD1", "FIELD 2"</p>
+
+<p>would produce</p>
+
+<p>THIS IS A FIELD&nbsp;&nbsp;&nbsp;&nbsp;FIELD 1</p>
+
+<p>FIELD 2</p>
+
+<p>The computer used 2 fields for the first string, skipped a field and 
+then continued. It runs out of fields on the first line and has to 
+continue in the first field of the second line.</p>
+
+<p>There is no limit to the number of fields you may skip using commas, (Unless you run out of display area, of course.)</p>
+
+</td><td>
+
+<p>If you use a control character right at the end of a PRINT statement 
+the next PRINT statement will obey the control character. For instance</p>
+
+<p>10 X = 4</p>
+<p>20 PRINT "THE ANSWER IS ";</p>
+<p>30 PRINT X</p>
+<p>will produce the output</p>
+<p>THE ANSWER IS 4</p>
+
+<p>If no control character occurs at the end of a line the next PRINT statement will start printing on a new line.</p>
+
+<p>The best way of finding out about PRINT is to experiment with it.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 72</p>
+<hr>
+<a name="73"></a>
+
+<h2>CHAPTER <font size="+5">12</font></h2>
+
+<a name="COPING"><h3>COPING WITH CHARACTERS</h3></a>
+
+<p class="pno">page 73</p>
+<hr>
+<a name="75"></a>
+
+<h3>COPING WITH CHARACTERS</h3>
+
+<table><tbody><tr><td>
+
+<p>You will have noticed that - in addition to the normal typewriter 
+characters - there are several other characters not usually found on a 
+typewriter. In addition there are some usable characters <u>not</u> written on the keyboard.</p>
+
+<p>Before we go on to investigate what characters can be printed, meet an interesting function:</p>
+
+<p>CHR$(X) where X is a number, integer variable or expression.</p>
+
+<p>It is used mainly in conjunction with the PRINT statement.</p>
+<p>CHR$(X) means "the character whose code is x"</p>
+<p>Try this:</p>
+<p>10 INPUT X</p>
+<p>20 PRINT CHR$(X)</p>
+<p>30 GO TO 10</p>
+
+<p>What this program does is to ask for a number and then to print out 
+the character whose code is the number entered. The codes lie between 0 
+and 255.</p>
+
+<p>A useful program for listing the symbols is given below.</p>
+
+<p>10 PRINT "ENTER CODE VALUE"</p>
+
+</td><td>
+
+<p>20 INPUT X</p>
+<p>30 PRINT X; "..."; CHR$(X)</p>
+<p>40 PRINT</p>
+<p>50 LET X = X+1</p>
+<p>60 GO TO 30</p>
+
+<p>This lists 11 symbols together with their codes, starting with the code entered at the start of the program.</p>
+
+<p>Table of characters corresponding to different codes:</p>
+
+<table class="nb">
+<tbody><tr><td>Code</td> <td> Character </td> <td> Code</td> <td> Character</td></tr>
+<tr><td>0</td> <td>space      </td> <td>  14</td> <td>   :</td></tr>
+<tr><td>1</td> <td>null string </td> <td> 15</td> <td>   ?</td></tr>
+<tr><td>2</td> <td>\           </td> <td> 16</td> <td>   (</td></tr>
+<tr><td>3</td> <td> |          </td> <td> 17</td> <td>   )</td></tr>
+<tr><td>4</td> <td> |          </td> <td> 18</td> <td>   -</td></tr>
+<tr><td>5</td> <td> graphics   </td> <td> 19</td> <td>   +</td></tr>
+<tr><td>6</td> <td> |          </td> <td> 20</td> <td>   *</td></tr>
+<tr><td>7</td> <td> |          </td> <td> 21</td> <td>   /</td></tr>
+<tr><td>8</td> <td> |          </td> <td> 22</td> <td>   =</td></tr>
+<tr><td>9</td> <td> |          </td> <td> 23</td> <td>   &lt;</td></tr>
+<tr><td>10</td> <td> |         </td> <td> 24</td> <td>   &gt;</td></tr>
+<tr><td>11</td> <td>/          </td> <td> 25</td> <td></td></tr>
+<tr><td>12</td> <td>  £  </td> <td>       26 </td></tr>
+<tr><td>13</td> <td>  $        </td> <td> 27</td> <td></td></tr>
+</tbody></table>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 75</p>
+<hr>
+<a name="76"></a>
+
+<table><tbody><tr><td>
+
+<table class="nb">
+<tbody><tr><td>Code</td> <td> Character   </td><td> Code</td> <td> Character</td></tr>
+
+<tr><td>28</td> <td>   Ø    </td><td> 55</td> <td>     R</td></tr>
+<tr><td>29</td> <td>   1           </td><td> 56</td> <td>     S</td></tr>
+<tr><td>30</td> <td>   2           </td><td> 57</td> <td>     T</td></tr>
+<tr><td>31</td> <td>   3           </td><td> 58</td> <td>     U</td></tr>
+<tr><td>32</td> <td>   4           </td><td> 59</td> <td>     V</td></tr>
+<tr><td>33</td> <td>   5           </td><td> 60</td> <td>     W</td></tr>
+<tr><td>34</td> <td>   6           </td><td> 61</td> <td>     X</td></tr>
+<tr><td>35</td> <td>   7           </td><td> 62</td> <td>     Y</td></tr>
+<tr><td>36</td> <td>   8           </td><td> 63</td> <td>     Z</td></tr>
+<tr><td>37</td> <td>   9           </td><td> 64 to 127</td> <td> ?</td></tr>
+<tr><td>38</td> <td>   A           </td><td> 128</td> <td>   Inverse space</td></tr>
+<tr><td>39</td> <td>   B           </td><td> 129</td> <td>   Inverse quote</td></tr>
+<tr><td>40</td> <td>   C           </td><td> 130</td><td>\</td></tr>
+<tr><td>41</td> <td>   D           </td><td> 131</td><td>|</td></tr>
+<tr><td>42</td> <td>   E           </td><td> 132</td> <td>|</td></tr>
+<tr><td>43</td> <td>   F           </td><td> 133</td> <td>|Inverse</td></tr>
+<tr><td>44</td> <td>   G           </td><td> 134</td> <td>|graphics</td></tr>
+<tr><td>45</td> <td>   H           </td><td> 135</td> <td>|</td></tr>
+<tr><td>46</td> <td>   I           </td><td> 136</td> <td>|</td></tr>
+<tr><td>47</td> <td>   J           </td><td> 137</td> <td>|</td></tr>
+<tr><td>48</td> <td>   K           </td><td> 138</td> <td>|</td></tr>
+<tr><td>49</td> <td>   L           </td><td> 139</td> <td>/</td></tr>
+<tr><td>50</td> <td>   M           </td><td> 140</td> <td>   INVERSE £</td></tr>
+<tr><td>51</td> <td>   N           </td><td> 141</td> <td>      "    $</td></tr>
+<tr><td>52</td> <td>   O           </td><td> 142</td> <td>      "    :</td></tr>
+<tr><td>53</td> <td>   P           </td><td> 143</td> <td>      "    ?</td></tr>
+<tr><td>54</td> <td>   Q           </td><td> 144</td> <td>      "    (</td></tr>
+</tbody></table>
+
+</td><td>
+
+<table class="nb">
+<tbody><tr><td>Code</td> <td>   Character </td><td>  Code</td> <td>   Character
+
+</td></tr><tr><td>145</td> <td> Inverse )    </td> <td> 172</td> <td> Inverse G
+</td></tr><tr><td>146</td> <td>    "    -    </td> <td> 173</td> <td>    "    H
+</td></tr><tr><td>147</td> <td>    "    +    </td> <td> 174</td> <td>    "    I
+</td></tr><tr><td>148</td> <td>    "    *    </td> <td> 175</td> <td>    "    J
+</td></tr><tr><td>149</td> <td>    "    /    </td> <td> 176</td> <td>    "    K
+</td></tr><tr><td>150</td> <td>    "    =    </td> <td> 177</td> <td>    "    L
+</td></tr><tr><td>151</td> <td>    "    &gt; </td> <td> 178</td> <td>    "    M
+</td></tr><tr><td>152</td> <td>    "    &lt; </td> <td> 179</td> <td>    "    N
+</td></tr><tr><td>153</td> <td>    "    ;    </td> <td> 180</td> <td>    "    0
+</td></tr><tr><td>154</td> <td>    "    ,    </td> <td> 181</td> <td>    "    P
+</td></tr><tr><td>155</td> <td>    "    .    </td> <td> 182</td> <td>    "    Q
+</td></tr><tr><td>156</td> <td>    "    0    </td> <td> 183</td> <td>    "    R
+</td></tr><tr><td>157</td> <td>    "    1    </td> <td> 184</td> <td>    "    S
+</td></tr><tr><td>158</td> <td>    "    2    </td> <td> 185</td> <td>    "    T
+</td></tr><tr><td>159</td> <td>    "    3    </td> <td> 186</td> <td>    "    U
+</td></tr><tr><td>160</td> <td>    "    4    </td> <td> 187</td> <td>    "    V
+</td></tr><tr><td>161</td> <td>    "    5    </td> <td> 188</td> <td>    "    W
+</td></tr><tr><td>162</td> <td>    "    6    </td> <td> 189</td> <td>    "    X
+</td></tr><tr><td>163</td> <td>    "    7    </td> <td> 190</td> <td>    "    Y
+</td></tr><tr><td>164</td> <td>    "    8    </td> <td> 191</td> <td>    "    Z
+</td></tr><tr><td>165</td> <td>    "    9    </td> <td> 192 to 211</td> <td>  ?
+</td></tr><tr><td>166</td> <td>    "    A    </td> <td> 212</td> <td>         "
+</td></tr><tr><td>167</td> <td>    "    B    </td> <td> 213</td> <td>         THEN
+</td></tr><tr><td>168</td> <td>    "    C    </td> <td> 214</td> <td>         TO
+</td></tr><tr><td>169</td> <td>    "    D    </td> <td> 215</td> <td>         ;
+</td></tr><tr><td>170</td> <td>    "    E    </td> <td> 216</td> <td>         ,
+</td></tr><tr><td>171</td> <td>    "    F    </td> <td> 217</td> <td>         )
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 76</p>
+<hr>
+<a name="77"></a>
+
+<table><tbody><tr><td>
+
+<table class="nb">
+<tbody><tr><td>Code </td> <td> Character </td> <td> Code </td> <td>  Character
+
+</td></tr><tr><td>218 </td> <td> (     </td>  <td> 237 </td> <td> POKE</td></tr>
+<tr><td>219 </td> <td> NOT   </td>  <td> 238 </td> <td> INPUT</td></tr>
+<tr><td>220 </td> <td> -     </td>  <td> 239 </td> <td> RANDOMISE</td></tr>
+<tr><td>221 </td> <td> +     </td>  <td> 240 </td> <td> LET</td></tr>
+<tr><td>222 </td> <td> *     </td>  <td> 241 </td> <td> ?</td></tr>
+<tr><td>223 </td> <td> /     </td>  <td> 242 </td> <td> ?</td></tr>
+<tr><td>224 </td> <td> AND   </td>  <td> 243 </td> <td> NEXT</td></tr>
+<tr><td>225 </td> <td> OR    </td>  <td> 244 </td> <td> PRINT</td></tr>
+<tr><td>226 </td> <td> **    </td>  <td> 245 </td> <td> ?</td></tr>
+<tr><td>227 </td> <td> =     </td>  <td> 246 </td> <td> NEW</td></tr>
+<tr><td>228 </td> <td> &lt;  </td>  <td> 247 </td> <td> RUN</td></tr>
+<tr><td>229 </td> <td> &gt;  </td>  <td> 248 </td> <td> STOP</td></tr>
+<tr><td>230 </td> <td> LIST  </td>  <td> 249 </td> <td> CONTINUE</td></tr>
+<tr><td>231 </td> <td> RETURN </td>  <td> 250 </td> <td> IF</td></tr>
+<tr><td>232 </td> <td> CLS   </td>  <td> 251 </td> <td> GO SUB</td></tr>
+<tr><td>233 </td> <td> DIM   </td>  <td> 252 </td> <td> LOAD</td></tr>
+<tr><td>234 </td> <td> SAVE  </td>  <td> 253 </td> <td> CLEAR</td></tr>
+<tr><td>235 </td> <td> FOR   </td>  <td> 254 </td> <td> REM</td></tr>
+<tr><td>236 </td> <td> GO TO </td>  <td> 255 </td> <td> ?</td></tr>
+</tbody></table>
+
+<p>Inverse means that the character appears white on a black background.</p>
+<p>Inverse space is a black square, for instance.</p>
+
+<p>The graphics characters are shown on the next page:</p>
+
+<p>CHR$ (X) allows us to print any character we want.</p>
+
+</td><td>
+
+<p>There is a further group of facilities which enables us to handle characters;</p>
+
+<p>These are</p>
+<p>(a) TL$ (string)</p>
+<p>- this gives the string minus its first character.</p>
+
+<p>The string can be a literal string inside quotes or a string variable.</p>
+
+<p>10 PRINT TL$ ("ABC") would give</p>
+
+<p>BC</p>
+
+<p>10 PRINT TL$(G$) will cut off the first character of string G$</p>
+
+<p>(b) CODE (string)</p>
+<p>- this gives the code corresponding to the first character in a string (either a string variable or a literal string)</p>
+
+<p>10 PRINT CODE("ABC")</p>
+
+<p>would print 38 which is the code for A.</p>
+
+<p>An example of the way in which these can be used is the following 
+program which accepts a string and prints it out in inverse video.</p>
+<p>10 PRINT "ENTER YOUR STRING"</p>
+<p>20 INPUT G$</p>
+<p>30 PRINT G$</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 77</p>
+<hr>
+<a name="78"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om078_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om078_1.gif" width="508" height="361"></a></p>
+
+<p>Table of Graphic Symbols</p>
+
+<p class="pne">page 78</p>
+<hr>
+<a name="79"></a>
+
+<table><tbody><tr><td>
+
+<p>40 LET X = CODE (G$)</p>
+<p>50 LET X = X + 128</p>
+<p>60 IF G$ = CHR$ (1) THEN GO TO 100</p>
+<p>70 PRINT CHR$ (X);</p>
+<p>80 LET G$ = TL$ (G$)</p>
+<p>90 GO TO 40</p>
+<p>100 STOP</p>
+<p>Statement:</p>
+<p> 40 sets <b>X</b> = code of the first character of <b>G$</b>.</p>
+
+<p> 50 adds 128 to the code (this gives inverse of the letters, digits and graphics).</p>
+
+<p> 60 test the string to see if it is a null string, i.e. has no 
+characters in it. If it is a null string either the input string was a 
+null string to begin with, or all the characters have been converted to 
+inverse video and printed.</p>
+
+<p> 70 prints the inverse video character.</p>
+
+<p> 80 chops off the character which has just been printed and the 
+program then jumps back to 40 and the code for the next character is 
+extracted. The program goes on until the string has been shortened to 
+the null string.</p>
+
+<p>There is a further function which can be useful. This is:</p>
+
+<p>STR$ (variable or number).</p>
+
+</td><td>
+
+<p>This allows an integer number or variable to be treated as a string variable</p>
+<dir><p>10 LET G$ = STR$(1234)</p></dir>
+<p>sets G$ = "1234"</p>
+<dir><p>10 LET G$ = STR$(X)</p></dir>
+
+<p>does the same thing for an integer variable - if X = 4852 then G$ = "4852".</p>
+
+<p>So far we've not said very much about the graphics symbols. These 
+have been designed so as to double the effective resolution of the 
+display, which gives 23 lines of 32 characters each.</p>
+
+<p>Here is a program which plots TWO bar charts on the same display.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 79</p>
+<hr>
+<a name="80"></a>
+
+<h3>BAR CHART PLOTTER</h3>
+
+<table><tbody><tr><td>
+
+<p>10 LET X = 0</p>
+<p>20 PRINT "YZ-AXIS"</p>
+<p>30 PRINT "X ="</p>
+<p>40 FOR I = 1 TO 21</p>
+<p>50 LET Y=X</p>
+<p>60 LET Z=24-X</p>
+<p>70 PRINT X,</p>
+<p></p>
+<p>80 FOR J = 1 TO 20</p>
+<p>85 IF J&gt;Y AND J=Z THEN PRINT CHR$ (3);</p>
+<p>90 IF J&gt;Y AND J&gt;Z THEN GO TO 135</p>
+<p>95 IF J=Y AND J&gt;Z THEN PRINT CHR$ (11);</p>
+<p>100 IF J&lt;Y AND J&lt;Z THEN PRINT CHR$ (139);</p>
+<p>105 IF J&lt;Y AND J=Z THEN PRINT CHR$ (139);</p>
+<p>110 IF J&lt;Y AND J&gt;Z THEN PRINT CHR$ (11);</p>
+<p>115 IF J=Y AND J&lt;Z THEN PRINT CHR$ (139);</p>
+
+<p>Comment 10-70:</p>
+<p>Defines Vari-<br>
+ables and<br>
+prints titles;<br>
+generates Y<br>
+and Z</p>
+
+</td><td>
+
+<p>120 IF J&gt;Y AND J&lt;Z THEN PRINT CHR$ (3);</p>
+<p>125 IF J=Y AND J=Z THEN PRINT CHR$ (139);</p>
+<p>130 NEXT J</p>
+<p></p>
+<p>135 PRINT</p>
+<p>140 LET X=X+1</p>
+<p>150 NEXT I</p>
+
+<p>The program prints Z as black bars, Y as grey bars. Statements 80 to 130 determine what graphic symbol is to be used: <img src="A%20Course%20in%20BASIC%20Programming_files/gr3.gif">, <img src="A%20Course%20in%20BASIC%20Programming_files/gr139.gif">, <img src="A%20Course%20in%20BASIC%20Programming_files/gr138.gif"> or nothing at all.</p>
+
+<p>This program calculates the graphs of Y = X and Z = 24 - X and plots 
+them in bar chart form. As you will see if you run the program it 
+produces a very clear, unambiguous display You can use the same sort of 
+trick to achieve greater resolution along the line, as well as from 
+line-to-line.</p>
+
+<p>Lines 85 to 125 decide what character will be printed, depending on the relative size of J, Z and Y.</p>
+
+<!-- (Lex)  I don't have the word 'literally' in my manual. -->
+<p>These examples are only scratching the surface when it comes to 
+character manipulation and graphics. The possibilities are almost 
+literally endless.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 80</p>
+<hr>
+<a name="81"></a>
+
+<h2>CHAPTER <font size="+5">13</font></h2>
+
+<a name="HELP"><h3>HELP! OR, WHAT TO DO WHEN DESPERATE</h3></a>
+
+
+
+<p class="pno">page 81</p>
+<hr>
+<a name="83"></a>
+
+<h3>HELP! or "What to do when desperate"</h3>
+
+<table><tbody><tr><td>
+
+<p>You may occasionally get into difficulties.</p>
+
+<p>These can be divided into two sorts:
+</p><ol type="a">
+<li>Problems with the system</li>
+<li>Problems with your programs.</li>
+</ol>
+<p>Most problems with the system are likely to occur when you're 
+entering string variables into your programs. One favourite is deleting 
+the quotation marks round the string by accident. When the computer is 
+waiting for you to enter a string variable it prints "<img src="A%20Course%20in%20BASIC%20Programming_files/l.gif">".</p>
+
+<p>If you enter the wrong string and then use RUBOUT to delete it you 
+may delete one or other of the quotation marks. This will give rise to a
+ <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> syntax error symbol. If you see this check to see that both quotes are there.</p>
+
+<p>If you have written a program which calls for a null string to be 
+entered, and the program is recursive, you may find it very difficult to
+ get out of the program back into command mode, Whatever you enter seems
+ to have no effect! When (or if) this happens delete the quotes using 
+RUBOUT <img src="A%20Course%20in%20BASIC%20Programming_files/right.gif"> RUBOUT and enter (say) CHR$ (10**6) which causes arithmetic overflow, giving a 6/N error message (when N is the line</p>
+
+</td><td>
+
+<p>number of the INPUT statement reading the string).</p>
+
+<p>Generally speaking the BREAK key (SHIFT SPACE) is the first thing to 
+resort to. If the program is caught in an endless loop, or if it is 
+LOADing unsuccessfully, the screen will go grey or black for an 
+indefinite period. BREAK will get you back under these conditions.</p>
+
+<p>If BREAK does not work in this situation there is nothing left to do 
+but switch the ZX-80 off for a few seconds and then switch on. You do 
+lose whatever program was in the ZX-80 if you do this.</p>
+
+<p>When it comes to faults in the program it is difficult to offer such specific advice.</p>
+
+<p>Some problems arise if you type an <b>O</b> instead of a <b>0</b>.</p>
+
+<p><b>LET J = O</b> would be accepted as a valid program line but would give a <b>2/N</b> error code (variable not found) when the program was run. This sort of thing can be very difficult to spot. Similarly <b>S</b> and <b>$</b> do get confused.</p>
+
+<p>When a program stops unexpectedly or does something peculiar it may 
+be difficult to work out exactly what went wrong. It is possible to 
+carry out a post-mortem by using the immediate</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 83</p>
+<hr>
+<a name="84"></a>
+
+<table><tbody><tr><td>
+
+<p>PRINT statement to find out what the value of variables (especially loop control variables) was at the time the program stopped.</p>
+<p>If you type</p>
+
+<p>PRINT J (or whatever variable you want)</p>
+<p>the ZX-80 will print it even after the program has stopped running.</p>
+
+<p>Sometimes there is not room to print the whole of the line number in 
+an error message, particu-larly with error numbers 4 and 5. In this case
+ usually only the first digit of the line number is printed. For 
+example, error 4 on line 250 may cause the message<br>
+4/2</p>
+
+<p>Another useful technique is to put STOP statements into programs at 
+key points. When the program reaches the STOP statement it will stop (of
+ course) and you will be able to see how it has performed up to that 
+point, You can then get back into command mode, type CONTINUE (key T) 
+NEWLINE and the program will continue from the STOP statement.</p>
+
+<p>Luckily the ZX-80 is quite choosy about the program lines it will 
+accept and this eliminates many of the problems which can happen with 
+other BASICs.</p>
+
+</td><td>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 84</p>
+<hr>
+<a name="85"></a>
+
+<h2>CHAPTER <font size="+5">14</font></h2>
+
+<a name="RAGBAG"><p>A RAGBAG OF FUNCTIONS</p></a>
+
+<p class="pno">page 85</p>
+<hr>
+<a name="87"></a>
+
+<table><tbody><tr><td>
+
+<p>A RAGBAG OF FUNCTIONS</p>
+
+<p>This chapter covers all those statements and functions that haven't already been dealt with elsewhere.</p>
+
+<p>RND(X) provides a random number in the</p>
+<dir><p>range 1 to X</p></dir>
+
+<p>Typical statement using RND:</p>
+<p>10 LET J = RND(X)</p>
+<dir><p>sets J equal to a random number</p></dir>
+
+<p>Every time the ZX-80 executes the function RND it uses a random 
+number generator to generate a pseudo-random number. It is called 
+pseudo-random because the numbers occur in a fixed sequence. However, 
+the sequence is very long and hence appears random.</p>
+
+<p>RANDOMISE - sets the starting point of the</p>
+<dir><p>sequence to a number equal to the number of frames supplied to 
+the TV since the machine was turned on (unless POKE is used to alter the
+ count, see below).</p></dir>
+
+<p>RANDOMISE n - sets the starting point of the</p>
+<dir><p>sequence to n unless n is 0,</p>
+
+</dir></td><td>
+<!-- (Lex)  The formatting here is quite messy and I would like to tidy it up. -->
+<p>when it behaves as RANDOMISE.</p>
+
+<p>The RANDOMISE statement allows the random</p>
+<p>sequence to be initialised at any time in the program. Typical forms:</p>
+
+<p>10 RANDOMISE 6</p> 
+<p>10 RANDOMISE</p>
+<p>RANDOMISE n (n &#8800; o) generates a sequence</p>
+<dir><p>depending only on the value of</p></dir>
+<dir><p>n (which will be the same from run</p></dir>
+<dir><p>to run if n is unchanged).</p></dir>
+
+<p>RANDOMISE generates a different sequence</p>
+<dir><p>each time.</p></dir>
+
+<p>One highly useful statement is POKE.</p>
+
+<p>This is of the form</p>
+<p>POKE A,B where A is the ADDRESS of a</p>
+<dir>location in store and B is an</dir>
+<dir>expression (the value of which</dir>
+<dir> should be less than 256 for</dir>
+<dir>sensible results).</dir>
+
+<p>Typically A might be the address of one of the two bytes which form 
+the variable which acts as the frame counter. This is demonstrated in 
+the next example program.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 87</p>
+<hr>
+<a name="88"></a>
+
+<table><tbody><tr><td>
+
+<dir><p>Thus:</p></dir>
+
+<p>LET X = PEEK (A) sets X equal to the contents</p>
+<dir><dir><p>of address A</p></dir></dir>
+
+<p>PEEK (A) is always less than 256</p>
+<dir><p>(in range 0 to 255)</p></dir>
+
+<p>The reason that the variables associated with PEEK and POKE should 
+always be less than 256 (255 is maximum) is that everything in the ZX-80
+ is stored in 8 bit bytes. Bit is short for Binary digit. The maximum 
+which can be stored in 8 bits is 255, and so all the integer variables 
+use up 2 bytes, which allows numbers up to 32,767 to be stored.</p>
+
+<p>Each half of a variable is stored in one byte, and every byte has an address of its own.</p>
+
+<p>Here is a program which uses PEEK and POKE to gain access to the TV frame counter.</p>
+
+<p>PEEK/POKE REACTION TIMER</p>
+<p>10 FOR I = 1 to 20 * RND(100)</p>
+<p>20 NEXT I</p>
+<p>30 POKE 16414,0</p>
+<p>40 POKE 16415,0</p>
+
+</td><td>
+
+<p>50 PRINT "HIT RETURN"</p> 
+<p>60 INPUT C$</p>
+<p>70 LET A = PEEK (16414)</p> 
+<p>80 LET B = PEEK (16415)</p>
+<p>90 PRINT "YOUR REACTION TIME WAS";</p> 
+<dir><p>(B*256 + A - 4)*20; "MILLISECS"</p></dir>
+
+<p>16414 and 16415 are the addresses of the two halves of a 16 bit 
+number which counts the frames on the TV - increasing by 1 every 1/50th 
+of a second. Lines 30 to 40 set the count to zero, and the count is 
+stopped when a null string is input to C$. There is a delay on all 
+operations (mainly between pressing the return key and this signal 
+getting to the CPU) of around 80 mS, hence the 4 subtracted from the 
+expression in line 90.</p>
+
+<p>This could have a repeat mechanism tacked on the end, for example:</p>
+
+<p>100 PRINT "DO YOU WANT ANOTHER GO?"</p>
+<p>110 PRINT "TYPE Y OR N"</p>
+<p>120 INPUT C$</p>
+<p>130 IF C$ = "Y" THEN GO TO 10</p>
+<p>140 STOP</p>
+
+<p>Another function which allows the user to communicate directly with the ZX-80 is</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 88</p>
+<hr>
+<a name="89"></a>
+
+<table><tbody><tr><td>
+
+<p>USR(A) - this calls a machine-code subroutine</p>
+<dir><p>at the address A. The value is whatever the routine leaves in HL
+ (a storage register within the central processor of the ZX-80) or, if 
+the subroutine has not altered HL, the result is A.</p></dir>
+
+<p>Typical form: LET J = USR(A)</p>
+
+<p>PEEK, POKE and USR(A) are really facilities provided for very 
+experienced users who under-stand the detailed working of the ZX-80.</p>
+
+<p>CLEAR is a statement which resets all the variables in the program.</p>
+<p>Typical form:</p>
+<p>10 CLEAR</p>
+
+<p>(RUN automatically clears the variables every time a program is run.)</p>
+
+<p>And now, last but not least, DIM. This is of the form</p>
+
+<p>10 DIM A(B) - sets up an <u>array</u> A which</p>
+<dir><p>contains B+1 variables.</p></dir>
+<p>Each variable is called an <u>element</u> of array A.</p>
+
+<p>Arrays can have any single-letter name and can have any number of 
+elements (providing that there is enough room to store all the 
+elements).</p>
+
+</td><td>
+
+<p>It is possible, though not a good idea, to have a variable and an array with the same name. Example:</p>
+<p>10 LET A = 4</p> 
+<p>20 DIM A(A)</p>
+<p>Each element is referred to by its <u>subscript</u>. For instance</p>
+<p>B(0) is the first element of array B</p>
+<p>B(2) is the third element of array B</p>
+<p>B(N) is the (N+1)th element of array B.</p>
+
+<p>Because you can use any integer expression as a subscript it is possible to process array elements easily and quickly.</p>
+
+<p>Here is an example of the use of arrays for character manipulation.</p>
+
+<p>CHEESE NIBBLER</p>
+<p>10 DIM A(10)</p>
+<p>20 DIM B(10)</p>
+<p>30 DIM C(10)</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 89</p>
+<hr>
+<a name="90"></a>
+
+<table><tbody><tr><td>
+
+<p>100 FOR J = 1 TO 10 </p>
+<p>110 LET A(J) = 1 </p>
+<p>120 LET B(J) = 1 </p>
+<p>130 LET C(J) = 1 </p>
+<p>140 NEXT J</p>
+
+<p>200 FOR J = 1 TO 10</p>
+<p>205 IF NOT A(J) = 1 THEN GO TO 220</p>
+<p>210 PRINT "<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">";</p>
+<p>215 GO TO 230</p>
+<p>220 PRINT " ";</p>
+<p>230 NEXT J</p>
+<p>240 PRINT</p>
+
+<p>300 FOR J=1 TO 10</p>
+<p>305 IF NOT B(J) = 1 THEN GO TO 320</p>
+<p>310 PRINT "<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">"</p>
+
+<p>315 GO TO 330</p>
+<p>320 PRINT " ";</p>
+<p>330 NEXT J</p>
+<p>340 PRINT</p>
+
+<p>400 FOR J=1 TO 10</p>
+<p>405 IF NOT C(J)=1 THEN GO TO 420</p>
+
+</td><td>
+
+<p>410 PRINT "<img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif">"</p>
+
+<p>415 GO TO 430</p>
+<p>420 PRINT " ";</p>
+<p>430 NEXT J</p>
+<p>440 PRINT</p>
+
+<p>445 PRINT "HIT NEWLINE TO NIBBLE THE</p>
+<dir><p>CHEESE"</p></dir>
+<p>450 INPUT Y$</p>
+<p>460 IF NOT Y$="" THEN GO TO 1000</p>
+<p>470 CLS</p>
+
+<p>500 LET I = RND(10)</p>
+<p>510 LET K = RND(3)</p>
+<p>520 IF K = 1 THEN LET A(I) = 0</p>
+<p>530 IF K = 2 THEN LET B(I) = 0</p>
+<p>540 IF K = 3 THEN LET C(I) = 0</p>
+<p>550 GO TO 200</p>
+
+<p>1000 STOP</p>
+
+<p>When typing in a program like this where there are several similar 
+lines the EDIT facility is very useful, because you can edit line 
+numbers.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 90</p>
+<hr>
+<a name="91"></a>
+
+<table><tbody><tr><td>
+
+<p>For example; after entering line 210, type:</p>
+
+<dir><dir><p>EDIT</p>
+<p><img src="A%20Course%20in%20BASIC%20Programming_files/left.gif">
+</p><p><img src="A%20Course%20in%20BASIC%20Programming_files/left.gif">
+</p><p>RUBOUT</p> 
+<p>3</p>
+<p>NEW LINE</p></dir></dir>
+
+<p>Statements 10 to 30 set up 3 arrays, A, B, and C of 10 elements each.</p>
+
+<p>Statements 100 to 140 set all the elements of all arrays to 1.</p>
+
+<p>200 to 240 examine each element of the array A in turn. If an element is equal to 1 a <img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif"> is printed. If an element is not 1 a space is printed.</p>
+<p>Similarly for 300 to 340 and 400 to 430.</p>
+<p>On the first pass all the elements are set to 1 and</p>
+<p><img src="A%20Course%20in%20BASIC%20Programming_files/bbox.gif"> is printed all the way through.</p>
+
+<p>445 to 470 print the instruction and if the user then hits NEWLINE the screen is cleared.</p>
+
+<p>500 to 540 select a random element of a random array to be set to 0.</p>
+
+<p>At 550 the program jumps back to print out all</p>
+
+</td><td>
+
+<p>the arrays. The element which has been set to 0 is printed as a space - or nibble.</p>
+
+<p>As more nibbles are taken there is a greater chance that the element 
+selected will already be 0 and thus the effective nibble rate slows down
+ as the game progresses.</p>
+
+<p>ABS(n) this function gives n if n&#8805;0, and -n if</p>
+<dir><p>n&lt;0. n is any integer expression.</p>
+<p>e.g. ABS(5) = 5</p>
+<dir><p>ABS(-5) = 5</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 91</p>
+<hr>
+<a name="93"></a>
+
+<h2>CHAPTER <font size="+5">15</font></h2>
+
+<a name="OVER"><h3>OVER TO YOU</h3></a>
+
+<p class="pno">page 93</p>
+<hr>
+<a name="95"></a>
+
+<h3>OVER TO YOU</h3>
+
+<table><tbody><tr><td>
+
+<p>If you have read all the way through this book, running the programs 
+in it and writing your own, you should be well on the way to becoming a 
+fluent BASIC programmer. Remember, though, that there are many things 
+you can do with ZX-80 BASIC which you can't do using other BASICs. 
+Equally, some BASICs have features which are not present in ZX-80 BASIC.</p>
+
+<p>The appendices present a concise summary of the error codes and the 
+ZX-80 BASIC. Section 2 of Appendix 2 is written with experienced users 
+in mind, but most of it does not require a detailed knowlege of the 
+working of the central processor.</p>
+
+<p>From now on it's up to you!</p>
+
+</td><td>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 95</p>
+
+<hr>
+<a name="97"></a>
+
+<h2>APPENDIX <font size="+5">I</font></h2>
+
+<a name="APP1"><h3>ERROR CODES</h3></a>
+
+<p class="pno">page 97</p>
+
+<hr>
+<a name="99"></a>
+
+<!-- (Lex)  Perhaps replace this with a table.  I had a go at it: it just looked awful, so I gave up. :) -->
+<h3>ERROR CODES</h3>
+
+<table><tbody><tr><td>
+
+<p>When results are displayed, a code</p>
+<p><b>n</b>/<b>m</b></p>
+<p>is displayed also: <b>n</b> is the error number, <b>m</b> is a</p>
+<p>line number in the program.</p>
+<pre><p>stmt  code    meaning</p>
+<p>type</p>
+
+<p>             (m = next line that would have
+             been executed) BREAK pressed.
+             (m = - 1 or - 2) Command suc-
+             cessfully completed.</p>
+<p>        0    (m &lt; 0 or &gt; largest line number 
+             in program) GO TO m was
+             executed.</p>
+<p>             (m = largest line number in
+             program) end of program.</p>
+
+
+<p>NEXT    1    * NEXT &lt;id&gt; where &lt;id&gt; is
+             not the control variable of an 
+             active FOR loop.</p>
+
+<p>any     2    * variable name not found (any
+             variable being used, or array
+             name of an array element being
+             assigned to).</p>
+
+<p>any     3    * subscript out of range, or
+             error of any kind while evalu-
+             ating a subscript.</p>
+</pre>
+</td><td>
+<pre><p>stmt code meaning type</p>
+
+<p>LET   4   * no room to add new variable
+INPUT     or to assign a longer string to a
+DIM       string variable or to screen.
+PRINT</p>
+<p>PRINT 5   * no more room on screen.</p>
+<p>any     6  arithmetic overflow (result
+          &gt; 32767 or &lt; -32768, also
+          result = -32768 in some
+          circumstances).</p>
+
+<p>RETURN 7  * RETURN with no corres-
+           ponding GOSUB.</p>
+
+<p>INPUT  8  INPUT can only be used in a
+          program, not directly.</p>
+
+<p>STOP   9  STOP statement executed.</p>
+<dir><p>* m = line number of offending statement.</p>
+
+<p>CONTINUE is the same as GO TO m, except 
+after code 9 when it is GO TO m+1.</p></dir>
+</pre>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 99</p>
+
+<hr>
+<a name="101"></a>
+
+<h2>APPENDIX <font size="+5"><b>II</b></font></h2>
+
+<a name="APP2"><h3>4K BASIC FOR ZX-80</h3></a>
+
+<p class="pno">page 101</p>
+<hr>
+<a name="103"></a>
+
+<table><tbody><tr><td>
+
+<h3>4K BASIC FOR ZX - 80</h3>
+
+<p><u>1. ZX-80 user's view.<br>
+(a) Program Listing</u></p>
+
+<p>The user inputs via the keyboard, lines of BASIC for insertion into 
+the program and commands for immediate execution. While he is doing this
+ he sees a display which is divided into two parts: the upper part is a 
+"window" on the program listing, while the lower part displays the line 
+or command he is currently outputting. Normally, the lower part is large
+ enough to hold the whole line (which will take more than one screen 
+line if it contains more than 32 characters), there is a blank line 
+between the two parts, and the upper part occupies the remainder of the 
+screen. If, however, there is insufficient RAM to hold a display of this
+ size (each character on screen occupies 1 byte of RAM<sup>*</sup>) the 
+upper part of the display will be shrunk line by line until the display 
+file is small enough. When the upper part has disappeared altogether the
+ lower part shrinks character by character.</p>
+
+<p>The computer maintains a "current line number"</p>
+
+<p><sup>*</sup>RAM stands for random access memory, or store.</p>
+
+</td><td>
+
+<p>for editing the program and the display is always organised so that 
+the line with that number, or the preceding line if no line with that 
+number exists, is on the screen if at all possible. If there is a line 
+with the current number, it is displayed with a symbol consisting of a 
+reverse video <img src="A%20Course%20in%20BASIC%20Programming_files/gt.gif"> between its line number and the text of the line; if there is none then the reverse video <img src="A%20Course%20in%20BASIC%20Programming_files/gt.gif"> will not appear.</p>
+
+<p>Three keys are provided for changing the current line number: "<img src="A%20Course%20in%20BASIC%20Programming_files/up.gif">" changes it to the line number of the preceding line, "<img src="A%20Course%20in%20BASIC%20Programming_files/down.gif">" changes it to the line number of the following line, and "HOME" resets it to zero. If there is no preceding line <img src="A%20Course%20in%20BASIC%20Programming_files/up.gif"> sets it to the line number of the first line in the program; similarly "<img src="A%20Course%20in%20BASIC%20Programming_files/down.gif">" will set it to the last line.</p>
+
+<p>There are two other ways which the current line number can change: 
+inserting a line into the program sets it to the line number of that 
+line, and the command "LIST n" will set it to n.</p>
+
+<p>When the current line is off the top of the screen, the window moves 
+up so that it becomes the first line. When it is at or just off the 
+bottom the window moves down a line. If it is well beyond the bottom of 
+the window, the window moves down so that it becomes the second line on 
+the screen.</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 103</p>
+<hr>
+<a name="104"></a>
+
+<table><tbody><tr><td>
+
+<p><u>(b) Input area</u></p>
+<p>The lower part of the screen contains the line the user is currently 
+typing in. This line may be a command or a line of program; in the 
+latter case it will begin with a line number (in the range 1 to 9999) 
+and in the former case there should be no number, although zero in 
+practice counts as "no number" here.</p>
+
+<p>Somewhere in the line a "cursor" is displayed. This indicates two 
+things: the position in the line where symbols will be inserted, and 
+whether an unshifted alphabetic key will be treated as a keyword (eg. 
+"LIST") or a letter (eg. "A"). The cursor is in the form of an inverse 
+video <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif"> for keywords or <img src="A%20Course%20in%20BASIC%20Programming_files/l.gif"> for letters.</p>
+
+<p>Note that this cursor, although displayed in the line and occupying a
+ character position on the screen, does not form part of the line and is
+ ignored by anything interpreting the line.</p>
+
+<p>A second symbol, similar in principle to the cursor, may also be displayed: this is in the form of an inverse video <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif">
+ and indicates that the line is not a syntactically correct BASIC 
+statement. It is positioned such that the part to the left of it could 
+be the beginning (or the whole) of a syntactically correct BASIC 
+statement, eg. if "20 LET A = B + 5"</p>
+
+</td><td>
+
+<p>is input from left to right then. <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> symbol will be displayed at the end of</p>
+
+<p>20 LET   and be absent from 2</p>
+<p>20 LET A                    20</p>
+<p>20 LET A=                   20 LET A=B</p>
+<p>20 LET A=B+                 20 LET A=B+5</p>
+
+<p>In most cases the symbol is displayed as far to the right as is 
+consistent with the above description; however there are a few 
+circumstances where this is not quite so, for instance in</p>
+
+<dir><p>LET A=ASC("X")</p></dir>
+
+<p>although "LET A=ASC" is a syntactically correct statement (ASC here being an integer variable) the <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif">
+ is not displayed after "ASC" but rather before it. This is because 
+"ASC(...)" has already been identified as a function call, but as no 
+built-in function with the name "ASC" is available it is faulted. Having
+ identified it as a function call, however, the computer does not then 
+consider other possible parses.</p>
+
+<p>The following keys are available to alter the</p>
+<p>input line:</p>
+<p>(i) single-character symbols: letters, digits,</p>
+<dir><p>punctuation, etc.: the symbol is inserted to</p>
+<p>the left of the cursor.</p></dir>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 104</p>
+<hr>
+<a name="105"></a>
+
+<table><tbody><tr><td>
+
+<p>(ii) multi-character "tokens": "**", "AND",</p>
+<dir><p>"OR", "NOT", "TO", "THEN" keywords.</p></dir>
+<p>Each of these is stored in the computer as a single byte, which, as 
+in (i), is inserted to the left of the cursor. However, they appear on 
+the screen as more than one character. Those that are alphanumeric (ie 
+all except "'") are preceded and followed by a space, the preceding 
+space being omitted (a) at the beginning of the line (b) where it 
+follows another alphanumeric token. (This rule means that programs 
+appear well-laid-out on the screen without using up scarce RAM space for
+ explicit space characters. Inserting an explicit space character before
+ or after an alphanumeric token always inserts one extra space in the 
+displayed form.)</p>
+<p>"RUBOUT" deletes the symbol or token</p>
+<dir><p>to the left of the cursor.</p></dir>
+<p>(iv) cursor control keys "<img src="A%20Course%20in%20BASIC%20Programming_files/right.gif">" and "<img src="A%20Course%20in%20BASIC%20Programming_files/left.gif">" skip the</p>
+<dir><p>cursor past the next symbol or token to the right and left respectively.</p></dir>
+<p>(v) "EDIT" replaces the input line with a copy</p>
+<dir><p>of the current line from the program. If no line has the current
+ line number, the first line after it is used. If the current line is 
+after the last line in the program, the last line is used. If there are 
+no lines of program</p>
+
+</dir></td><td>
+
+<p>at all, then an empty line is used. Note that any existing input line
+ is lost; "EDIT" followed by "NEWLINE" is in fact the quickest way to 
+get rid of an unwanted line, but beware typing "EDIT" in mistake for 
+"NEWLINE"!</p>
+<p>(vi) "NEWLINE" is ignored if the inverse video</p>
+<dir><p><img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> 
+symbol is present. Otherwise it marks the end of input and the line or 
+command is submitted to the system (see next section). Note that the 
+whole line is submitted, not just the part to the left of the Cursor.</p></dir>
+
+<p><u>(c) After input</u></p>
+<p>When a line with a nonzero line number is sub-mitted to the system, 
+it is inserted into the program, any existing line with the same number 
+being first deleted. The input area is then cleared. A special case is 
+where the new line consists only of a line number, possibly preceded by 
+spaces: the existing line (if any) is deleted but nothing replaces it 
+and it therefore simply disappears from the listing. The "current line 
+number" is still set to its number, however, so the inverse video <img src="A%20Course%20in%20BASIC%20Programming_files/gt.gif">
+ disappears also (see (a) above). If the line being inserted has one or 
+more spaces after the line number but no other symbols or tokens,</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 105</p>
+<hr>
+<a name="106"></a>
+
+<table><tbody><tr><td>
+
+<p>it is still inserted in the program and appears in the listing as a 
+line which is blank except for its number; when the program is run such 
+lines are ignored.</p>
+
+<p>A line which has no line number, or which has line number zero, is a 
+"command" and is obeyed immediately. For as long as it takes to obey the
+ command (which for most commands is very brief) the screen is blank, 
+then on completion the upper part of the display contains any output 
+generated and the lower part contains a display of the form</p>
+
+<dir><p><b>m</b>/<b>n</b></p></dir>
+
+<p>where <b>m</b> is a single digit and <b>n</b> is "-2" for most commands.</p>
+
+<p>If <b>m</b> = 0, execution was successful; if <b>m</b> = 9 a STOP command was executed; otherwise <b>m</b> is an error code (see Appendix I).</p>
+
+<p>Where a command (RUN, GO TO, GOSUB, CONTINUE) has caused the program to be entered, <b>n</b> is the line number of the offending instruction if <b>m</b> is an error code (exception: if the error is in a GO TO or GOSUB then <b>n</b> may be the target of the jump), the line number of the STOP if <b>m</b> = 9, and the line number of the last line in the program if <b>m</b> = 0. Except in the case of <b>m</b> = 0 or <b>m</b> = 9, CONTINUE is a jump to</p>
+
+</td><td>
+
+<p>line number <b>n</b> (but see 3(c)). If <b>m</b>=9, CONTINUE is a jump to line number <b>n</b>+1.</p>
+
+<p>Sometimes only the first digit of <b>n</b> is displayed because there
+ is no room in the RAM for any more display file. For example beware 
+confusing line number 240, of which only the first digit is displayed, 
+with line number 2.</p>
+
+<p>A jump to a line number which is beyond the end of the program, or greater than 9999, or negative, gives <b>m</b>=0, <b>n</b>= the line number jumped to.</p>
+
+<p>The commands are described individually in section 3.</p>
+
+<h3><u>2. Computer's view</u></h3>
+
+<p>N.B. 35h means Hexadecimal 35 (35h = 3*16+5 = 53. 0Ah to 0Fh are the decimal numbers 10 to 15.</p>
+
+<p><u>(a) RAM</u></p>
+<p>The contents of the RAM are:</p>
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om106_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om106_1.gif" width="270" height="87"></a></p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 106</p>
+<hr>
+<a name="107"></a>
+
+<table><tbody><tr><td>
+
+<p>The first area is fixed in size and contains various "system 
+variables" which store various items of information such as the current 
+line number, the line number to which CONTINUE jumps, the seed for the 
+random number generator, etc. Those that could possibly be useful with 
+PEEK etc. have been documented elsewhere (Appendix 3).</p>
+
+<p>An important subset of the system variables are the five contiguous 
+words labelled VARS to DF_END which hold pointers into the RAM and 
+define the extent of the remaining areas (apart from the stack).</p>
+
+<p>The program consists of zero or more lines, each of the form</p>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om107_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om107_1.gif" width="209" height="58"></a></p>
+
+<p>i.e. beginning with the line number (stored ms byte first contary to 
+the usual practice on Z80's) and ending with a newline. The line number 
+is in the range 1 to 9999 so that the ms 2 bits of the first byte are 
+zeroes. The ms 2 bits of the byte pointed to by (VARS) will not both be 
+zeroes; this gives a simple test for end-of-program.</p>
+
+</td><td>
+
+<p>The program lines are stored in ascending order of line number. The 
+text consists of ordinary characters (codes 0 to 3Fh) and tokens (codes 
+C0h to FFh), although reverse video characters (codes 80h to BFh) have 
+also been allowed for.</p>
+
+<p>The variables take the forms shown on the next page.</p>
+
+<p>They are not stored in any particular order; in practice each new 
+variable is added onto the end. When a string variable is assigned to, 
+the old copy is deleted and a new one created at the end. (Created first
+ - "LET A$ = A$" does work!) Note that apart from the ms bit of the 
+first byte a single-character integer is the same as the controlled 
+variable of a FOR loop. The characters in a name, being all 
+alphanumeric, have 6-bit codes as in the character code table. The first
+ character in a name, being perforce alphabetic (ie in the range 26h to 
+3Fh) effectively has a 5-bit code.</p>
+
+<p>The "variables" area is terminated by a single byte holding 80h (which can't be the name of a string! ).</p>
+
+<p>The working space holds the line being input (or edited, hence 
+"E_LINE") except when statements are being obeyed when it is used for</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 107</p>
+<hr>
+<a name="108"></a>
+
+<p><a href="http://fjkraan.home.xs4all.nl/comp/zx80/om/zx80om108_1.gif"><img src="A%20Course%20in%20BASIC%20Programming_files/zx80om108_1.gif" width="460" height="229"></a></p>
+
+<table><tbody><tr><td>
+
+<p>temporary strings (e.g. the results of CHR$ and STR$) and any other 
+similar requirements. The subroutine X_TEMP is called after each 
+statement to clear it out, so there is no need to explicitly release 
+space used for these purposes.</p>
+
+<p>The display file always contains 25 newline characters (hex 76); the 
+first and last bytes are always 76h and in between are 24 lines each of</p>
+
+</td><td>
+
+<p>from 0 to 32 (inclusive) characters. (DF_EA) points to the start of the lower part of the screen.</p>
+
+<p>The stack (pointed to by register SP) has at the bottom (high-address
+ end) a stack of 2-byte records. GOSUB adds a record to this stack 
+consisting of 1+ its own line number; RETURN removes a record and jumps 
+to the line number</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 108</p>
+<hr>
+<a name="109"></a>
+
+<table><tbody><tr><td>
+
+<p>stored therein. The last 2 bytes of RAM contain a value which RETURN recognises as not being a line number.</p>
+
+<p>The expression evaluator (which is also used to check the syntax of 
+expressions) pushes 4 bytes onto the top of the stack for each 
+intermediate result and pops them again when the appropriate operator is
+ found, eg,</p>
+
+<!-- (Lex)  Why does this table look awful? :/ -->
+<table border="1">
+<tbody><tr><td>A+B*C**D*E+F*G</td><td></td><td></td><td></td><td></td><td></td><td>X=B*C<sup>D</sup></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td>Y=A+X*E</td></tr>
+<tr></tr>
+<tr><td>stack</td><td>A+</td><td>B*</td><td>C**</td><td>X*</td><td>Y+</td><td>F*</td></tr>
+<tr><td></td><td></td><td>A+</td><td>B*</td><td colspan="2">A+</td><td>Y+</td></tr>
+<tr><td></td><td></td><td></td><td>A+</td></tr>
+</tbody></table>
+
+<p>Thus the above expression uses a maximum of 12 bytes of stack.</p>
+<p>Parentheses use an additional 6 bytes each, eg.</p>
+<p>A + (B * C ** D) * E + F * G</p>
+<p>would use 12 + 2 x 6 = 24 bytes</p>
+
+<p>Apart from these two cases, the stack is only used for subroutine calls and for saving registers.</p>
+
+<p><u>(b) Actions</u></p>
+<p>The actions taken by the computer in response to the user's keystrokes are as follows.</p>
+
+</td><td>
+
+<p>Each time a symbol or token is inserted into or deleted from the 
+input line - also each time the cursor is moved - this change is put 
+into effect in the input line held in working-space, after deleting the 
+lower part of the display file (viz that part from DF_EA to DF_END) - 
+note that during this period the display file may be incomplete in that 
+less than 25 newline characters are present, although the display file 
+is never allowed to become large enough that there will not be room to 
+add the remaining newline characters). Then the input line is checked to
+ see if it is syntactically correct. The input line contains an inverse 
+video <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif"> at 
+the point where the cursor is; the syntax checker notes the address of 
+the cursor in the variable (P_PTR) and sets variable (X_PTR) to point to
+ the first wrong symbol or to zero if there is none, It also notes 
+whether the cursor should be displayed as <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif"> or an <img src="A%20Course%20in%20BASIC%20Programming_files/l.gif">. Finally the lower part of the display file is rebuilt, inserting the <img src="A%20Course%20in%20BASIC%20Programming_files/s.gif"> symbol and changing the cursor from <img src="A%20Course%20in%20BASIC%20Programming_files/k.gif"> to <img src="A%20Course%20in%20BASIC%20Programming_files/l.gif"> if required, as well as converting tokens into characters.</p>
+
+<p>If there is now insufficient room for the display file the display 
+file area is cleared and the upper part is remade with fewer lines by 
+re-copying from the program stored in the area RAMBOT to (VARS), again 
+converting tokens into characters</p>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 109</p>
+<hr>
+<a name="110"></a>
+
+<table><tbody><tr><td>
+
+<p>as part of this process, and the lower part is then output afresh.</p>
+
+<p>When a line is to be inserted into the program, its line number is 
+converted into binary, space is made at the appropriate place by copying
+ everything else up, and the text of the line (from which the cursor has
+ already been deleted) is copied in. The working-space and display file 
+are then re-made, the former now containing just the cursor and a 
+newline.</p>
+
+<p>When a command is executed, it is interpreted in situ in the 
+working-space area. Program lines are of course interpreted in their 
+place in the program.</p>
+
+<p><u>3. Statements</u></p>
+<p><u>(a) expressions</u></p>
+<p>Throughout section 3, "n" will be used to represent any space integer expression and "s" to represent any string expression.</p>
+
+<p>String expressions are:</p>
+
+<p> (i) string variable: <i>&#945;</i>$ where <i>&#945;</i> is any letter</p>
+<dir><dir><p>(no intervening space allowed). Example: A$.</p>
+<p>May be used as "dest" for INPUT (see 3(b)).</p></dir></dir>
+
+</td><td>
+
+<p>(ii) literal string: delimited by quotes, any</p>
+<dir><dir><p>symbols or tokens other than quote permitted inside the string. Examples: "ABC" "++"</p></dir></dir>
+
+<p>(iii) CHR$(n) the character with code n,</p>
+<dir><dir><p>or the null string if n = 1. (Note: code 212 is a token 
+which is represented by the quote character, and this code may be 
+supplied as the parameter to CHR$ to get something which prints as a 
+quote.)</p></dir></dir>
+
+<p>(iv) TL$(s) the string s minus its first</p>
+<dir><dir><p>character, or the null string if s is null or contains only one character.</p></dir></dir>
+
+<p>(v) STR$(n) the decimal representation</p>
+<dir><dir><p>of n: from 1 to 5 digits, leading minus sign if negative, no spaces - hence from 1 to 6 characters in all.</p></dir></dir>
+
+<p>(vi) (s)            parenthesised string expression.</p>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 110</p>
+<hr>
+<a name="111"></a>
+
+<table><tbody><tr><td>
+
+<p>Integer expressions are:</p>
+<p>integer variable: first character alphabetic,</p>
+<dir><dir><p>subsequent characters alphanumeric, no em-bedded spaces, no limit on length of name, May be used as "dest" for INPUT (see 3(b)).</p>
+<p>Examples: J AB37Q,</p></dir></dir>
+<p>literal number: decimal, unsigned, value</p>
+<dir><dir><p>must be &lt;32768 (syntax error otherwise), as many leading zeroes as you like. Examples: 23 32767</p>
+<p>0000032767.</p></dir></dir>
+<p>(iii) prefix and</p>
+<dir><p>infix operations:</p>
+
+<dir><pre><u>form   priority  notes</u><p></p>
+n**n   10         "to the power"
+-n      9
+n*n     8
+n/n     7
+n+n     6
+n-n     6        n - n behaves
+                 identically to
+         n+ - n</pre>
+</dir></dir>
+
+</td><td>
+
+<dir><dir>
+<pre><u>form    priority  notes</u>
+n=n     5  
+n&gt;n     5   
+n&lt;n     5         value is - 1 if
+s=s     5         "true", 0 if
+s&gt;s     5         "false".
+s&lt;s     5  
+NOT n   4  
+n AND n 3         bitwise Boolean
+n OR n  2         operations</pre></dir></dir>
+
+<p>Ambiguities in parsing operations are resolved by considering the 
+priority of the operators in question: higher priorities bind tighter, 
+equal priorities associate from the left. Example:</p>
+<p>-A**B+C*D/E*F-G-H</p>
+<p>is the same as</p>
+<p>(((-(A**B))+((C*D)/(E*F)))-G)-H</p>
+
+<p>(iv) PEEK(n) the value at address n, being</p>
+<dir><dir><p>a single byte in the range 0 to 255.</p></dir></dir>
+
+<p>(v) CODE(s) the code for the first</p>
+<dir><dir><p>character in strings.</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 111</p>
+<hr>
+<a name="112"></a>
+
+<table><tbody><tr><td>
+
+<p>(vi) RND(n) a pseudo-random number in</p>
+<dir><dir><p>the range 1 to n if n&gt;0, in the range 1 to 32767 or -32768 to n-1 if n&lt;0. If n=0 returns 1 always.</p></dir></dir>
+
+<p>(vii) USR(n) call machine-code sub-rou-</p>
+<dir><dir><p>tine at address n. Value is whatever the subroutine leaves in HL, or n if it doesn't alter HL.</p></dir></dir>
+<p>(viii) ABS(n) if n&lt;0 <u>then</u> - n <u>else</u> n.</p> 
+<p>(ix) array element: <i>a</i>(n) Example: A(I+1).</p>
+<dir><dir><p>May be used as "dest" for INPUT (see 3(b)).</p></dir></dir>
+<p>(x) (n)            parenthesized integer expression.</p>
+<p>Values of string expressions can be of any length and can contain any
+ codes except 1 (the closing quote). Values of integer expressions must 
+be in the range - 32768 to +32767; any value outside this range causes a
+ run-time error (number 6).</p> 
+<p>Note that relations yield - 1 for "true" and 0 for "false" and that</p>
+<p>-1 AND n is the same as n.</p>
+<p>0 AND n is the same as 0</p>
+<p>-1 OR n is the same as - 1.</p> 
+<p>0 OR n is the same as n.</p>
+
+</td><td>
+
+<p>also</p>
+<p>NOT n  is the same as - n - 1.</p>
+<p>so that for instance</p>
+<p>I AND I&gt;0 OR - I AND I&lt;0.</p>
+<p>is the same as ABS (I),</p>
+
+<p>However constructions such as A&gt;B&gt;C do not have the obvious effect, being parsed as</p>
+
+<p>(A&gt;B)&gt;C ie as</p>
+<p>(A&gt;B) AND C&lt;-1 OR (NOT A&gt;B) AND C&lt;0.</p>
+
+<u></u><p><u>(b)</u> <u>Statements</u></p><u>
+</u><p>The statements available are:</p>
+
+<p>NEW            re-initialise the computer to the</p>
+<dir><dir><p>state it has at initial switch-on. Loses all program, variables, etc.</p></dir></dir>
+
+<p>LOAD            read system variables, program,</p>
+<dir><dir><p>and variables, from tape, and re-initialise input line and 
+remake display file. Does not affect any GOSUB blocks that may be on the
+ stack (although the effect of doing a RETURN is unlikely to be 
+sensible). BREAK after data has been found on the</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 112</p>
+<hr>
+<a name="113"></a>
+
+<table><tbody><tr><td>
+
+<dir><dir><p>tape does the same as NEW: BR EA K during the lead-in preserves the current program and variables.</p></dir></dir>
+
+<p>SAVE            Write system variables, program,</p>
+<dir><dir><p>and variables to tape for sub-sequent reading by LOAD. 
+Precedes data with 5 secs of silence; starting the tape before executing
+ SAVE (which is recommended, practice) writes frame sync pulses to the 
+tape.</p></dir></dir>
+
+<p>The above can all be used in programs, but are intended to be used as
+ commands, and use in programs is not particularly sensible.</p>
+
+<p>RUN n            is the same as CLEAR followed</p>
+<dir><dir><p>by GO TO n.</p></dir></dir>
+
+<p>RUN            is the same as RUN 1.</p>
+
+<p>CONTINUE is the same as GO TO n, where n</p>
+<dir><dir><p>is the last number in an end-of-program message m/n with 
+m&gt;0 (see 1(c) and 3(c). However, after message 9/n, CONTINUE is the 
+same as GO TO n+1.</p></dir></dir>
+
+<p>REM any text no effect (ie is comment).</p>
+
+</td><td>
+
+<p>IF n THEN executes the statement unless n statement is zero. (ie unless n is "false"),</p>
+
+<p>INPUT dest where "dest" can take any of</p>
+<dir><dir><p>the forms marked above (see 3(a)). Returns to the input 
+mode with any output so far produced by the PRINT state-ment in the 
+upper part of the screen, and the input line initialised to contain the 
+cursor alone if "dest" is an integer and the cursor inside a pair of 
+quotes if "dest" is a string. These quotes can, however, be deleted as 
+the input can be any expression (not necessarily a literal). The 
+expression is checked for correct syntax and "NEWLINE" is ignored if the
+ [SS marker is present. The upper part of the screen consists of as many
+ lines as have been written by PRINT and the lower part follows on 
+rather than being placed at the bottom of the screen. It is possible for
+ the upper part to contain 24 lines, in which case the lower part is not</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 113</p>
+<hr>
+<a name="114"></a>
+
+<table><tbody><tr><td>
+
+<dir><dir><p>visible although the keys all function normally, and, provided the user is able to work blind, the input can still be submitted.</p>
+<p>The keys "<img src="A%20Course%20in%20BASIC%20Programming_files/up.gif">" and "<img src="A%20Course%20in%20BASIC%20Programming_files/down.gif">" have no effect; the effect of "EDIT" is rather comical and not very helpful, although it doesn't actually crash the system.</p></dir></dir>
+
+<p>The INPUT statement cannot be used as a command because of the 
+conflict in use of the working-space; however, in this situation LET can
+ be used instead. Using INPUT as a command causes error code 8/-2.</p>
+
+<p>If "dest" is an array element and there is an error in evaluating the
+ subscript or the subscript is out of bounds the error is not reported 
+until after the input value has been submitted.</p>
+
+<p>PRINT &lt;list&gt;</p>
+<dir><dir><p>in which &lt;list&gt; may be:</p>
+<p>&lt;empty&gt;</p>
+<p>or &lt;expr&gt;</p>
+<p>or &lt;list&gt;, &lt;list&gt;</p>
+<p>or &lt;list&gt;; &lt;list&gt;</p>
+<p>and &lt;expr&gt; may be s or n.</p></dir></dir>
+
+</td><td>
+
+<dir><dir><p>writes the value of each &lt;expr&gt; to the upper part of 
+the screen, ie in the case of "s" writes the body of the string, 
+converting tokens into characters, and in the case of "n" writes 
+STR$(n). Each comma causes the output to tab to the 9th, 17th, or 25th 
+column on the line of to the 1st column on the next line. A new line is 
+output unless the &lt;list&gt; ends with a comma or semicolon.</p></dir></dir>
+
+<p>LIST n            sets the "current line number"</p>
+<dir><dir><p>to n and enters "program input" mode without waiting to 
+display any printed output error code (even if there is an error in 
+evaluating n!) It is therefore only really suitable for use as a 
+command.</p></dir></dir>
+
+<p>LIST is equivalent to LIST 0.</p>
+
+<p>STOP            causes "error" code 9, so that</p>
+<dir><dir><p>CONTINUE will carry on from the following statement. Useful for displaying results when no input is required.</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 114</p>
+
+<hr>
+<a name="115"></a>
+
+<table><tbody><tr><td>
+
+<p>DIM <i>a</i>(n) creates an array with name <i>a</i> and</p>
+<dir><dir><p>subscript range 0 to n inclusive. If one already exists, 
+the new space will be reserved but the old array will continue to be 
+used for all accesses. If a variable a already exists, it can still be 
+used.</p></dir></dir>
+
+<p>FOR <i>a</i> = n TO n &nbsp;&nbsp;&nbsp; assigns to <i>a</i> (ie an integer with a</p>
+<dir><dir><p>single-character name) a FOR block as described in section 2(a). The effect is that a sub-sequent "NEXT <i>a</i>
+ will incre-ment n and if it is not now greater than the TO value jump 
+to the statement following the FOR. Note that we always enter the body 
+of the loop at least once, and that the association between FOR and NEXT
+ is entirely dynamic, ie not lexical.</p></dir></dir>
+
+<p>GO TO n jumps to line number n, or to</p>
+<dir><dir><p>the next line with a line number greater than n, or if neither exists stops showing code 0/n.</p></dir></dir>
+
+<p>POKE n,n the first n is an address to which</p>
+<dir><dir><p>the value of the second (modulo 256) is written as a single byte.</p></dir></dir>
+
+</td><td>
+
+<p>RANDOMISE n set the seed of the pseudo random number generator to n.</p>
+
+<p>RANDOMISE as above with n = number of frames displayed on the TV since initialisation (modulo 256).</p>
+
+<p>CLEAR            delete all variables.</p>
+
+<p>CLS            clear the upper part of the</p>
+<dir><dir><p>screen, eg to get rid of a message appropriate to an INPUT as in</p>
+<p>20 PRINT "TYPE THE VALUE FOR A".</p>
+<p>30 INPUT A.</p>
+<p>40 cps.</p></dir></dir>
+
+<p>GOSUB n as GO TO n, but also push a</p>
+<dir><dir><p>GOSUB block on the stack so that RETURN will jump to the line following this one.</p></dir></dir>
+
+<p>RETURN    pop a GOSUB block off the</p>
+<dir><dir><p>stack and jump to the line number contained in it.</p></dir></dir>
+
+<p>NEXT <i>a</i> equivalent to LET n = <i>a</i> + 1.</p>
+<dir><dir><p>IF NOT <i>a</i> &gt; (value supplied with</p>
+<p>TO) THEN</p>
+<p>GO TO (line following FOR <i>a</i>).</p></dir></dir>
+
+</td></tr></tbody></table>
+
+<p class="pno">page 115</p>
+<hr>
+<a name="116"></a>
+
+<table><tbody><tr><td>
+
+<p>The combined effect of</p>
+
+<dir><dir><p>m FOR <i>&#945;</i> = n<sub>1</sub>2 (m is the line number).</p></dir></dir>
+
+<p>and</p>
+<dir><dir><p>NEXT <i>&#945;</i></p></dir></dir>
+
+<p>is of</p>
+
+<dir><dir><p>rn LET<i>&#945;</i>= n<sub>2</sub></p>
+<p>LET LIMIT <i>&#945;</i> = np (assuming LIMIT <i>&#945;</i> isn't used elsewhere in the program).</p></dir></dir>
+
+<p>and</p>
+
+<dir><dir><p>LET <i>&#945;</i>=<i>&#945;</i>+1.</p>
+<p>IF NOT <i>&#945;</i>&gt;LIMIT <i>&#945;</i> THEN GO</p>
+<p>TO m+1.</p></dir></dir>
+
+<p>Note that this does not preclude (i) assignment to <i>&#945;</i> (ii) several NEXTs matching one FOR, or one NEXT matching several FORs.</p>
+
+<p>Note also that FOR - GOSUB - NEXT - RETURN, and FOR I - FOR J - NEXT I - NEXT J are possible, though not very useful.</p>
+
+<p><u>(c) BREAK</u></p>
+
+<p>If the BREAK key is found to be pressed at the end of execution of a line, execution does not</p>
+
+</td><td>
+
+<p>follow on to the next line but stops showing 0/n where n is the line 
+number of the next line that would have been executed but for the 
+break-in.</p>
+
+<u></u><p><u>4</u> <u>Character</u> <u>set</u></p><u>
+</u>
+<table class="nb">
+<tbody><tr><td>  0</td> <td> space</td> <td> †23</td> <td> &gt;</td></tr>
+<tr><td>  1</td> <td> " </td> <td> †24</td> <td> &lt;</td></tr>
+<tr><td>  2</td> <td> </td> <td> †25</td> <td>;</td></tr>
+<tr><td>  3</td> <td> </td> <td> †26</td> <td>,</td></tr>
+<tr><td>  4</td> <td> </td> <td> 27</td> <td> .</td></tr>
+<tr><td>  5</td> <td> </td> <td> 28</td> <td> 0</td></tr>
+<tr><td>  6</td> <td> </td> <td> 29</td> <td> 1</td></tr>
+<tr><td>  7</td> <td> GRAPHICS</td> <td>  30</td> <td> 2</td></tr>
+<tr><td>  8</td> <td> </td> <td> 31</td> <td> 3</td></tr>
+<tr><td>  9</td> <td> </td> <td> 32</td> <td> 4</td></tr>
+<tr><td> 10</td> <td> </td> <td> 33</td> <td> 5</td></tr>
+<tr><td> 11</td> <td> </td> <td> 34</td> <td> 6</td></tr>
+<tr><td> 12</td> <td> £  </td> <td> 35</td> <td> 7</td></tr>
+<tr><td> 13</td> <td> $ </td> <td> 36</td> <td> 8</td></tr>
+<tr><td> 14</td> <td> : </td> <td> 37</td> <td> 9</td></tr>
+<tr><td> 15</td> <td> ? </td> <td> 38</td> <td> A</td></tr>
+<tr><td>†16</td> <td> ( </td> <td> 39</td> <td> B</td></tr>
+<tr><td>†17</td> <td> ) </td> <td> 40</td> <td> C</td></tr>
+<tr><td>†l8</td> <td> - </td> <td> 41</td> <td> D</td></tr>
+<tr><td>†19</td> <td> + </td> <td> 42</td> <td> E</td></tr>
+<tr><td>†20</td> <td> * </td> <td> 43</td> <td> F</td></tr>
+<tr><td>†21</td> <td> / </td> <td> 44</td> <td> G</td></tr>
+<tr><td>†22</td> <td> = </td> <td> 45</td> <td> H</td></tr>
+</tbody></table>
+
+</td></tr></tbody></table>
+
+<p class="pne">page 116</p>
+<hr>
+<a name="117"></a>
+
+<table><tbody><tr><td>
+
+<table class="nb">
+<tbody><tr><td>   46</td> <td> I </td></tr>
+<tr><td>   47</td> <td> J </td></tr>
+<tr><td>   48</td> <td> K </td></tr>
+<tr><td>   49</td> <td> L </td></tr>
+<tr><td>   50</td> <td> M </td></tr>
+<tr><td>   51</td> <td> N </td></tr>
+<tr><td>   52</td> <td> O </td></tr>
+<tr><td>   53</td> <td> P </td></tr>
+<tr><td>   54</td> <td> Q </td></tr>
+<tr><td>   55</td> <td> R </td></tr>
+<tr><td>   56</td> <td> S </td></tr>
+<tr><td>   57</td> <td> T </td></tr>
+<tr><td>   58</td> <td> U </td></tr>
+<tr><td>   59</td> <td> V </td></tr>
+<tr><td>   60</td> <td> W </td></tr>
+<tr><td>   61</td> <td> X </td></tr>
+<tr><td>   62</td> <td> Y </td></tr>
+<tr><td>   63</td> <td> Z </td></tr>
+<tr><td>†  64</td> <td> - 127 print as ? </td></tr>
+<tr><td>† 128</td> <td> - 191 inverse video of 0 to 63 </td></tr>
+<tr><td>† 192</td> <td> - 211 print as ? </td></tr>
+<tr><td>† 212</td> <td> " </td></tr>
+<tr><td>  213</td> <td> THEN </td></tr>
+<tr><td>  214</td> <td> TO </td></tr>
+<tr><td>  215</td> <td> , </td></tr>
+<tr><td>  216</td> <td> , </td></tr>
+<tr><td>  217</td> <td> ) </td></tr>
+<tr><td>  218</td> <td> ( </td></tr>
+</tbody></table>
+
+</td><td>
+
+<table class="nb">
+<tbody><tr><td>219</td> <td> NOT</td>           <td> 238</td> <td> INPUT</td></tr>
+<tr><td>220</td> <td> -</td>             <td> 239</td> <td> RANDOMISE</td></tr>
+<tr><td>221</td> <td> +</td>             <td> 248</td> <td> LET</td></tr>
+<tr><td>222</td> <td>  </td>             <td> 241</td> <td> ?</td></tr>
+<tr><td>223</td> <td> /</td>             <td> 242</td> <td> ?</td></tr>
+<tr><td>224</td> <td> AND </td>          <td> 243</td> <td> NEXT</td></tr>
+<tr><td>225</td> <td> OR</td>            <td> 244</td> <td> PRINT</td></tr>
+<tr><td>226</td> <td> **</td>            <td> 245</td> <td> ?</td></tr>
+<tr><td>227</td> <td> =</td>             <td> 246</td> <td> NEW</td></tr>
+<tr><td>228</td> <td> &lt;</td>          <td> 247</td> <td> RUN</td></tr>
+<tr><td>229</td> <td> &gt;</td>          <td> 288</td> <td> STOP</td></tr>
+<tr><td>230</td> <td> LIST</td>          <td> 249</td> <td> CONTINUE</td></tr>
+<tr><td>231</td> <td> RETURN</td>        <td> 250</td> <td> IF</td></tr>
+<tr><td>232</td> <td> CLS</td>           <td> 251</td> <td> GOSUB</td></tr>
+<tr><td>233</td> <td> DIM</td>           <td> 252</td> <td> LOAD</td></tr>
+<tr><td>234</td> <td> SAVE</td>          <td> 253</td> <td> CLEAR</td></tr>
+<tr><td>235</td> <td> FOR</td>           <td> 254</td> <td> REM</td></tr>
+<tr><td>236</td> <td> GO TO</td>         <td> 255</td> <td> ?</td></tr>
+<tr><td>237</td> <td> POKE</td></tr>
+</tbody></table>
+
+<p>† not available from the keyboard. Codes 38 - </p></td></tr></tbody></table></body></html>

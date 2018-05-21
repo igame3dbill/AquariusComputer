@@ -1,0 +1,1 @@
+10 print chr$(11)20 for x=0to38step230 a=12328+x+11*40:b=a+4040 c=a+1:d=c+4050 poke a,21:poke b,22:gosub11060 poke a,32:poke b,3270 poke c,23:poke d,24:gosub11080 poke c,32:poke d,3290 next x100 goto 20110 for p=1to100:next p:return

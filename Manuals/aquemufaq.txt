@@ -1,0 +1,444 @@
+MATTEL AQUARIUS FAQ (Frequently Asked Questions)
+http://aqemu.classicgaming.gamespy.com/aqfaq2.htm
+Comments to:
+ kenny@kmillar.co.uk
+gparrish@webzone.net
+
+[This FAQ is best printed with a 10-point non-proportional font like Courier.]
+
+Copyright.
+-----------------------------------
+-- What is the Aquarius? --
+-----------------------------------
+
+The Mattel Aquarius was the first and only genuine home computer offered by Mattel Electronics, a company which at the time was flying high with its Mattel Intellivision cartridge game machine. Mattel had promised and delivered an add-on keyboard for the Intellivision (apparently less an effort to "keep its word" than it was to get the Federal Trade Commission off its back regarding that promise), but it wanted to put out a real computer as its entry into the burgeoning home computer market.
+
+Mattel did not start by designing a computer. It instead began by looking around for a pre-made computer system it could market under its name. It discovered that one of its manufacturing partners, the Hong Kong based Radofin Electronics Far East, had already designed a three-system line of home computers. All Mattel had to do was secure the U.S. marketing rights, which it promptly did for the first two units in the line, and have Radofin handle the manufacturing.
+
+The simplest unit, originally code-named "Checkers" and which was eventually named the Aquarius (Model #5931), did have some good things going for it. The 13.5 x 6 x 2 inch unit was equipped with the same Z-80A microprocessor used in many other home and business computers of the era (although some units had a different but still Z-80A compatible processor, like the NEC D780C or the Hitachi HD64180); it had built-in BASIC, being a subset of full Microsoft BASIC; it had the ability to utilize cartridge-based games and other software; and, it had a color video display (16 foreground and 16 background colors, with 40 character x 24 line text). But it also featured a mere 4K of RAM (along with its 8K of ROM) with only about 1.7K free for BASIC programs, a "chicklet" keyboard with just 48 keys (on an 8-line-in, 6-line-out matrix) and a reset button, a one-voice tone generator for sound, no programmable graphics, no sprites, no game controllers, no monitor port (it attached to a TV only), a non-standard printer interface, ordinary cassette access at 600 baud, and no expansion capability except for what could be plugged into the cartridge port. Given that the unit was introduced in 1983, these features did not make it strongly competitive in the home computer market.
+
+In its defense, Mattel did recognize some of the problems. Mattel added a larger character set to the original Radofin design, so that games could use character graphics. Mattel made several sizes of memory add-on cartridges (the unit reportedly being expandable to 52K). It produced a "mini-expander", which at least brought three-voice sound to the Aquarius, added two game controllers, and allowed both a memory cartridge and a program cartridge to be plugged in at the same time. And Mattel was working not only on other gizmos for the Aquarius (such as a larger expander which would allow disk drives), but also on the intended successor unit, originally code-named "Chess" and called publicly the Aquarius II (Model #4000), which would have had more memory, a full stroke keyboard, and hi-res graphics capability (character resolution of 320x196). However, the initial failure of the Aquarius was such that it was discontinued almost as soon as it hit store shelves ("One of the shortest lifespans of any computer", per the April '85 issue of COMPUTE! magazine). Hardware development stopped within Mattel Electronics in mid-1983, and that company was shut down at the beginning of 1984.
+
+Radofin was paid to take the Aquarius marketing rights back. The existing Mattel stock of Aquarius items was sold to a business called CEZAR Industries in Hawthorne, California; but, that company quickly fell apart, and a new company called CRIMAC INCORPORATED in Redwood City, California was formed around November of 1984 to take over. That entity stayed afloat for perhaps a year, and even put out some new products for the Aquarius. 
+
+
+-----------------------------------------
+-- What Hardware was Released? --
+-----------------------------------------
+
+Some items below were actively marketed; others may not have been extensively released but at least a few examples appear to be in circulation. Model numbers below ending in a "C" were CRIMAC-produced products; the other model numbers were Radofin-produced products, and sometimes have an "R" set at the end of the model numbers shown.
+
+
+Aquarius Mini Expander (Model #4063)- An expansion system that made game playing more exciting and easier. It came with 2 detachable 6-key 16-position disk hand controllers (similar to Intellivision controllers but with 6 keys instead of 12 and no side fire buttons). The unit added a decent sound chip (the same as used on the Intellivision) and gave the Aquarius 3 sound channels. It had two cartridge slots, allowing one to be used with a memory cartridge while the other could be used for a program cartridge.
+
+Aquarius Data Recorder (Model #4394)- A sequential file medium cassette player to store data and programs. It is 12" L x 8.5" W. It is sloped from the back (4" thickness) down to the front (2.5" thickness). It weighs 2.7 pounds and has its own internal power transformer & hardwired AC cord. The case and buttons are all white with a nice sculpted design. There is a black translucent panel over the cassette area; marking-wise, it has a black plate with "Aquarius Data Recorder" written on it, and a large colorful Aquarius logo. Once you get past the case, the unit is pretty much a standard 70's/80's portable cassette recorder. It has a resetable tape counter on the top, along with RECORD, PLAY, REWIND, FAST FWD., STOP/EJ. and PAUSE buttons. However, the recorder has no volume knob (though there is a small trimmer pot inside the unit); the volume is preset for the level the Aquarius likes. The unit also has no speaker. On the back of the unit are 3 jacks: EAR (EARphone, for audio output), MIC (MICrophone, for audio input) and REM (REMote control). The REM jack is unused by the Aquarius; the standard connecting cable, which was included with the recorder (and not sold separately) had only two plugs (marked MIC and EAR). There is a green "POWER" LED, which does not come on when the unit is plugged in, but instead lights when any movement button (like PLAY or REWIND) is pressed. The unit also has a red "DATA" LED which comes on when data is encountered on the playback/record circuit, whether or not the computer is processing such data. The "DATA" LED is fed via a bandpass filter, and will light up erratically if you put in a music cassette, etc. The Aquarius recording system uses a lightly tokenized save format for its BASIC recordings: all strings, program names, variables and values are stored as ASCII text, with only standard commands being tokenized. The Aquarius recording system operates at 600 baud, using 900 Hz and 1800 Hz tones. Input impedance is 82 ohms, output impedance is 2.4K ohms, and output level is 50mV. For more detailed information on the recording system, see the "What's the Tape Recording Format?" section of this FAQ. 
+
+Data Recorder Tape (Model #4700)- Computer cassette tapes, marketed as having been designed specifically for the Aquarius Data Recorder (yeah, right). 
+
+Aquarius Printer (Model #4210)- 40 column, narrow-paper thermal printer. 80 cps in upper/lower case text and 20 graphic lines per second. 5x7 character matrix at 10 cpi; thermal roll paper utilized up to 4-3/8" wide. Another incarnation of the narrow-width Alphacom 42 thermal printer that was OEMed for so many home computers of that era (e.g., as the Timex/Sinclair 2040, TI Solid State Printer, and Tandy TP-10).
+
+Aquarius 4-Color Printer (Model #4615)- A 4-color printer/plotter using small red, green, blue and black pens to draw graphics, or text 40 or 80 columns wide, on plain 4-1/2" roll paper. It was apparently an OEMed version of the small Alps printer/plotter that appeared under many manufacturers' names (e.g., the Commodore 1520, the Atari 1020, and the Tandy CGP-115).
+
+Printer Paper Pack (Model #4216)- Roll printer paper, marketed for use with either the Aquarius Printer or the Aquarius 4-Color Printer.
+
+Aquarius Modem (Model #4399)- A 300 baud modem with originate/answer capability and upload/download ability. The needed terminal software came on tape. It was intended to be used with "Aquarius Home Services", a Mattel on-line service tied in with CompuServe; and, the modem's official release was held pending start-up of that service. But, the latter never materialized, and the modem was never widely distributed.
+
+Aquarius Modem (Model #4820C)- This was the CRIMAC model of Aquarius modem. It too was 300 baud.
+
+Aquarius Master Expansion Module (Model #4398)- A large peripheral expansion box with room for two floppy disk drives and "seven built-in peripheral boards to expand Aquarius memory and expand it into the technology of the future at your own pace." It would have allowed not only use of the floppies for storage, but also utilization of the popular CP/M disk operating system and CP/M-compatible programs. Certainly not widely released.
+
+Aquarius Single Disk Drive (Model #4801C)- A stand-alone external double-sided disk drive for the Aquarius. This added not only 128K of disk capacity to the unit, being 64K on both sides of the special 2.8" disks, but also 128K of RAM.
+
+Quick Disks (Model #4825C)- These were the disks for the Single Disk Drive. 2.8", double sided, these were used to hold 128K (64K on each side).
+
+Com/Pac - This was simply a marketing package which included an Aquarius, Aquarius Printer, Aquarius Data Recorder, and Aquarius Mini Expander, all in one box.
+
+AQUARIUS MEMORY CARTRIDGES:
+
+4K RAM Cartridge (Model #4214)
+16K RAM Cartridge (Model #4215)
+32K RAM Cartridge (Model #4217)
+
+
+-----------------------------------------
+-- What Software was Released? --
+-----------------------------------------
+
+Mattel and CRIMAC collectively put out less than two dozen software cartridges for the Aquarius. Mattel made six short machine language games available on one tape, and the Aquarius modem software was provided on tape. The Aquarius manual contains some type-in programs. That was about it. (Mattel's programmers hated working on the Aquarius, and even joked that the motto for its 1983 introduction should have been "Aquarius-- System for the Seventies!"). CP/M was planned once the Expansion Module was widely distributed, but that never occurred. And because of the extremely short production history, no commercial third-party support, or for that matter any formal user group support, ever appeared.
+
+
+PRACTICAL/EDUCATIONAL CARTRIDGES:
+
+LOGO (#4890C)- Graphics programming with Turtle Graphics.
+
+FinForm (#4178)- 63 column by 255 row spreadsheet program. (For more detailed information on FinForm's tape recording format, see the "What's the Tape Recording Format?" section of this FAQ.)
+
+FileForm (#4177)- Database & word processing program. (For more detailed information on FileForm's tape recording format, see the "What's the Tape Recording Format?" section of this FAQ.) 
+
+Extended Microsoft BASIC (#4392)- Programming with most if not all the remaining commands of full Microsoft BASIC. With this you were also able to access the Mini Expander's controllers to write games to use them.
+
+Hints From Heloise- Question and Answer program with helpful hints for common household questions ("Heloise" being the author of a popular newspaper column and an authority on housekeeping).
+
+Zero-In (#4895C)- Educational software.
+
+Biorhythms (#4673)- Software calculating the user's "biorhythm" cycles. Many home computers of the era had similar software exploring the "biorhythm" theory and whether the same had any predictive ability regarding daily performance.
+
+Space Speller (a/k/a Spelling in Space) (#4682)- Education in spelling.
+
+Melody Chase (#4920C)
+
+
+GAME CARTRIDGES:
+
+Advanced Dungeons & Dragons Treasures of Tarmin (#4023)
+Astrosmash (#4003)
+Burger Time (#4653)
+Bump and Jump (#4925C)
+Night Stalker (#4595)
+Reversi (#4594)
+Snafu (#4028)
+Tron Deadly Discs (#4024)
+Utopia (#4596)
+Chess (#4393)
+Lock 'N' Chase (#4029)
+Sea Battle
+
+
+------------------------------------
+-- What Else was Planned? --
+------------------------------------
+
+Certain other hardware and software products were publicly announced, but were apparently never released. 
+
+
+HARDWARE:
+
+Aquarius Home Computer System Command Console (Model #7064)- An X-10 or similar type device capable of controlling up to 64 lights or appliances around the house, turning them on or off up to 32 times a day. 
+
+
+SOFTWARE:
+
+Match & Learn
+Trapdoor
+Waterfall
+Math & Mazes
+Mr. Whirlpool
+Brain Baffler
+Menu Planner
+Tax Tips
+Advanced Diet Trac
+Typemaster
+Masters of the Universe
+
+
+----------------------------------------------------------------
+-- Are All Aquarius Computers Functionally Identical? --
+----------------------------------------------------------------
+
+There is both an "old ROM" and a "new ROM" version of the Aquarius, although both bear the same model number (#5931). They can be distinguished by the start-up message. Both versions say "Copyright (c) 1982 by Microsoft Inc.", but the "new ROM" adds at the end of that line, "S2". The "old ROM" has 1731 bytes free on start-up, while the "new ROM" has slightly less-- 1724 bytes. The advantage of the "new ROM" is that it fixes certain bugs in the "old ROM". See the paragraph below on the CLOAD? command for one example. 
+
+
+--------------------------------------
+-- What's the Power Supply? --
+--------------------------------------
+
+The Aquarius power supply, being an external transformer, was not designed to be removable. But, a user may run across an Aquarius which has had the power supply cut off for some reason, and wonder about replacement. For the record, the Aquarius power supply is:
+
++8.8vdc	1.2 amps	(red-black)
++16vdc	.15 amps	(yellow-black)
+-19vdc	.01 amps	(blue-black)
+
+Inside the Aquarius, the straight-in-a-row 4-pin female connector at the end of the power supply cord can be disattached from the motherboard; the cord just cannot be pulled out of the computer. Thus if you cut off an Aquarius power supply and cord from the outside of a (perhaps otherwise damaged) unit, cut off the female connector inside the unit, and then reattach the connector to the cord (by soldering, crimping butt connectors, or whatever), you will then have a movable power supply that can be used to test other Aquarius units. In other words, if a bad power supply is suspected on a unit, that unit can be opened (see the WARNING first, in the "What's Inside the Aquarius?" section), the old power supply disattached from the motherboard, the movable power supply slipped on in its place, and (while not closing the computer case all the way, to leave room for the power supply cord) the computer retested with the movable supply.
+
+The 4-pin female connector, which has an unusual edge (ridge) on it, fits so that such edge rubs up against a curved piece of plastic along one side of the 4 male pins on the motherboard. When pushed down, the connector will "lock" against the curved piece. So to remove, push the curved piece away from the connector while lifting the connector up. Viewed FROM THE BACK of the computer, the wire connections to those 4 pins are, left to right: yellow, black, red, & blue (see the voltages and amps above).
+
+
+-----------------------------------------
+-- What's Inside the Aquarius? --
+-----------------------------------------
+
+WARNING REGARDING THE KEYBOARD CABLE! When you remove the 6 screws on the bottom of the Aquarius and separate the two halves of the case, you will find a major problem in going further: the keyboard cable. The cable is flat clear plastic with 16 vertical metallic stripes (conductors); it is short (about 3 inches); it is removable only on the motherboard side (from the bottom case); and, that end of the cable is merely shoved into a slot on the motherboard and held by friction. You can carefully pull it out, but be forewarned that the cable is not hard to tear or fatally bend; and, trying to shove the cable back into the slot when you are finished (an awkward maneuver at best, given that short length) can easily cause a bend or tear.
+
+If you nevertheless do choose to open the unit, you will not see much. Most components are covered with a metal shield that is soldered in place. Visible are the power supply connector (see the "What's the Power Supply?" section of this FAQ), the keyboard connector, the RF modulator (having its own tight cover firmly in place), a couple of capacitors, and not much else.
+
+If you manage to get the metal shield removed, you will see the chips and other components on the motherboard-- but nothing particularly interesting. Major chips in a typical Aquarius (usually soldered in place) include a Zilog Z-80A CPU, a Ferranti PLA2 chip, one HM 6116P-2, one GI 8244CEA, an HD61K202P, an HN61366P, and a NEC D4016C-2.
+
+Bottom line: there is nothing much to see inside an Aquarius, and a good chance you can damage something if you take a peek. The best advice is not to go inside unless you really need to.
+
+
+--------------------------------
+-- Can I Write Music? --
+--------------------------------
+
+Aquarius BASIC allows control over the 1-voice built-in tone generator through use of the SOUND command. (This method will not control the added sound channels included in the Aquarius Mini-Expander.) The command's form is-- SOUND(X,Y) --with the X representing the duration of the sound (usually a value from 5 to 500) and Y representing the pitch, with lower numbers representing a higher tone.
+
+However, at least two problems are presented. First, the Aquarius manual does not include a chart showing what tone values produce what notes. As a starting point for creating your own tunes, here is a musical scale of about two octaves. Note that this chart was produced by ear by a non-musician, and the musically-talented out there may well be able to do better. Also note sharps and flats are not shown, although they are typically about half way between the higher and lower whole note values.
+
+A	494
+B	440
+C	400
+D	380
+E	340
+F	300
+G	265
+A	247
+B	220
+C	197
+D	185
+E	164
+F	147
+G	130
+A	122 
+
+The second major problem is that the duration of the note for any given duration value is different for every note; for instance, a low tone with a duration of 100 will last longer than a high tone with a duration of 100. A fancy algorithm is probably needed to equalize the tones, but about all that can be suggested here is that you manually adjust the duration values until each note sounds like the right length.
+
+Because the Aquarius can use READ-DATA-RESTORE statements, one memory-saving technique (particularly on longer tunes) is to put the duration and tone values into data statements, to be read by a music subroutine. This might look like:
+
+100 FOR Z=1 TO 5
+110 READ X,Y
+120 SOUND(X,Y)
+130 NEXT Z
+200 DATA 50,494,50,440,50,400,50,380,50,340
+
+Using a RESTORE statement can allow the same musical data to be read and sounded one or more additional times, e.g., by adding to the above:
+
+150 RESTORE
+160 GOTO 100 
+
+
+----------------------------------------------
+-- Are there Undocumented Features? --
+----------------------------------------------
+
+Sometimes, poking around memory can reveal useful (or at least interesting) results. All locations from 12288 through 32767 can be peeked or poked. Some locations of note are:
+
+12288. Poke this one, and the character corresponding to the number you poke (see A6 of the Manual) will appear all over the border. It will also place the same character in the upper lefthand corner just below the border (see below); this character cannot be modified without modifying the border characters too. 
+
+12289-12327. The Manual (p. A4) indicates the Character RAM Matrix, being the area of your screen to which you can poke characters, starts at 12328 (and ends at 13287). Actually, the entire 40-column row above that, being 12288-12327, can also be poked the same way. Location 12288 (discussed above) is unique in that it controls what is printed on the border. But all these locations can be poked with a character, just like the rest of the Character RAM Matrix. There's another unusual quirk, though: normally, when the screen scrolls, characters poked into the Character RAM Matrix scroll with the rest of the picture. Characters poked to 12288-12327 stay put. This makes the line perfect for headings and other information you do not want to scroll off the top of the screen.
+
+13248. This is the lower lefthand corner of the regular Character RAM Matrix, and can be poked with a character just like any other location. But unlike other locations, where the characters will either scroll up with the screen or (for locations 12288-12327) stay fixed in place, a character poked here will scroll up AND reappear in the former location. The effect, if done several times, is a column of identical characters along the lefthand side of the screen that cannot be deleted by scrolling.
+
+13312. This is the color location corresponding to 12288 discussed above, being the upper lefthand corner just under the border. If you poke a color into this square, then just like the character location, the entire border will change to what you poked. (By the way, while values for colors are from 0 to 15, just as page 6-3 of the Manual says, if you happen to poke higher numbers here or in any Color RAM Matrix location, you will find the same colors scroll through in the same sequence; e.g., if you go from Color 0 (Black), to Color 1 (Red), to Color 2 (Green) and so forth through Color 15, you will find that poking 16 gives you Black again, 17 Red , 18 Green, and so forth.)
+
+13313-13352. These are the color locations corresponding to the character locations 12289-12327 discussed above. In other words, while the Manual (p. A5) indicates the Color RAM Matrix, being the area of your screen to which you can poke foreground and background colors, starts at 13352 (and ends at 14311), the entire 40 row column above that, being 13312-13352, can be poked with color the same way. Again, location 13312 is unique (as discussed above), but locations 13313-13352 appear to work perfectly normally. (No colors, whether in these locations or anywhere else in the Color RAM Matrix, scroll with the screen.)
+
+14336. This location usually is value 0. Poking a 1 will move the normal left margin, governing text appearing on the screen, one location to the LEFT. Larger numbers will push printing further left, making it wrap and reappear on the screen at the right. Thus a POKE 14336,38 moves the margin 38 places to the left and makes it appear (on a 40-column screen) that the margin has been moved two places to the right. Text beyond the right margin may be lost, may wrap, or may wrap and cause reinstatement of the normal left margin.
+
+14337. Sort of like 14336, but stranger. Adjusts margins a seemingly random amount, and may cause the cursor to jump several lines up or down.
+
+14338, 14342-14343, 14407, 14550-14553, 16313. Avoid poking these locations.
+
+16314. Poking a 12 here is equivalent to sending your program an END command. Poking other numbers may have strange results.
+
+16315-16317. Avoid poking these locations.
+
+16384-32767. Peeking or poking these locations is meaningless; unless you have an expander, they are all "92", and pokes will not change them.
+
+
+---------------------------------------------------------
+-- How do I Save and Load Back BASIC Programs? --
+---------------------------------------------------------
+
+The Aquarius manual was vague (perhaps intentionally so) on a number of points, including about interfacing peripherals. The manual did not even include a diagram of any of the Aquarius ports! Regarding attachment of a cassette recorder for program saving and loading, the manual gave a brief description of what the needed cable looked like, but nothing on the actual wiring. If one bought the Mattel-brand recorder, that unit came with the appropriate cable, so the pin-out was not important. But nowhere did the manual indicate that ONLY the Mattel cable and recorder would work; and in fact, the language seemed to suggest that interface cables to attach standard home cassette recorders were commercially available. This lead many users to think that the cable available at Radio Shack ("RS") for TRS-80 computers, and which LOOKED exactly like the cable described in the Aquarius manual (a 5-pin DIN plug on one end, with three plugs for a recorder's MIC, EAR and REM jacks on the other end) would work. Unfortunately, the pinout of the Aquarius cassette port was totally different from the TRS-80 design and hence the TRS-80 cable did not allow recorders to function with the Aquarius, causing some Aquarius users to conclude the Aquarius was just not capable of loading and saving programs. Needless to say, if anything would kill a computer model, not being able to load and save software certainly would.
+
+So, if you do not own the Aquarius Data Recorder package, the first thing you must do is construct a cable to connect your Aquarius to an ordinary cassette recorder featuring a MIC (MICrophone) jack and an EAR (EARphone, Speaker or Monitor) jack. The cable will have a 5-pin male DIN connector on one end, and two 3.5mm miniplugs on the other (and may have a third, smaller plug, which will plug into the REMote jack of the recorder, but which is not supported on the Aquarius). Those connectors should be available from RS or other electronic source, and along with them you will need a length of cabling with at least four separate wires.
+
+Rather than starting from scratch, you can try modifying an RS cable (sometimes encountered in thrift stores) by disattaching wires and reconnecting them in the right place. Either course will probably require a soldering iron.
+
+If you look at the cassette port on the back of the Aquarius, you will see a 5-pin female DIN socket. The holes are numbered:
+
+3 1 Port on back of Computer
+5 4 (or DIN plug pins viewed from the BACK)
+2
+
+As noted above, this numbering will be the same if you look at the BACK of your 5-pin male DIN plug (the side to which the wires will attach). If instead you view the FRONT of your DIN plug (looking down on the pins that will be inserted into the socket), the numbering will be the mirror image:
+
+1 3
+4 5 DIN plug pins viewed from the FRONT
+2
+
+DO NOT GET THE TWO ORIENTATIONS CONFUSED! The holes/pins are assigned the following functions for the Aquarius:
+
+Pin 1	MIC (tip of one plug)
+Pin 2	Ground (outside of both MIC and EAR plugs)
+Pin 3	EAR (tip of other plug)
+Pin 4	(Not used)
+Pin 5	(Not used)
+
+You will solder one wire to the back of Pin 1 of the DIN plug, and the other end of that wire to the center (going to the tip) of the back of one of the miniplugs; this miniplug will be your MIC connector. You will solder another wire to the back of Pin 3 of the DIN plug, and the other end to the center (going to the tip) of the back of the other miniplug; that will be your EAR connector. Of the two remaining wires, solder one each to the outside of the back of the respective miniplugs; then, solder the other ends to the back of Pin 2 of the DIN plug (Ground). Obviously, the MIC connector will then go to the MIC socket, and the EAR connector will go to the EAR socket, of your cassette recorder.
+
+Even with the right cable, you may (or may not) have difficulty loading and saving programs. Chapter 3 of the Aquarius Guide recommends that you "USE THE RIGHT KIND OF TAPE. High-quality, low noise recording tape (no longer than 60 minutes) will give the best results." To which it might have added, Type I tapes should be used unless your recorder was specifically designed for "metal" or other special tapes. Fully fast forward and rewind new tapes before you use them, to adjust the tension. If your recorder has a tone control, turn it to "high" or "maximum". 
+
+The Guide discusses the proper volume setting for saving programs on those cassette units that allow control of volume during recording. It indicates the volume must be loud enough to create a strong recorded signal but not so loud as to cause distortion, and suggests trying various levels. However, most common cassette units are "auto-level" recorders, meaning they will choose their own recording volume level no matter where the volume knob is set during recording. Fortunately, that kind of recorder typically works well with the Aquarius. Once you save a program on such a unit, try verifying or loading it back at maximum volume, and if that fails, try slightly lower playback volume settings until it works. (The Aquarius Data Recorder has both save and load volume preset by the factory at the correct levels.) 
+
+If your Aquarius has been separated from its Guide, here are the commands for loading, saving and verifying BASIC programs and arrays. Note that the maximum program filename length the Aquarius will handle is 6 characters; so, I will call the program in our examples below FILENM, but your own filename can be anything you choose up to that length.
+
+CSAVE "FILENM" This is to save a program to tape. You must give the file a name, and the filename must include quote marks around it. After you give this command, you will be prompted to-- Press <RECORD> --on the tape unit (normally, the Play and Record buttons together), and-- Press RETURN key to start --to begin the process. Be sure during saves to start the tape BEFORE you press the RTN key, or some of the program may be lost. You can hear the sound of the tones Aquarius is sending (through the TV), and Aquarius will report-- Ok --when it is finished. That does not necessarily mean the program recorded properly on tape, however.
+
+CLOAD? "FILENM" Use this immediately after a CSAVE to verify that the program you just attempted to save did in fact record properly, AND BE SURE TO INCLUDE THE QUESTION MARK. Make certain to rewind the tape to a point before the program you want to verify. Once the CLOAD? command is given, the Aquarius will tell you to-- Press <PLAY> --and then to-- Press RETURN key to start --but actually, you are safer to press the RTN key BEFORE you press Play on the cassette unit, so the Aquarius does not miss any of the tape. The report-- Found: FILENM --will be given when Aquarius finds the program, and then-- Ok --if it verifies properly. It will report-- Bad --and then-- Ok --if it does not verify properly. (Actually, the "old ROM" Aquarius has a quirk that will cause it to report-- Ba_ --with that last character being something other than a "d"; the "new ROM" Aquarius will properly report "Bad".) As to what happens if it finds a different program or none at all, see below.
+
+CLOAD or CLOAD "FILENM" This is to load a program from tape. Used without a name, the computer will load the first file it finds. Used with a name, the computer will search the tape for the name you specify. If it runs into a different file first (I will call such file DIFFER here), the computer will report-- Skip: DIFFER --before telling you to-- Press <PLAY> --and finally-- Press RETURN to start --to continue the search. You must press RTN quickly to keep the computer searching; otherwise, it may miss the next file on the tape. (Pressing the Play button as requested is not necessary since such button is already depressed at this point.) If during any CLOAD operation the computer finds nothing, it will just continue searching until you do the reset (RST) procedure.
+
+CSAVE* A This would be used to save a dimensioned numeric array and any numeric data contained in that array. The array must have a valid numeric variable name (I have chosen "A" in this example), and no quote marks are put around the name. There is no verify procedure, so it is suggested that you save any array at least twice.
+
+CLOAD* A This would be used to load back a numeric array and its data. The array must be dimensioned on the Aquarius before it can be loaded. The Aquarius will skip any arrays not matching the name you give; and, when it finds the correct one it will not report such array as Found, but will load it normally and report-- Ok --afterwards. Any second array loaded will erase the first.
+
+
+-----------------------------------------------------
+-- How Do I Backup Machine Language Games? --
+-----------------------------------------------------
+
+Mattel put out a tape with six short games, each being a machine language program with a BASIC loader. The loaders are all exactly the same, except for the number in line 20 which sets the dimensions of a numeric array with the variable name "A". The machine code is the data for the array, and is saved and loaded separately in the manner of any Aquarius array data. To play one of the games, you simply load and run the BASIC portion and that program automatically loads and runs the rest. 
+
+To backup one of the games, CLOAD the BASIC portion and CSAVE that (with an appropriate name) to another tape. Then insert the new line:
+
+35 STOP
+
+and run the program. The program will have you start the tape to retrieve the machine code portion. Once that has loaded, the program will stop with a "Break in 35" message. At that point, you can resave numeric array A and its machine code data with the command:
+
+CSAVE*A
+
+You may wish to do this twice, to make sure you have a good copy. When the save has finished, you can start the game with a CONT command; if the game seems to function, this will be at least some indication that the original array loading went properly and what you saved to tape has a chance to work. Obviously, testing the copy by loading and running it is the only real proof that the backup went OK, since you cannot use the Aquarius tape verify procedure on numeric array data.
+
+
+-----------------------------------------------
+-- What's the Tape Recording Format? --
+-----------------------------------------------
+
+The Aquarius uses a simple "FSK" (frequency shift keying) serial data system for saving and loading data from cassettes. Because such system uses sound data, the output can also be recorded on any other sound-sensitive media.
+
+The Aquarius uses 900Hz and 1800Hz as its "Mark" and "Space" tones during recording. Each "Mark" represents a logical bit 1, and each "Space" represents a logical bit 0. When saving, data is just fed one bit at a time into a simple FSK circuit that translates the bits into corresponding sounds, and those sounds are saved on the cassette. Since "Spaces" and "Marks" have different play lengths, the data transfer rate is not constant; in well-mixed data the rate will be around 250-300 bits per second. 
+
+The Aquarius serial transmission format is 1 start bit, 8 data bits, and 2 stop bits. The Aquarius has no built in error checking in its tape save function, not even checksums or parity bits. This is why the Aquarius can report 'Ok' even when a CLOAD is incorrect.
+
+Since each program can obviously control the data sent to the port, it is still possible for individual software programs to implement error checking in the system, or even redundant blocks. The FileForm text editor uses a simple checksum to determine if data transmission was OK, but cannot recover bad blocks since there are no redundant blocks saved in the data. (The FinForm spreadsheet use no error checking at all, and will happily load completely invalid data.)
+
+Each type of Aquarius save has a specific format. For Aquarius BASIC:
+
+0 : 12 x $FF header (for the Aquarius to calibrate its bit length when
+loading)
+12 : 1 x $00 space
+13 : 6 x PROGRAM NAME IN ASCII
+19 : 12 x $FF header
+31 : 1 x $00 space
+32 : .. x TOKENIZED AQUARIUS BASIC
+.. : 18 x $00 tail
+
+For a FinForm data save:
+
+0 : 12 x $FF header (for the Aquarius to calibrate its bit length when
+loading)
+12 : 1 x $00 space
+14 : 6 x $CF (save name that cannot be typed in Aquarius BASIC)
+20 : 7 x SAVE NAME IN ASCII
+27 : 12 x $FF header
+28 : 1 x $00 space
+29 : .. x FINFORM INTERNAL DATA
+.. : 26 x $FF tail
+
+For a FileForm data save:
+
+0 : 12 x $FF header (for the Aquarius to calibrate its bit length when
+loading)
+12 : 1 x $00 space
+14 : 6 x $8F (save name that cannot be typed in Aquarius BASIC)
+20 : 7 x SAVE NAME IN ASCII
+27 : 12 x $FF header
+28 : 1 x $00 space
+29 : .. x FILEFORM ASCII TEXT
+.. : 21 x $00 tail
+
+
+---------------------------------------------
+-- What about Connecting Printers? --
+---------------------------------------------
+
+The Aquarius allows connection of a printer, and its BASIC language supports printer usage with commands like LLIST and LPRINT. But the computer has a unique printer port; the "standard" printer for the unit, being Mattel's "Aquarius Printer", attaches with a cable with a simple mini-stereo plug on each end. Advantages of that printer include that it can print all 256 characters available on the Aquarius, being not only the normal "ASCII" characters (uppercase and lowercase letters, numbers, and common punctuation), but also those graphic characters unique to the Aquarius (and which the Aquarius uses for composition of all its graphic displays). In addition, it needs no configuration to work; it is "plug and play". And it is small, light, fairly fast (80 characters/second), and rather quiet. On the negative side, the Aquarius Printer produces "draft" quality text on narrow-width thermal paper a maximum of 40 columns wide. Then too, just tracking down an Aquarius Printer may be difficult, because they did not sell in the same numbers as the Aquarius computer. Thus, you may find it useful to know that because the Aquarius uses standard RS-232C serial signals (+12VDC/-12VDC), it is possible to interface most RS-232C serial printer capable of communicating at 1200 baud to an Aquarius for printing normal ASCII characters. This requires you to solder together your own cable to hook up the proper lines on each end.
+
+The printer port on the Aquarius is a mini-stereo socket (just three separate lines), so you will need a male mini-stereo plug to fit into it. Standard serial printers have a female DB-25 socket, so you will need a male DB-25 connector (being the "solder-cup" kind, not the "push-on" kind designed for attachment to ribbon cable) for that end. The cable itself will need at least three separate conductors (phone wire is one possibility, although that is stiff). Supplies of this kind can be obtained at electronics stores such as Radio Shack. The pin positions on the DB-25 are typically labeled; look very closely at the plastic on the connector next to each pin. See the chart at the end of this section for the exact connections needed on each end. Once the cable is made, you will need to configure your printer to the correct settings; this is typically done by dip switches (see your printer manual). The Aquarius uses a 1200 baud rate, 8 data bits, 2 stop bits, and no parity. It sends a line feed, so to avoid double-spacing set your printer for no line feed (sometimes called "carriage return only", "CR", "new line invalid", "line feed inhibit", and so forth). If your printer allows protocol selection, set it for Busy/Ready instead of X-on/X-off.
+
+The Aquarius can also be used with many RS (Tandy/Radio Shack) printers having round 4-pin female DIN socket serial interfaces. (Such printers typically have a parallel connector as well.) These serial interfaces, which work with the various models of the Tandy Color Computer, operate using RS-232C signals and are preset to the "8 data bits, no parity" setting utilized by the Aquarius. Unfortunately, not all such printers will do the needed 1200 baud rate, but many/most will with adjustment of a dip switch setting (see the printer manual). Examples of some RS printers with serial interfaces and 1200 baud adjustments include the LP-VIII; the DMP 100, 110, 120, 200, 400 and 420; DWP 210 and 220; and, the CGP 115. Some RS printers use a slightly modified version of ASCII which would cause the \ character (known as a reversed virgule or forward slash) and the ^ (caret) character on the Aquarius to print as a down arrow and right arrow respectively; if dip-switch selectable, set the printer to plain ASCII to stop this. One final quirk is that RS printers typically try to send an extra linefeed the Aquarius does not need; so, turn off the linefeed if your printer has a dip switch for that, or on some RS printers sending the command-- LPRINT CHR$(27); CHR$(21) --in immediate mode after the printer is turned on will solve the problem. To make an RS-compatible cable, you will need a mini-stereo plug on the computer end and a male 4-pin DIN plug for the printer end. (You may wish to start by cutting off one end of a real RS serial cable with male 4-pin DIN plugs on both ends; these cables are sometimes encountered in thrift stores.) Looking at the port on the back of the printer, the RS pins are numbered from left to right: 4, 3, 2, 1, and the proper hookup is shown in the chart at the end of this section.
+
+A serial cable will also allow you to connect your Aquarius to a PC for the limited purpose of transferring an ASCII image of program files to the PC and thereby letting you print the files on the PC's printer. See the "Can I Move Aquarius Programs To/From a PC?" section of this FAQ on the required technique. For this purpose, you could use the "Aquarius to male DB-25" cable described above, but in such event you might need to also utilize a female/female DB-25 gender changer or a female DB-25 to female DB-9 serial port adapter, depending on what the serial port on your PC looks like. The alternate solution is to purpose-build a cable for attaching your Aquarius to a PC by substituting either a female DB-25 or a female DB-9 connector as required. The appropriate connections for both are shown in the chart at the end of this section. 
+
+Finally, serial-to-parallel interface converters are commercially sold; these allow computers with serial printer ports to utilize normal parallel printers having female Centronics 36-pin ports. (For instance, DALCO at 1-800-445-5342 has sold a bi-directional converter, Item 78920, in the $50 range; Global Computer Supplies at 1-800-845-6225 has sold a single-direction converter, Stock No. TCC95391, also in the $50 range.) By acquiring such a converter, and assembling the "Aquarius to male DB-25" serial cable as explained above, it is possible to use an Aquarius with a normal parallel printer to produce standard ASCII text. Configure the converter dip switches (see your converter manual) for DTE, 1200 baud, 8 data bits, 2 stop bits, and no parity.
+
+The proper hookup for creating a cable with a mini-stereo plug on the Aquarius end, and a DB-25, DB-9 or an RS 4-pin connector on the other end is:
+
+MINI-STEREO PLUG DB-25 DB-9 RS FUNCTION
+
+Tip/Center of Plug Pin 3 Pin 2 Pin 4 Data to Printer
+Middle of Plug Pin 20 Pin 4 Pin 2 Printer Busy/Ready 
+Base/Outside Pin 7 Pin 5 Pin 3 Signal Ground
+
+
+--------------------------------------------------------
+-- Can I Move Aquarius Programs To/From a PC? --
+--------------------------------------------------------
+
+The answer is "Yes"; however, the fashion in which it may be most readily accomplished might be non-obvious to you.
+
+First, if you have the Aquarius modem and terminal program, you ought to be able to communicate back and forth with a PC having its own modem and terminal software. But no one has yet figured out how to do bi-directional serial communications (through a null modem arrangement or something) without the Aquarius modem, and most Aquarius owners do not have Aquarius modems.
+
+Secondly, you can send program files to a PC as ASCII text files through the Aquarius printer port and the PC serial port. However, there is no corresponding method for moving text or programs back to the Aquarius from the PC; so, this technique is really useful only if you wish the PC to display or print them. For this method, start with an Aquarius-specific serial printer cable as described in the "What About Connecting Printers?" section of this FAQ; a null modem adapter is NOT required, but you may need a female/female DB-25 gender changer or a female DB-25 to female DB-9 serial port adapter, depending on the connector on the cable and what the serial port on your PC looks like. Hook the cable between the printer port of the Aquarius and the serial port of the PC, and run a terminal program on the PC with settings for 1200 baud & 8-N-1 (or -2). Open the capture buffer on the terminal program, and then give an LLIST command on the Aquarius. (The first LLIST command always seems to cause a slight error in the first line of the program; the second LLIST will not display an error.) Once the program has LLISTed (it should show up on the terminal screen), close the buffer; that text file can then be handled on the PC as any other text file for viewing or printing. 
+
+But thirdly, the most useful way to send Aquarius files to a PC, and then load them back from the PC, is to utilize the Aquarius cassette port. Since the Aquarius recording system uses audio tones, those tones can be both sampled on the PC and played (loaded) back from the PC, requiring only that your PC has a soundcard, decent sound-handling (audio editing) software, and the appropriate connecting cables. The files on the PC are stored as audio files, such as .WAV files, so such files cannot be viewed or printed while on the PC.
+
+Per Steve Tucker, who pioneered this method, the Win98 Media Player seems to work poorly for this purpose, but software called Goldwave lets programs play back and load perfectly. Goldwave can be obtained for Windows 3.1 or Windows 95/98 from www.goldwave.com on the Web. The below directions assume you are using Win95/98 and Goldwave.
+
+Put the MIC plug from your Aquarius cassette cable (described in the "How do I Save and Load Back Programs?" section of this FAQ) into your soundcard's MIC-IN jack. Start the computers, then type this program into the Aquarius:
+
+10 SOUND (50,50)
+20 GOTO 10
+
+and enter the RUN command. This program will produce a loud constant beeping on the Aquarius cassette output, and should be visible later on through the Goldwave monitor. Start Goldwave and create a new .WAV file with settings of 44100 (samples per second) and "mono".
+
+Doubleclick the Win95/98 volume control in the tray at the bottom right of the screen to bring up the playback volume control, and move that box (with your mouse) a little bit left on your screen. Double click the Win95/98 volume control AGAIN to bring up a second window. In the second window, select [ Options | Properties ] from the menu; click RECORDING and then OK. You now have one volume control window for playback mixing, and a second for recording mixing. Make sure the "Mute all" box in the playback mixing window is not checked, and that the "Select" box IS checked in the recording mixing window.
+
+Now adjust the Microphone volume on the both the playback and the record mixing controls until the beeping waveform seen in the Goldwave window fills up the monitor but with the tops of the waves still visible (no clipping). ("Clipping" happens when a sound sent to the card is so loud that the top of the waveform is cut off, which distorts the sound.) At this level you should be able to make a good recording of the Aquarius cassette audio. Press CTL-C on the Aquarius to stop the program, and then record a test CSAVE.
+
+When playing back, unplug the MIC plug and place the EAR plug into your soundcard's SPEAKER-OUT jack. (Attaching both sets of cables at the same time may cause some feedback to show up in the Goldwave monitor, so disconnect the extraneous plug during either CLOADs or CSAVEs.) Enter CLOAD on the Aquarius. Select the playback properties of Goldwave, and set it to play your recording in a loop until you tell it to stop. Then press the Play button with the little smiley face on it; this will start the loop playback. Adjust the playback and master volume controls until the Aquarius can read the cassette audio properly. The highest volume setting may work best.
+
+
+----------------------------------------
+-- Where Can I Find More....? --
+----------------------------------------
+
+If you want more hardware, including cartridges, check flea markets, garage sales and such. No commercial vendors sell new or used Aquarius-brand or Aquarius-compatible hardware.
+
+Software-wise, third parties never wrote commercial software for the Aquarius, and no user groups developed libraries. One idea is to find early computer books written with generic BASIC "type-in" programs, and use such programs (with some modifications) as a starting point to develop programs on your Aquarius. Of course, you can simply utilize your imagination to develop your own software; then, see if other users will swap software with you.
+
+More information on the Aquarius can be obtained from the website for the Blue Sky Rangers, former programmers for Mattel Electronics. Go to-- http://www.webcom.com/~makingit/bluesky/
+
+
+------------------------------------
+-- Does Anybody Know....? --
+------------------------------------
+
+The Aquarius FAQ is intended to provide its readers with useful information on many aspects of Aquarius computing. However, it is recognized that many possible areas are not covered. Any FAQ is a group effort, and if you would care to put your own knowledge and curiosity to work, all Aquarius users can benefit from what you learn and do. Here are some suggestions regarding areas for further exploration and effort that might be particularly useful:
+
+1.	Programming the Aquarius. Other than Mattel's cartridges, very little software was ever developed for the computer. The BASIC language is there to use if someone cares to put the elements together in a particularly elegant manner. Machine language programming is also a possibility for anyone familiar with programming the Z-80A. A memory map, and/or disassembly of the Aquarius ROM (and perhaps, of some of Mattel's cartridges) might be helpful in this regard. (I do have the e-mail address of one of the Blue Sky Rangers, and he might provide the names of others, if someone needs to ask some preliminary technical questions.)
+
+2.	Detailing the differences between the "old ROM" and the "new ROM". The FAQ mentions only the misprint under the "old ROM" of the word "Bad" if a CLOAD? verify comes out wrong; what are some of the others?
+
+3.	A more serious exploration of music on the Aquarius. The musical scale in the FAQ covers only two octaves, and (as stated there) was put together by a non-musician by ear. Surely, someone can do better. Also, some help is required to equalize the duration of the tones, being either an algorithm or just a chart showing the proper duration of whole notes.
+
+4.	If anyone has prototypes or other obscure items, an explanation of those items (e.g., model number, size, function, and operating software) would be nice.
+
+5.	Development of additional tools for or insights into programming the Mini-Expander (3 voice music, hand controllers, etc.)
+
+6.	A pin-by-pin diagram of the Aquarius cartridge port. This would be the starting point of most serious interfacing projects described below. 
+
+7.	Interfacing a standard modem, or doing a null modem connection between computers. While there are some Aquarius Modems floating around, they are few and far between, and limited to 300 baud. Figuring out how to interface a standard external modem (perhaps starting with a modified game cartridge) could be a useful exercise; at least 1200 baud communications (the speed of the printer) ought to be possible. The Aquarius Modem terminal software was reportedly tape-based, so completion of the project would require finding and modifying such software as needed, or writing something else from scratch.
+
+8.	Adding more memory, possibly by modifying an ordinary game cartridge or doing some sort of RAM piggybacking internally. 4K expanders are around but in fairly short supply; 16K and 32K expanders exist but are uncommon. Every Aquarius owner needs to be able to add 4K, and I would think programmers in particular would be helped by larger expanders.
+
+9.	Other interfacing projects. If the Aquarius puts out a TV picture with sound, there must be signals somewhere in the unit that could be tapped (and amplified if needed with a transistor) to run a composite monitor. An Aquarius external disk drive exists, so there must be a way to build and add an external controller and floppy drive. And while the Aquarius keyboard is not as bad as some from that era (say, the small flat-panel one on the Timex/Sinclair 1000), replacing the keyboard with a better one (possibly a TI 99/4a full-stroke keyboard) might be helpful.
+
+If your explorations lead to other important questions or issues that need to be addressed but are beyond the scope of what you can contribute, let me know and I'll add them to the list.
+
+Fred Horvat, AP748@CLEVELAND.FREENET.EDU, started this file. Since February of 1997 it has been updated and maintained by Gil Parrish at gil.parrish@abanet.org who welcomes your questions and comments. Special help was provided by Steve Tucker regarding Aquarius tape recording formats, and particularly the use of soundcards for transferring files to/from a PC.
+
+This FAQ is copyrighted; it is freely available for personal use but please do not post it on bulletin boards and web sites. (Old FAQs seem to take on a life of their own.) However, users can be directed to me for a free copy of the latest version.
+
+Last Updated May 6, 2001

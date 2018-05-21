@@ -1,0 +1,25 @@
+#!/usr/bin/bas
+
+
+5 cls
+200 for c = 1 to 80
+400 for r = 1 to 72
+425 read y,x 
+440 if y =-1 or x=-1 then gosub 2600 
+450  locate x,y 
+600  print chr$(255);
+700 next r
+800 next c
+900 restore
+1000 locate 1,1
+1999 end
+
+2600 restore:read y,x:return
+6666 end
+
+7777 REM  values used by pset
+8888 REM XY DATA posts below
+8889 REM -1 exits
+
+36577 DATA -1,-1,-1,-1
+

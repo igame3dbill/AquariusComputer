@@ -1,0 +1,18 @@
+new
+5 PRINTCHR$(11)
+10 BOTTLES = 100 : 
+20 BOTTLES = BOTTLES -1
+30 IF BOTTLES =1 THEN GOTO 100
+35 poke 14337,1:poke 14338,48
+40 PRINT BOTTLES;" bottles of beer on the wall "
+50 print BOTTLES;" bottles of beer"
+60  REM DELAY for i = 1 to 400:next i
+70 print "  Take one down and pass it around"
+80 GOTO 20
+100 poke 14337,1:poke 14338,48
+110 S$=" bottle of beer"
+120 PRINT BOTTLES;S$;" on the wall"
+130 PRINT BOTTLES;S$
+140 PRINT "go to the store get some more"
+150 GOTO 10
+run

@@ -1,0 +1,44 @@
+rem Aquarius usergroup of the HCC
+rem translated to English
+rem All credits go to H. Spier
+rem You can use the Windows Soundrecorder
+rem to save a 8bit mono WAV file,
+rem load it into this speech program
+rem and listen to the Aquarius
+rem - works on Virtual Aquariu emulator too
+rem (play cassette file, select your WAV)
+
+1 REM UITGAVE WATERMAN GEBRUIKRSCLUB
+2 REM DATE-DECEMBER 1985-
+2 REM SOURCE:H.SPIER AMERSFOORT
+5 ?CHR$(11)
+20 POKE 14340,128:POKE14341,62
+30 ? " <1> LOAD SPEECH"
+40 ?
+50 ? " <2> SPEECH"
+60 ?
+70 ? " Make your selection! ";
+80 A$=INKEY$:IFA$=""THEN80
+90 IFA$<>"1"THENRESTORE500
+100 I=16000
+110 READX
+120 IFX<>-1THENPOKEI,X:I=I+1:GOTO110
+160 ?CHR$(7)
+170 X=USR(0)
+180 IFPEEK(14351)=6THEN170
+190 RUN
+200 DATA33,0,63:REM free memory
+210 DATA14,252,6,8,237,120,237,121
+220 DATA254,255,203,18,62,10,61,32
+230 DATA253,16,241,122,35,119,34,2
+240 DATA48,124,254,125,194,133,62
+250 DATA201,-1
+500 :
+510 DATA33,0,63:REM free memory
+520 DATA14,252,35,126,87,34,2,48
+530 DATA6,8,203,18,30,255,48,2,30
+540 DATA254,237,89,62,10,61,32,253
+550 DATA16,239,124,254,125,194,133
+560 DATA62,201,-1
+570 :
+

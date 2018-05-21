@@ -1,0 +1,83 @@
+
+
+
+I created a small program to find scrambler codes of ROM packs. Just start
+this program, install a ROM pack in real of by using the VAQ, and see how
+the scramble code changes.
+
+Harrold, 3 June 2008
+
+
+
+
+List of ROM packs with their scrambler codes:
+
+- Advanced Dungeons & Dragons, (c) 1982 Mattel, [74]
+- Astrosmash, (c) 1982 Mattel Electronics, [95]
+- Biorhythms, (c) 1983 Mattel, [61]
+- Burgertime, (c) 1982 Mattel, [170]
+- Chess, (c) 1982 Mattel, [235]
+- Extended BASIC, (c) 1982 by Microsoft Inc., [220]
+- Fileform.bin, (c) 1982 Mattel Electronics, [245]
+- Finform, (c) 1982 Mattel Electronics, [192]
+- Logo, (c) 1982 Mattel, [76]
+- Marquee Demo, (c) 1983 Mattel, [51]
+- Melody Chase, (c) 1982 Mattel, [72]
+- Night Stalker, (c) 1982 Mattel, [134]
+- QuickDisk, AQUARIUS DOS BASIC V1.02, [179]
+- Modem Terminal Software, [0]
+- Shark!, (c) 1983 Mattel, [123]
+- Snafu, (c) 1982 Mattel Electronics, [8]
+- Space Speller, (c) 1983 Mattel, [251]
+- Tron Deadly Discs, (c) 1982 Mattel, [58]
+- Utopia.bin, (c) 1982 Mattel, [212]
+- Zero-in, (c) 1983 Mattel. Inc. [0]
+
+
+
+Program:
+
+100 I=16000
+110 READ X 
+120 IF X<>-1 THEN POKE I,X : I=I+1 : GOTO 110
+150 POKE 14340,128 : POKE 14341,62
+160 X=USR(0)
+170 PRINT "Scramble code: "; PEEK(14345)
+180 GOTO 160
+190 :
+200 : REM Code extracted from Kenny
+210 : REM Millar's ROM disassembly
+220 :
+230 DATA 175       : xor a
+240 DATA 211,255   : out ($ff),a
+250 DATA 17,17,224 : REM ld de,$e011
+260 DATA 33,129,0  : REM ld hl,$0081
+270 :
+300 DATA 27        : REM dec de
+310 DATA 27        : REM dec d
+320 DATA 35        : REM inc hl
+330 DATA 26        : REM ld a,(de)
+340 DATA 15        : REM rrca
+350 DATA 15        : REM rrca
+360 DATA 131       : REM add a,e
+370 DATA 190       : REM cp (hl)
+380 DATA 40,246    : REM jr z,$0062
+390 DATA 126       : REM ld a,(hl)
+400 DATA 183       : REM or a
+410 DATA 32,15     : REM jr z,+15
+420 DATA 235       : REM ex de,hl
+430 DATA 6,12      : REM ld b,$0c
+440 :
+500 DATA 134       : REM add a,(hl)
+510 DATA 35        : REM inc hl
+520 DATA 128       : REM add a,b
+530 DATA 5         : REM dec b
+540 DATA 32,250    : REM jr nz,-6
+550 DATA 174       : REM xor (hl)
+560 DATA 211,255   : REM out ($ff),a
+570 DATA 50,9,56   : REM ld (14345),a
+580 DATA 201       : REM ret
+590 :
+600 DATA -1
+
+

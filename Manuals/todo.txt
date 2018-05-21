@@ -1,0 +1,18 @@
+
+Properly do ROM echoes of small ROMs
+
+Quicktype for LOGO?
+
+use cartridge scrambler for RAM
+
+better keyboard config
+
+scan docs
+
+disassemble or rewrite talker
+
+dump modem?
+
+Need a better copy of modem cassette
+
+

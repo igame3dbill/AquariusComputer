@@ -1,0 +1,42 @@
+
+Does it work under NTSC?<br>==<br>Here's how
+Emucompboy dumps Aquarius game cartridges:<br><br>Set up
+your Aquarius so you can record sounds back and forth
+from your PC. (I have mine hooked up to my VCR, and
+have the VCR's sound output hooked up to my computer's
+sound card input).<br><br>In the Quicktype directory
+you'll find a program called ROMSND.TXT. Load that into
+the emulator. Save it right back out as a CAQ file.
+Use the CAQ2WAV program to convert it into a WAV
+file. Load that into your real Aquarius.<br><br>Then,
+with the real Aquarius still on, plug in the
+cartridge. You need to be pretty sure-handed about this and
+plug it in straight. I manage to do this about 75% of
+the time with the Aquarius, and about 50% of the time
+with the NEC Trek. The risk is that you'll wreck your
+computer or your cartridge or both.<br><br>Set up your PC
+to record sounds from your real Aquarius -- and
+start recording. On the real Aquarius, run the ROMSND
+program. It will make beeping noises for about 20 minutes.
+When the beeping noises stops (and the ROMSND program
+puts up a message about starting a checksum), then you
+can stop recording on your PC. Save out the WAV file.
+It's about 100 Megabytes, if you recorded it at 44,100
+samples per second.<br><br>Run the enormous WAV file
+through the SQUWAV program. The output file will be the
+same size as the input, but should ZIP down to about 1
+Megabyte.<br><br>Copy down the checksum numbers exactly as they appear
+from the Aquarius.<br><br>E-Mail me the zipped _SQ.WAV
+file and the checksum numbers. With luck, I can turn
+them into a ROM image file. I have a program for doing
+this, but it requires changing 32 parameters each time
+it is run. Do you have Microsoft Visual C++
+6.0?<br><br>==<br>The Extended BASIC cartridge should not require
+inserting the cartridge while the computer is on, so
+there'd be no risk to the cartridge or computer. The
+ROMSND program is set to make sounds out of $C000-$FFFF,
+which is where games reside. The Extended BASIC
+cartridge might occupy the same address, or it might do the
+"CP/M swap" and reside at $0000-$1FFF, or it might be
+an "extension ROM" and reside at $2000-$2FFF. Some
+experimentation, with the WINDOW program might be in order.

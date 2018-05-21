@@ -1,0 +1,40 @@
+
+5 PRINTCHR$(11)
+10 X$ = INKEY$
+11 IF X$="" THEN 10
+15 D = 1
+20 IF X$="s" THEN C=C+D
+25 IF X$="a" THEN C=C+D
+30 IF C > 255 THEN C = 0
+35 PRINT CHR$(11)
+40 POKE 14336,C
+50 FOR R = 1 TO 4
+80 READ T$
+90 PRINT T$
+100 NEXT R
+200 RESTORE
+300 GOTO 10
+1000 DATA "####################"
+2000 DATA "      #########     "
+3000 DATA "       ######       "
+4000 DATA "        ##          "
+
+5 PRINTCHR$(11)
+10 X$ = INKEY$
+11 IF X$="" THEN 10
+15 D = 1
+20 IF X$="s" THEN C=C+D
+25 IF X$="a" THEN C=C+D
+30 IF C > 255 THEN C = 0
+35 PRINT CHR$(11)
+40 POKE 14336,C
+50 FOR R = 1 TO 4
+80 READ T$
+90 PRINT T$
+100 NEXT R
+200 RESTORE
+300 GOTO 10
+1000 DATA "####################"
+2000 DATA "      #########     "
+3000 DATA "       ######       "
+4000 DATA "        ##          "

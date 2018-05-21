@@ -1,0 +1,375 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0108 
+header_name {.h} 
+code_name {.cxx}
+Function {make_window()} {open
+} {
+  code {--globals up here
+counter = 0
+quads={}
+cubes={}
+AqAddress={}
+AqPoked={}
+Aqbox={}
+
+fltk.fl_register_images()
+
+ 
+CharZeroPath = "/Data/Icons/Aquarius16x16/aquarius_chr_000.png"
+pickedChar=255
+pathToMurgaLua = string.gsub(murgaLua_ExePath,"(.*)/.*","%1")
+AppPathImage = pathToMurgaLua..CharZeroPath
+CurDirImage = lfs.currentdir() ..CharZeroPath
+
+
+if lfs.attributes(AppPathImage) ~= nil then  gameroot = pathToMurgaLua.. "/" end
+if lfs.attributes(CurDirImage) ~= nil  then gameroot = lfs.currentdir() .."/"  end
+
+--pokeoutPath = "/Users/billgriffin/Applications/CrossOver/VirtualAquarius/AQUAPOKE/"
+pokeoutPath=gameroot.."Data/AQBASIC/"
+print("GAMEROOT = "..gameroot)
+iconPath = gameroot.."Data/Icons/Aquarius16x16/"
+AquaDrawChar=Fl_Shared_Image.get(gameroot.."Data/Icons/Aquarius16x16/aquarius_chr_255.png")
+chrten = string.char (13)} {}
+  code {function writeafterURL(myFileName,whatText)
+myFile = io.open(myFileName, "a")
+ myFile:write(string.char (13))
+ myFile:write(whatText)
+ --myFile:write(string.char (13))
+ io.close(myFile)
+end} {}
+  code {function pokeoutpathUpdate(pokeoutfile)
+if pokeoutfile == nil then pokeoutfile = pokeoutPathInput:value()..pokeoutFileName:value().."_"..".txt" end
+if lfs.attributes(pokeoutfile) == nil then 
+writeafterURL(pokeoutfile,"new"..chrten.."cls"..chrten)
+end
+end} {}
+  code {-- gridMouseXY
+function gridMouseXY()
+  flmousex=Fl:event_x()
+  flmousey=Fl:event_y()
+  MouseX=(math.floor((flmousex+(vcubewidth/2))/vgridwidth)*vgridwidth)-1
+ MouseY =(math.floor((flmousey+(vcubelength/2))/vgridlength)*vgridlength)-1
+ 
+return MouseX,MouseY	
+end} {}
+  code {psetmouseXYstore={}
+psetmousecount=1
+function psetMouseXY()
+ qx=Fl:event_x()
+  qy=Fl:event_y()
+--qx,qy=gridMouseXY() 
+ cgridSize=8
+  rgridSize=4.3125
+local sl,st = drawingrect:x(),drawingrect:y()
+local sr,sb= sl+drawingrect:w(),st+drawingrect:h()
+    PsetMouseX=math.floor((qx-sl)/cgridSize)
+  PsetMouseY=math.floor((qy-st)/rgridSize)
+  if PsetMouseX > 79 then PsetMouseX=79 end
+  if PsetMouseY > 69 then PsetMouseY=69 end
+return PsetMouseX,PsetMouseY
+end} {}
+  code {function RAMPOKE(qx,qy)
+local l,t,r,b=qx-widthHalf,qy-lengthHalf,qx+widthHalf,qy+lengthHalf
+ quadCount=table.getn(quads)+1
+   quads[quadCount]=(qx..","..qy)
+     AqPoked[currentPoke]= pickedChar
+     
+if Aqbox[currentPoke] ~= nil then 
+	w= Aqbox[currentPoke]
+	w:show()
+else
+	w= fltk.Fl_Button(l,t,r,b,"")
+	pokemap:add(w)
+	Aqbox[currentPoke]=w
+end
+ local psx , psy= psetMouseXY()
+ psetmousecount=\#psetmouseXYstore+1
+ psetmouseXYstore[psetmousecount]=(psx..","..psy)
+
+w:labelsize(1)
+w:box(fltk.FL_FLAT_BOX)
+imageFile=AquaDrawChar
+
+w:resize(l,t,gridSize,gridSize);
+w:image(imageFile,14,14)
+w:redraw();
+
+--print((currentPoke).." , "..pickedChar)
+    
+end ---drawQuad} {}
+  code {function savePSets()
+  pokeoutfile = pokeoutPathInput:value()..pokeoutFileName:value().."psets.txt"
+   if lfs.attributes(pokeoutfile) == nil then pokeoutpathUpdate(pokeoutfile) end
+local n=10
+for index,value in pairs(psetmouseXYstore)   do
+print(index,value)
+if index == "row" or index == "col" then break  end
+   n=n+1
+ BasicLine=(n)*10
+  Basicout=(BasicLine.." Pset(" .. psetmouseXYstore[index]..")")
+   writeafterURL(pokeoutfile,Basicout)   
+end
+  writeafterURL(pokeoutfile,"cls:run")
+   writeafterURL(pokeoutfile,"")
+end
+
+
+function savePsetReads()
+     pokeoutfile = pokeoutPathInput:value()..pokeoutFileName:value().."pset.txt"
+   if lfs.attributes(pokeoutfile) == nil then pokeoutpathUpdate(pokeoutfile) end
+local n=900
+local i =5
+bigDataLine=(n*10).."REM "
+AQNPum=0
+for index,value in pairs(psetmouseXYstore)   do
+
+if index == "row" or index == "col" then break  end
+i=i+1
+AQNPum=AQNPum+1
+if i > 5 then 
+   n=n+1
+ BasicLine=(n)*10
+ bigDataLine = bigDataLine..chrten..BasicLine.."Data "..psetmouseXYstore[index]
+  i=1
+  else
+  bigDataLine=bigDataLine..","..psetmouseXYstore[index]
+  end  
+end
+
+
+
+
+
+psetsDim="10 dim m("..AQNPum.."),c("..AQNPum..")"
+psetsFr="20 for r = o to "..(AQNPum-1)..":read m(r),c(r): next r"
+Psetsheader="40 for a = 0 to ".. (AQNPum-1)..": pset(m(a),c(a)):next a"
+
+writeafterURL(pokeoutfile,"5 cls")
+writeafterURL(pokeoutfile,psetsDim)
+writeafterURL(pokeoutfile,psetsFr)
+writeafterURL(pokeoutfile,Psetsheader)
+ writeafterURL(pokeoutfile,bigDataLine)
+  writeafterURL(pokeoutfile,"cls:run")
+   writeafterURL(pokeoutfile,"")
+end
+
+
+function savePokes()
+     pokeoutfile = pokeoutPathInput:value()..pokeoutFileName:value()..".txt"
+   if lfs.attributes(pokeoutfile) == nil then pokeoutpathUpdate(pokeoutfile) end
+local n=10
+for index,value in pairs(AqPoked)   do
+print(index,value)
+if index == "row" or index == "col" then break  end
+   n=n+1
+ BasicLine=(n)*10
+  Basicout=(BasicLine.." POKE "..index..","..AqPoked[index])
+   writeafterURL(pokeoutfile,Basicout)
+    
+end
+  writeafterURL(pokeoutfile,"cls:run")
+   writeafterURL(pokeoutfile,"")
+   savePSets()
+end
+
+
+function saveReads()
+     pokeoutfile = pokeoutPathInput:value()..pokeoutFileName:value()..".txt"
+   if lfs.attributes(pokeoutfile) == nil then pokeoutpathUpdate(pokeoutfile) end
+local n=900
+local i =4
+bigDataLine=(n*10).."REM "
+AQNum=0
+for index,value in pairs(AqPoked)   do
+--print(index,value)
+if index == "row" or index == "col" then break  end
+i=i+1
+AQNum=AQNum+1
+if i > 4 then 
+   n=n+1
+ BasicLine=(n)*10
+ bigDataLine = bigDataLine..chrten..BasicLine.."Data "..index..","..AqPoked[index]
+  i=1
+  else
+  bigDataLine=bigDataLine..","..index..","..AqPoked[index]
+  end  
+end
+RunImag="5 for r = 1 to "..AQNum..":read m,c:pokem,c:next r"
+writeafterURL(pokeoutfile,RunImag)
+ writeafterURL(pokeoutfile,bigDataLine)
+  writeafterURL(pokeoutfile,"cls:run")
+   writeafterURL(pokeoutfile,"")
+   savePsetReads()
+end
+
+
+
+
+
+
+
+function clsButton()
+for index,value in pairs(AqPoked)   do
+print(index,value)
+if index == "row" or index == "col" then break  end
+   Aqbox[index]:hide()
+end
+
+savePSets()
+end} {selected
+  }
+  code {function QuadInDrawRect(qx,qy)
+local l,t,r,b= qx-widthHalf,qy-lengthHalf,qx+widthHalf,qy+lengthHalf
+local sl,st = drawingrect:x(),drawingrect:y()
+local sr,sb= sl+drawingrect:w(),st+drawingrect:h()-widthHalf
+doQuad=true 
+if l < sl-1 or r > sr  then doQuad=false end
+if t < st-2 or b > sb  then doQuad=false end
+--if doQuad == false then print(l,t,r,b.."\\n"..sl,st,sr,sb) end
+ return doQuad
+end} {}
+  code {--   input update_values
+
+
+function input_value_updates()
+
+vgridwidth=16 --gridwidth:value()
+vgridlength=16--gridlength:value()
+vcubewidth=16 --cubewidth:value()
+vcubelength=16 -- cubelength:value()
+vcubeheight=16  --cubeheight:value()
+
+
+widthHalf=math.floor(vgridwidth/2)
+lengthHalf=math.floor(vgridlength/2)
+
+cubeWidthHalf=math.floor(vcubewidth/2)
+cubeLengthHalf=math.floor(vcubelength/2)
+cubeHeightHalf=math.floor(vcubeheight/2)
+
+quadHalf=cubeWidthHalf
+gridSize=vgridwidth
+cubeSize=vcubewidth
+quadSize=cubeSize
+
+qx,qy=gridMouseXY() 
+local sl,st = drawingrect:x(),drawingrect:y()
+local sr,sb= sl+drawingrect:w(),st+drawingrect:h()
+  xyout:label(qx..","..qy)
+  AQX=math.floor((qx-sl)/gridSize)
+  AQY=math.floor((qy-st)/gridSize)
+  currentPoke=(12288+AQX+(AQY*40))
+  pokeout:label("POKE "..currentPoke)
+  ColRowOut:label(AQX..","..AQY)
+
+ 
+
+PsetMouseX,PsetMouseY=psetMouseXY();
+PsetOut:label(PsetMouseX..","..PsetMouseY)
+end; --   input update_values} {}
+  code {--- mouseDown_quads
+function mouseDown_quads()
+
+quadqx,quadqy=gridMouseXY() 
+if  Fl:event()==5 or Fl:event()==1 then
+ doQuad=QuadInDrawRect(quadqx,quadqy)
+		
+if doQuad==true then  RAMPOKE(quadqx,quadqy)     end
+end --fleventcheck
+end   ---mouseDown_quads*} {}
+  code {-- pokemapclose
+function pokemapClose()
+os.exit()
+end} {}
+  code {function pokemap_callback()
+pokemap:make_current();
+ input_value_updates()
+mouseDown_quads();
+  Fl:check();
+end} {}
+  Fl_Window pokemap {
+    label pokemap
+    callback pokemapClose open
+    xywh {755 318 675 523} type Double color 7 when 1 resizable size_range {339 370 663 443} visible
+  } {
+    Fl_Button label {
+      label Mouse
+      xywh {10 475 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button label1 {
+      label {Col,Row}
+      xywh {160 475 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button label2 {
+      label POKE
+      xywh {230 475 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button label3 {
+      label Char
+      xywh {325 475 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button label4 {
+      label PSET
+      xywh {82 475 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button xyout {
+      label {0,0}
+      xywh {10 490 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button ColRowOut {
+      label 0
+      xywh {160 495 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button pokeout {
+      label 0
+      xywh {230 495 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button charout {
+      label 0
+      xywh {325 495 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Button PsetOut {
+      label {0,0}
+      xywh {83 495 70 20} box NO_BOX labelsize 11
+    }
+    Fl_Box drawingrect {
+      label {+}
+      callback mouseDown_quads
+      xywh {10 65 640 400} box BORDER_BOX labelsize 11 when 1
+    }
+    Fl_Input pokeoutFileName {
+      label {File Name:}
+      xywh {55 10 146 20} labelsize 9 textsize 9
+    }
+    Fl_Input pokeoutPathInput {
+      label {File Path:}
+      xywh {257 11 375 19} labelsize 9 textsize 9
+    }
+    Fl_Button {} {
+      label {Save Pokes}
+      callback savePokes
+      xywh {95 40 70 20} labelsize 10
+    }
+    Fl_Button {} {
+      label {Save Read}
+      callback saveReads
+      xywh {175 40 70 20} labelsize 10
+    }
+    Fl_Button {} {
+      label Clear
+      callback clsButton
+      xywh {15 40 70 20} labelsize 10
+    }
+  }
+  code {pokeoutFileName:value("Pokeout_")
+pokeoutPathInput:value(pokeoutPath)
+pokemap:show()----FLTK WINDOW
+pokemap:color(55)
+pokemap:labelsize(9)
+drawingrect:when(1)
+
+while pokemap ~= nil do
+pokemap_callback()
+end} {}
+} 

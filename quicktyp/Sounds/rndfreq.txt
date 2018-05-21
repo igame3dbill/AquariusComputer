@@ -1,0 +1,19 @@
+new
+
+10 j=13313
+20 READA:if a=-1 then 40
+30 POKEJ,A:j=j+1:goto 20
+40 POKE14340,1:POKE14341,52
+
+50 a=int(rnd(2)*16)
+60 b=int(rnd(2)*256):poke13314,a:poke13318,b
+70 j=usr(0)
+75 print a;b
+80 for j=0 to 50:next
+90 goto 50
+rem ML
+
+200 data 62,2,211,247
+210 data 62,2,211,246
+220 data 201,-1
+

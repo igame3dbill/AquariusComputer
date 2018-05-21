@@ -1,0 +1,36 @@
+new
+
+10 j=13313
+20 READA:if a=-1 then 40
+30 POKEJ,A:j=j+1:goto 20
+40 POKE14340,1:POKE14341,52
+
+50 reada:if a=-1 then end
+60 readb:readc:poke13314,a:poke13318,b
+65 j=usr(0)
+70 if c=0 then 50
+80 for j=0 to c:next
+90 goto50
+
+rem ML
+
+200 data 62,2,211,247
+210 data 62,2,211,246
+220 data 201,-1
+
+rem sound -- AY register, value, delay to next
+
+425 data 7,56,0
+430 data 11,255,0
+440 data 12,0,0
+450 data 8,15,0
+
+460 data 0,28,0
+470 data 1,1,400
+
+550 data 0,253,0
+560 data 1,1,400
+
+999 data -1,-1,-1
+
+

@@ -1,0 +1,34 @@
+
+to turtles
+pen 0
+hatch "jan
+hatch "john
+ask: studs
+pos [ 40 15 ]
+ask: jan
+pos [60 45]
+ask: john
+pos [20 45]
+end
+
+to colorbox
+ink rn 16
+rep 4 [fd 10 rt 90]
+rt 45
+end
+
+to spinbox :allt
+:allt
+iftrue [ask first :allt pen 1
+colorbox spinbox bf :allt ]
+end
+
+turtles tf
+[studs jan john]
+
+to spinboxes :allt
+spinbox: allt
+spinboxes: allt
+end
+
+spinboxes tf

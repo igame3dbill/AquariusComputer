@@ -1,0 +1,36 @@
+
+ 10 REM edges are borders 
+ 20 REM cedges are color borders 
+ 100 EDGES = 12288 
+ 110 CEDGES = EDGES +1024 
+ 120 FIRSTLOC = EDGES+1 
+ 130 LASTLOC = EDGES+(40*25-1)
+
+ 0 P=128 
+ 5 L=12288 
+ 10 POKEL,P 
+ 0 INPUT "next Number: ";P
+ 25 PRINT CHR$(11)
+ 30 IF P < 1 THEN 20
+ 40 IF P > 255 THEN 20
+ 50 GOTO 10
+
+
+5 cls
+10 X=INT(70*RND(1)+1)
+20 Y=INT(72*RND(1)+1)
+30 C=INT(14*RND(1)+1)
+40 R=INT(30*RND(1)+1)
+50 PI = 3.1459
+60 CIRCLE(X,Y),R,C
+70 FOR I = 0 TO 2 * PI STEP PI/30
+80 XC=abs(x + r*SIN(I))
+90 YC=abs(y + r*COS(I))
+100 if XC < 80 and YC < 72 then gosub 500
+
+110 NEXT I
+
+200 GOTO 10
+500 REM DRAW pset circles
+540 pset(abs(x + r*SIN(I)), abs(y + r*COS(I))) 
+520 return

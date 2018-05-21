@@ -1,0 +1,37 @@
+new
+100 REM: KALEIDO PAGE 216 TRS-80 COLOR COMPUTER PROGRAMS
+120 GOSUB 400: forj=0to999:poke cm+j,32:next
+130 A=cm + 12*40+19:D=-1
+140 W=2:S=9:L=40:M=8
+150 DIM R(16):forj=0to15:r(j)=j*16+j:next
+160 FOR J=0 TO 15:t=r(j):q=int(16*rnd(1)):r(j)=r(q):r(q)=t
+180 NEXT
+190 D=-D
+200 P=0:Q=S:IF D<0 THEN Q=0:P=S
+210 FOR K=P TO Q STEP D
+220 FOR J=K TO Q STEP D
+221 a$=inkey$:if a$="" then 225
+222 printchr$(11):end
+225 JW=J*W:KL=K*L
+226 KW=K*W:JL=J*L
+230 poke A+JW+KL,R(K):poke A+JW+KL+1,R(K)
+240 poke A+KW+JL,R(K):poke A+KW+JL+1,R(K)
+250 poke A+JW-KL,R(K):poke A+JW-KL+1,R(K)
+260 poke A+KW-JL,R(K):poke A+KW-JL+1,R(K)
+270 poke A-JW+KL,R(K):poke A-JW+KL+1,R(K)
+280 poke A-KW+JL,R(K):poke A-KW+JL+1,R(K)
+290 poke A-JW-KL,R(K):poke A-JW-KL+1,R(K)
+300 poke A-KW-JL,R(K):poke A-KW-JL+1,R(K)
+310 NEXT:NEXT
+320 GOTO160
+
+400 print chr$(11);
+410 PRINT"** KALEIDO **"
+420 PRINT
+430 PRINT"PRESS A KEY TO START"
+440 A$=INKEY$:J=RND(2)
+450 IF A$="" THEN 440
+460 cm=3*4096+1024
+470 print chr$(11);"press a key to end";
+490 return
+

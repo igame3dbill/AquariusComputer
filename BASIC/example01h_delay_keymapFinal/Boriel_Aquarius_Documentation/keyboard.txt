@@ -1,0 +1,57 @@
+http://www.vdsteenoven.com/aquarius/keyboard.html
+http://archive.kontek.net/aqemu.classicgaming.gamespy.com/Files/aqromdis.txt
+
+--------------------------------------------------------------------------------
+
+input:
+  b:rowscan
+  c:port
+output:
+  a:colscan
+
+--------------------------------------------------------------------------------
+
+function fastcall aquariuskeymap(tkeyr as ubyte) as ubyte:
+  asm
+    xor $FF
+    ld b,a
+    ld c,$FF
+    in a,(c)
+    end asm
+  end function
+
+--------------------------------------------------------------------------------
+
+ ? |  0  1  2  3  4  5  
+---+--------------------
+ 0 |  =  bs :  rt ;  .  
+ 1 |  -  /  0  p  l  ,  
+ 2 |  9  o  k  m  n  j  
+ 3 |  8  i  7  u  h  b  
+ 4 |  6  y  g  v  c  f  
+ 5 |  5  t  4  r  d  x  
+ 6 |  3  e  s  z  sp a  
+ 7 |  2  w  1  q  sh ct 
+
+--------------------------------------------------------------------------------
+	
+COLSCAN:
+ 1 |  = BS  : RTN ;  .  bit0  254  0xFE
+ 2 |  -  /  0  p  l  ,  bit1  253  0xFD
+ 3 |  9  o  k  m  n  j  bit2  251  0xFB
+ 4 |  8  i  7  u  h  b  bit3  247  0xF7
+ 5 |  6  y  g  v  c  f  bit4  239  0xEF
+ 6 |  5  t  4  r  d  x  bit5  223  0xDF
+ 7 |  3  e  s  z SP  a  bit6  191  0xBF
+ 8 |  2  w  1  q SH CTL bit7  127  0x7F
+
+ROWSCAN:
+ 9 | SH SP  d  c  h  n  l  ;  bit4  239  0xEF
+10 |  q  z  r  v  u  m  p RTN bit3  247  0xF7
+11 |  w  e  t  y  i  o  / BS  bit1  253  0xFD
+12 |  2  3  5  6  8  9  -  =  bit0  254  0xFE
+13 | CTL a  x  f  b  j  ,  .  bit5  223  0xDF
+14 |  1  s  4  g  7  k  0  :  bit2  251  0xFB
+
+--------------------------------------------------------------------------------
+

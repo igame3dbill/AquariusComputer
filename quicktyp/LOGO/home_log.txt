@@ -1,0 +1,28 @@
+home cs
+pen 0
+pos [25 2]
+ink 1
+tp ' Home Sweet Home'
+
+pos [30 56]
+pen 1
+ink 7
+rep 40 [n 30 e 1 s 30]
+
+pen 0
+pos [8 56]
+pen 1
+ink 8
+rep 21 [n 30 e 1 s 30]
+
+pen 0
+pos [8 26]
+pen 1
+ink 1
+tile 138
+rt 45
+fd 17
+hd 0
+
+rep 6 [e 40 s 2 e 2 w 40]
+

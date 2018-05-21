@@ -1,0 +1,51 @@
+10 REM ==========================
+20 REM This program prints an
+30 REM overview of all programs
+40 REM stored on tape.
+50 REM ==========================
+60 REM Copyright 1986 by H.Spier
+70 REM ==========================
+80 :
+90 REM * compose commandstring *
+100 CLEAR 100
+110 CMND$="      CLOAD?" + CHR$(13)
+120 CMND$=CMND$ +CHR$(13) +"GOTO 300"
+130 CMND$=CMND$ +CHR$(13) +CHR$(128)
+140 :
+150 REM * string to memory *
+160 FOR I=1 TO LEN(CMND$)
+170 POKE 16639+I,ASC(MID$(CMND$,I,1))
+180 NEXT I
+190 :
+200 REM * machinecode to exec. *
+210 I=16384
+220 READ X
+230 IF X<>-1 THEN POKE I,X : I=I+1 : GOTO 220
+240 POKE 14340,0 : POKE 14341,64
+250 X=USR(0) : END
+260 DATA 33,0,65
+270 DATA 34,11,56
+280 DATA 201,-1
+290 :
+300 REM * Print name program found *
+305 :: TELLER = TELLER + 1 : LPRINT TELLER TAB(5) "> ";
+310 FOR I=14423 TO 14428
+320 IF PEEK(I) < 32 THEN POKE I,32
+330 LPRINT CHR$(PEEK(I));
+340 NEXT I :LPRINT
+350 :
+360 REM * restart *
+370 IF INKEY$="" THEN 250
+380 END
+390 :
+400 =============================
+410 ====                     ====
+420 === WRITTEN BY:           ===
+430 ==  HARROLD SPIER          ==
+440 ===                       ===
+450 ====                     ====
+460 =============================
+470 :
+480 * IN NO CASE DO NOT ALTER
+490 * THE LINE NUMBERS !!
+500 :

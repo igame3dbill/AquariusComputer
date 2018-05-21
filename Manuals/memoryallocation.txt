@@ -1,0 +1,16 @@
+$0000 - $1FFF : 8kb rom basic
+$2000 - $2FFF : 4kb not used
+
+$3000 - $33FF : 1kb chr
+$3400 - $37FF : 1kb attr
+$3800 - $3FFF : 2kb user ram
+
+$4000 - $7FFF : 4,8,16kb ram expansion
+
+$8000 - $BFFF : 16kb ram expansion
+
+$C000 - $DFFF : +8kb rom cartridge (=16kb)
+$E000 - $FFFF : 8kb rom cartridge
+
+http://www.vdsteenoven.com/aquarius/malloc.html
+
